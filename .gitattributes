@@ -1,0 +1,7 @@
+* text=auto eol=lf
+public/book/** -text
+*.jpg -text
+*.jpeg -text
+*.png -text
+*.webp -text
+*.pdf -text

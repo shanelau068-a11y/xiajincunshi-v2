@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第二章　农业</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="c232080e-7d30-832c-88c4-017b3178d40e" class="page sans"><header><h1 class="page-title" dir="auto">第二章　农业</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="49a2080e-7d30-8297-a375-016fff4b8188" class="" dir="auto">农业发源于远古时期的神农氏，炎帝在尝百草过程中辨出能吃的五谷，以刀耕火种产生原始农业。随着人类文明的发展，国以民为本，民以农为业，使我国成为农业大国，历时五千余年。</p><h2 id="2152080e-7d30-8359-b10b-8161ac7fbf65" style="display:inline-block" dir="auto">第一节　粮食作物</h2><p id="d142080e-7d30-838c-b14b-01970707d41a" class="" dir="auto">农业以粮为纲，下津自古以来种植的粮食作物有：水稻、小麦、番薯、芋头、玉米、木茨、马铃薯及豆类、瓜类等。由于土质关系，古有“可篮番薯玲头芋”的特产。</p><p id="2c02080e-7d30-83e6-a7f1-017a9de4c93a" class="" dir="auto">乡民利用地域温度优势，粮食生产一年三熟，即早造、晚造和冬耕（冬种）。冬耕主要作物有稻底麦和稻底薯等。</p><p id="40b2080e-7d30-82a9-8041-8107aff793fd" class="" dir="auto"><strong>稻底麦：</strong> 在晚造水稻灌浆达到腊尾（接近成熟）时，将麦种散播于田底（里），水稻收割后整理施肥过冬，第二年清明前收割。收成后立刻耕地种植早造。</p><p id="91d2080e-7d30-83c9-bbce-013d671f5403" class="" dir="auto"><strong>稻底茨：</strong> 在晚造水稻腊尾时，按一定距离插下一种名曰“甜果种”的番薯藤苗，该茨葛（番薯的别称）苗，育苗地在澄海店市，必须在育苗前定购。水稻收割后，施肥培陇过冬，来年清明节过后收获。收成后马上耕地种植早造，与稻底麦错开揷田（插秧）时间，不误农时。植于稻田里的番薯，每株生有7—8个，薯块细长，贮藏时间较久，柔软香甜似甜果，因而称甜果种。</p><p id="06e2080e-7d30-829e-9c41-01c52ca66b44" class="" dir="auto">民国时期至解放初期，粮食生产因受生产工具和品种所限而广种薄收。由于劳力不足，晚造常误农时，<em>“揷田揷到戴帽，割稻割到拍锣”</em>。</p><p id="0d22080e-7d30-826b-9918-811a89177265" class="" dir="auto">下津自高级社时期始，粮食生产由集体统一安排种植，确保完成公购粮。社员分配以人口和工分计算粮食数量。（当时，五斤番薯折算一斤稻谷。）</p><p id="51c2080e-7d30-8275-bdae-8186683ca342" class="" dir="auto">随着科技的发展，水稻品质由解放前的“高秆南特”，逐步引进“矮脚南特”、“珍珠矮”、“木泉”、“窄叶青”、“包胎”、“广占”、“青华”、“晚华”等品种。1980年以后，种植“杂优”。实施“农业四化”之后，水稻年亩产超“双纲”，引进高产杂优“独粒种”之后，年亩产达双千斤。</p><h2 id="a7d2080e-7d30-8241-b367-81c764879ed5" style="display:inline-block" dir="auto">第二节　畜牧</h2><ul id="9242080e-7d30-83b2-81b9-81277ab2e43c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、养牛</strong><p id="7942080e-7d30-83dd-8aad-81ff5b947ffd" class="" dir="auto">牛是农家宝，是耕种的动力和农家肥的主要来源。</p><p id="d742080e-7d30-8338-8ba0-0115260f9bf9" class="" dir="auto">高级社时期，下津集体牛栏设在桃坑向西祠，牛群派专人饲养管理。</p><p id="d962080e-7d30-8258-8eeb-0170b42ab5c0" class="" dir="auto">生产队核算时期，耕牛由驶牛户饲养管理。</p></li></ul><ul id="5192080e-7d30-83dc-9785-01b748d14c70" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、养猪</strong><p id="34a2080e-7d30-821e-8839-81276dbb241a" class="" dir="auto">猪是肉食和农家肥的来源。公社化时期，下津在酒厂设集体养猪场，派专人饲养管理。</p><p id="f762080e-7d30-83f8-8a87-014dce24993e" class="" dir="auto">私人养猪由每家每户饲养发展为专业户饲养。</p></li></ul><ul id="3112080e-7d30-83d8-9846-8106b18c9c23" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>三、养三鸟</strong><p id="7f72080e-7d30-82fa-b15b-812c63d0991c" class="" dir="auto">公社化时期，下津在桃坑向西祠养集体鸭群，派专人饲养管理。</p><p id="8f62080e-7d30-837a-94d6-017891ceb7d2" class="" dir="auto">家庭“三鸟”饲养，由鸡、鹅、鸭齐养，搬迁新住宅区以后，只有小部分家庭在旧居饲养。</p></li></ul><h2 id="5e62080e-7d30-8238-bc39-01c7a403dd8e" style="display:inline-block" dir="auto">第三节　渔业</h2><p id="4612080e-7d30-82bb-9692-812b4ad15309" class="" dir="auto">下津池塘得天独厚，解放初期，有桃坑湖、长池、安仔池、陈厨池、盐墩池、酒厂池、廖厨池、巷内池、五马池、三房池、大房池、营内池、新祠堂池、马路洋池、草尾池、康厨池、洗马桥池、海鹅头池等，自高级社时期起，由集体养鱼。</p><p id="7792080e-7d30-8227-9d32-01b384511d81" class="" dir="auto">体制改革后，由于平整土地和地域划出，只存几个厨前池。尔后，在山边、沙瓠、狗肚新挖鱼池250亩，又在东湖划出120亩，全部实行承包经营。</p><h2 id="d6c2080e-7d30-833e-8dc2-81415459f0f5" style="display:inline-block" dir="auto">第四节　林业</h2><p id="4782080e-7d30-83ab-8eb8-01a3b3fc2024" class="" dir="auto">1958年，下津连在辖境内各山播松柏种子，后来成林有神农祠山、笔架山、水缸山、象鼻山、鸡心坑、塘湖山东面、溪畔山等。下津大队成立山林管理组护林至今，保护生态环境。鸡心坑、水缸山列为广东省生态公益林。</p><h2 id="ca02080e-7d30-8309-bdde-01311e8d0ca6" style="display:inline-block" dir="auto">第五节　副业</h2><p id="8342080e-7d30-8394-80b2-81b7db97f128" class="" dir="auto">先祖素有利用农闲和收工顺道搞副业收入的传统。有的三五成群结队挑鱼苗至韩江上游各地，常言道“一苦担鱼崽”，人休息时，需要用手摇动装鱼苗的工具，使之不死亡。交接鱼苗时，还要听懂用不同语言计算鱼苗数量的专用语。有的在田洋收工后，上瓷土矿场挑白土（瓷土）至指定地点过称领工钱，有的上山割山草，卖给瓦窯。</p><p id="34b2080e-7d30-838c-937c-81a8783a77f0" class="" dir="auto">公社化后，下津成立副业组，统一管理副业人员。副业收入所得分为记工分及部分先支现金。副业项目有：</p><ol type="1" id="8a42080e-7d30-8213-9155-01bb58504dae" class="numbered-list" start="1" dir="auto"><li>成立运输队伍运载瓷矿。副业人员由采瓷场挑白土下山，装车后运往指定厂家。</li></ol><ol type="1" id="6e12080e-7d30-8213-a1d9-01b37460cf2b" class="numbered-list" start="2" dir="auto"><li>挑瓦土。由太婆坟侧挖土窟挑往瓦窯。</li></ol><ol type="1" id="f082080e-7d30-82b4-a2c5-01411b888c9a" class="numbered-list" start="3" dir="auto"><li>挑煤。汕头地区煤建公司征用下津虎池作为煤仓，每次煤炭入仓和出仓，优先安排给下津大队副业组装卸任务。煤船靠岸，架木板连接陆地，挑煤人员肩压一百多斤煤担，排队小心过木板，倘有大意就会掉进江里。</li></ol><h2 id="96b2080e-7d30-82bc-a480-81607c446ec4" style="display:inline-block" dir="auto">第六节　经济作物</h2><ul id="86b2080e-7d30-832f-9e69-81a03e97f6d8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、甘蔗</strong><p id="5402080e-7d30-82b1-92e2-018954d2b1f9" class="" dir="auto">下津传统种植的甘蔗品种为“绞卜”，产量及制糖率较低，经济收入不高。上世纪七十年代引进“台糖134”品种，亩产量提高百分之三十，制糖率红糖达百分之十一，白糖达百分之十五，提高了经济效益。</p><p id="cce2080e-7d30-839d-b07b-81464687cead" class="" dir="auto">集体化时期，种植甘蔗面积主要考虑轮种耕地，潮安建糖厂以后，由上级下达生产计划。</p></li></ul><ul id="40f2080e-7d30-82ce-8399-012f64b0ed37" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、花生</strong><p id="1442080e-7d30-83ea-985b-814a94031c6c" class="" dir="auto">春季种植的花生，亩产量平均250斤，榨油率百分之三十三。秋植花生，主要用于作明年的种子，因为反季节，俗称“倒宿地豆”。</p><p id="d2b2080e-7d30-838b-957f-01031b027a01" class="" dir="auto">集体化时期，种植花生按上调任务及社员分配数量安排种植面积。</p></li></ul><ul id="4642080e-7d30-8307-ba15-81168bff8b95" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>三、黄麻</strong><p id="67b2080e-7d30-8342-9bac-01343a63c8a1" class="" dir="auto">黄麻主要用于“拍索”自用，集体化时期以后，按上调任务及自留打索数量安排种植面积。</p></li></ul><ul id="9082080e-7d30-83df-8512-818b38c66757" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>四、蔬菜</strong><p id="a312080e-7d30-821f-b3f2-8159b0fbaf57" class="" dir="auto">下津因毗邻潮州城，种植蔬菜是乡民的一大传统经济收入。</p><p id="0dd2080e-7d30-8391-9793-01ff017598a7" class="" dir="auto">蔬菜种植品种颇多，首先种植家庭日常生活必需（家居咸）的大菜（芥菜），用于腐制咸菜或贡菜。菜头（萝卜），用于腐制菜脯（萝卜干）。而后种植经济价值较高的大蒜、香葱、菠菜、白菜、包菜、荷兰豆、长夹豆、四季豆等。</p><p id="7532080e-7d30-8375-bc89-01fb015660c4" class="" dir="auto">公社化创办公共食堂时，蔬菜由各排安排土地。</p><p id="06f2080e-7d30-834a-870a-01a9479e25bb" class="" dir="auto">土地承包后，由村统一安排各户菜地。</p></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

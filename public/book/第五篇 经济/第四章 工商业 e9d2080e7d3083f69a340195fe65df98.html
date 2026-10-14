@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第四章　工商业</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="e9d2080e-7d30-83f6-9a34-0195fe65df98" class="page sans"><header><h1 class="page-title" dir="auto">第四章　工商业</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h2 id="05a2080e-7d30-82b6-911f-0151bdb700d8" style="display:inline-block" dir="auto">第一节　工商业的形成与发展</h2><p id="7e72080e-7d30-821e-a6eb-819a7afba5d1" class="" dir="auto">下津西濒韩江，汇集闽粤赣三省之水。上游源头，西为琴江，自河源与东江分水，流经东源、紫金、五华、兴宁，在梅县注入梅江。北自寻乌、瑞金与赣江分水，流途集蕉岭、平远之水，在梅州注入梅江。东北自连城与漳州河分水，流途集长汀、上杭、武平、永定之水注入茶阳河。东自龙岩市、漳州市与梅州市分水岭支流汇入大埔河。梅江、茶阳河和大埔河在三河镇汇合后称为韩江。流经丰顺进入潮州，江宽水深流急，水运发达。</p><p id="a042080e-7d30-83ae-9478-01e7b6ade441" class="" dir="auto">自明、清以来，东厢乡是闽、粤、赣24个县杉、竹、木的集散地，先民购买杉、竹、木为原料，制作竹、木器，自制自销形成工商业。</p><p id="bf22080e-7d30-822d-a897-8130a452284e" class="" dir="auto">清康乾时期，社会稳定，贫困破产的农民也拜师学艺，使东厢乡竹木器发展迅速，一业带百业，逐渐形成东厢堤顶工商业一条街。</p><p id="0e12080e-7d30-82a4-82d4-81cbd81322dc" class="" dir="auto">民国年间，东厢工商业进入鼎盛时期，工商业管理机构遂之产生，有杉商公会、竹枝业公会、东津木屣业公会等。由当时所流传的<em>“意溪人锯杉、锯杉做二畔”</em>，<em>“意溪人骑（操）厚刀，东津人削屣桃”</em>，<em>“东津堤顶人抽槌”</em>、<em>“片云月饼、白塔木仔”</em>、<em>“东津屣铺”</em>、<em>“堤顶香枝铺”</em>、<em>“杉铺”</em>、<em>“打砧街”</em>……可知当时工商行业的生产情况，东厢（意溪、东津）从业人员近3000人。</p><h2 id="8072080e-7d30-82cf-aef3-812f5f27517e" style="display:inline-block" dir="auto">第二节　做屣桃</h2><p id="3a62080e-7d30-8201-b0bf-8153105ad470" class="" dir="auto">东津沖陷期间，市场由堤顶徙在蔡厨埔与廖厨埔之间，从事削屣桃的人也逐渐汇集在廖厨埔刺榴巷（今津界路南5巷）做屣，时人称该地为做屣桃。</p><p id="c8b2080e-7d30-83c9-9dbd-81578e2785cb" class="" dir="auto">1957年，前进社创办得冀木屣组，制木屣由个体转为集体工业。</p><p id="9482080e-7d30-82a3-8608-81a9d5856d08" class="" dir="auto">随着科技的发展，由国外进口的人字鞋、橡胶拖鞋及塑料拖鞋，使人们追求时尚热购。1960年以后，潮州创办橡胶、塑料厂，生产拖鞋，木屣滞销，迅速被拖鞋代替，名闻海内外的东津做屣桃遂之消失。</p><h2 id="dea2080e-7d30-8372-acf1-810a77a3515a" style="display:inline-block" dir="auto">第三节　工业</h2><ul id="4612080e-7d30-8327-8db1-81125873bcd7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、下津古今工业</strong><p id="b492080e-7d30-82af-93a7-81035af14b60" class="" dir="auto">下津地域蕴藏丰富的瓷土，在宋代就有采矿工业和陶瓷工业。相传，笔架山周边生产陶瓷的龙窯发展到99条，史称“百窯村”。1957年下津工副业挖矿队在水缸山发现古人采矿隧道遗迹。由此可知，笔架山古窯，原料取自下津水缸山。1959年，广东省考古队在下津燕仔山古窯出土的宋代陶瓷文物，珍藏于省博物馆。</p><p id="4702080e-7d30-827e-829b-01bf58cb3936" class="" dir="auto">明清时期，下津的竹木器工业初具规模。</p><p id="a852080e-7d30-83a8-9863-817e10add309" class="" dir="auto">民国时期，下津有瓦窯（1952年，私营瓦窯转为公私合营）、酒厂、米、面、豆加工坊及裁缝等手工业。尤其是建材产品，方便乡民盖房就近购买。</p><p id="0482080e-7d30-83e2-bdcb-0190a57247b0" class="" dir="auto">解放初期，上、中、下津联合在高厨埔创办季节性的制糖寮（俗称绞寮）。</p></li></ul><ul id="7ac2080e-7d30-8224-857b-8196c638aa3d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、瓷土开采</strong><p id="4ba2080e-7d30-82ab-bf02-01806db229de" class="" dir="auto">清光绪年间（1875—1908），东津乡窟尾沟大房大有一乡绅名叫刘敏秀，是清朝秀才。他发现有枫溪人到附近山地（飞天燕矿区内）葫坟和年间扫墓时，总要从山坑沟选择被山洪冲出的“白土块”带回去，后来知道这是制瓷的“缶土”。由于制出的瓷器质优物美，引起成群结队的枫溪人到矿山挖瓷土。因当时山权是当地乡绅管辖的，所以凡运出矿山的瓷土每担收五个铜钱，归乡里公用。约二、三年后，对瓷土的需求量逐渐增加，刘敏秀便组织了乡里劳力上山采矿卖给枫溪人，由枫溪人雇挑夫从矿山运到韩江东津堤三师公码头落船，每船装420斤，收价四个银元（每个银元等于一千个铜钱）。这笔钱收入后部分付给挖矿工钱，存余归乡里办书斋等公益事业。当时附近农民在农闲时都可上山挖矿赚钱。起初的采点在石马内（今中津乡陈厨山南侧），这段由乡绅组织采矿的形式大约维持20多年。</p><p id="9982080e-7d30-83de-b756-81c66c960bc2" class="" dir="auto">1956年，采瓷场转为东津瓷矿生产合作社，1958年后，改为意溪公社瓷矿场，1977年12月，瓷矿场移交给国营潮州市飞天燕瓷土矿。</p></li></ul><ul id="7042080e-7d30-82c9-80ab-0181acdf6eba" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>三、瓷泥加工</strong><p id="d972080e-7d30-8391-bdac-8121a343edf9" class="" dir="auto">民国二十六年（1937）钟锦麟伙同海鹅头村乡绅向国民党省政府打照缚地，并合伙一名客家人开设一个“三山公司”，在海鹅头山岞顶至径后一带开采瓷土。此后，相继有四个公司模仿这种办法插手到飞天燕矿区采矿。其中下津窟尾沟乡贤刘金钱创办“联兴公司”在飞天燕山东面开采，后来“联兴公司”在廖厨埔兴建火碓（即机碓，用蒸汽机带动）加工瓷粉洗泥。</p><p id="1832080e-7d30-820a-b833-01eb1b66270d" class="" dir="auto">改革开放后，由于瓷土资源使然，村民发挥优势，先后租地创办瓷泥加工厂、瓷厂有145家，成为下津村的经济支柱。</p></li></ul><ul id="83f2080e-7d30-82c2-982e-015e988986d7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>四、下津村办工业</strong><p id="a642080e-7d30-827b-92a0-0138ca8edfcd" class="" dir="auto">1、砖瓦厂：在内长池墧。</p><p id="b562080e-7d30-8293-8c6e-0165d35b84c8" class="" dir="auto">2、灰窯：在弯堤脚。</p><p id="b142080e-7d30-8262-9d5c-81d876c30025" class="" dir="auto">3、木工场：在土地爷宫。</p><p id="b212080e-7d30-82d7-99d0-0181f719e9f4" class="" dir="auto">4、榨油车间：1964年，在新祠堂办榨油车间，榨油设备用传统的龙眼木槽，以压力归油。</p><p id="d0c2080e-7d30-8208-a4dd-01be25e92899" class="" dir="auto">5、综合加工场：1965年，建在旧厨北侧，主要是粮食加工、榨油、榨糖。</p><p id="ec32080e-7d30-83fb-8953-013f9a70f9f0" class="" dir="auto">6、瓷粉厂：在太婆坟。</p><p id="f802080e-7d30-838a-a7a0-81739d919bcc" class="" dir="auto">7、瓷厂：在亭脚山岭头窟。</p><p id="e142080e-7d30-82b9-9dea-81e4f0b37f87" class="" dir="auto">8、建筑队：在龟山。</p></li></ul><h2 id="4e02080e-7d30-8335-a4c5-819bad5359b8" style="display:inline-block" dir="auto">第四节　商业</h2><p id="81f2080e-7d30-8332-99a0-8196747a6e42" class="" dir="auto">商业是以买卖方式使商品流通的经济活动。下津地域自古以来，商业大体分为固定商店（铺面）、集市、摆摊及走乡窜里叫卖等经营方式。</p><ul id="1d22080e-7d30-8251-b178-01948214a0df" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、市场</strong><p id="3c12080e-7d30-8316-aed1-011b831a444e" class="" dir="auto">下津先民自清代始，先后有52个家族在东津堤顶兴建房屋，大部分家族将房屋作店铺从事商业活动。乡民将自产的农副产品也在堤顶摆买，久之，堂顶成为商品流通的市场。</p><p id="4652080e-7d30-822b-b262-014c3f19b1bf" class="" dir="auto">民国时期，堤顶市场的店铺有木屣、家具、布铺、米店、肉铺、鱼铺、干果铺、烟酒店、百货店、饮食店、豆干铺、打面铺、拍银铺、药铺、副食店、饼食店……。</p><p id="41c2080e-7d30-83f0-9f05-013f6d415648" class="" dir="auto">抗日战争时期，下津沖为日军敌占区，堤顶店铺生意萧条。乡民在蔡厨埔与廖厨埔集市交易，堤顶店铺也设摊档于此地，形成抗战期间的市场。</p><p id="0cd2080e-7d30-8355-8799-8180a93c47a5" class="" dir="auto">1963年，实行“三自一包”的政策后，村民在安凤公路旧厨尾路段的十字路口集市，摆买自产的农副产品，各种摊挡摆在公路两侧。夜市有狗肉摊、三鸟（鸡、鹅、鸭）熟食摊、村民三五成群围在一起，买肉喝酒。时人称该市场为“小香港”。</p><p id="8f72080e-7d30-83fe-abc3-0145f6a46449" class="" dir="auto">1978年以后，村民在安凤公路下津路段两旁兴建房屋，逐渐形成商业一条街。</p></li></ul><ul id="65a2080e-7d30-82aa-b289-01f6ac3434ce" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、集体所有制商业</strong><p id="8ec2080e-7d30-82cd-960a-0195d525cccb" class="" dir="auto">1950年以后下津堤顶设有供销社、百货门市、饮食店。</p><p id="9802080e-7d30-8297-8803-8124052c30fd" class="" dir="auto">1959年，在安凤公路三房路段设集体所有制商铺一间。</p><p id="a202080e-7d30-82e8-a54d-01952c860277" class="" dir="auto">1980年，桥东公社在安凤公路水心亭南侧十字路口建供销社，由桥东派员经营。</p><p id="9f02080e-7d30-839b-8d77-817da2dd78f4" class="" dir="auto">1980年，潮州市征用下津土地，在安凤公路瓦窯前路段兴建蔬菜公司。</p><p id="53c2080e-7d30-83ba-bf5a-01c0ee0823e5" class="" dir="auto">1986年，潮州工商局征用下津土地，在安黄公路马安山下路段兴建凤东水果市场，设工商所管理。下津村民租铺开批发行，梅州、漳州的果农寄行销售。凤东水果市场成为水果集散地，下津老人组派员收取进场费，村民在场内开饮食点，香烟摊。</p><p id="6132080e-7d30-8260-9871-81f4a87a3daa" class="" dir="auto">2017年，桥东街道办事处在虎头兴建农贸市场。尔后，村民向市场租铺面开水果批发门市。</p></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

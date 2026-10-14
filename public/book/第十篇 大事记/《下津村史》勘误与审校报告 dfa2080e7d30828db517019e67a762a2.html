@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>《下津村史》勘误与审校报告</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="dfa2080e-7d30-828d-b517-019e67a762a2" class="page sans"><header><h1 class="page-title" dir="auto">《下津村史》勘误与审校报告</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="fd12080e-7d30-8342-b015-01ba3eb76900" class="" dir="auto">本报告对《下津村史》全书十篇进行逐项审校，标注发现的文字错误、数据矛盾、史实疑点及格式问题，供编委会参考修订。</p><hr id="1762080e-7d30-83d5-8f24-812a98dad594" dir="auto"/><h2 id="be02080e-7d30-8292-a132-01395159ca95" style="display:inline-block" dir="auto">一、重大史实疑点</h2><p id="98a2080e-7d30-8282-aae9-011d9b82324f" class="" dir="auto">以下问题涉及史实准确性，建议优先核实原始资料。</p><aside class="block-color-red_background callout" data-notion-callout="" data-notion-callout-icon="🔴" data-notion-callout-background="red_background" style="white-space:pre-wrap;display:flex" id="7dc2080e-7d30-8285-9bab-01907fc6c30a" dir="ltr"><div style="font-size:1.5em"></div><div style="width:100%"><p id="2062080e-7d30-8294-8266-811e17973952" class="" dir="auto"><strong>1. 刘景官衔&quot;台湾台南知州、高雄州知州&quot;存疑（第七篇·古代人物·唐宋时期）</strong></p><p id="ce52080e-7d30-823d-8094-016cb8819815" class="" dir="auto">原文称刘景（1066–1163）&quot;历任广南路市舶，台湾台南知州，高雄州知州&quot;。</p><p id="89e2080e-7d30-8252-a8f7-01cf91aa5ea0" class="" dir="auto"><strong>问题：</strong> 刘景为宋代人物。宋代中国对台湾并无行政管辖，&quot;台南&quot;、&quot;高雄&quot;均为近现代地名（日据时代及光复后命名），宋代不存在&quot;台南知州&quot;或&quot;高雄州知州&quot;之职。第二篇中对刘景的描述为&quot;授朝请郎，曾奉诏使安南（今越南）&quot;，二者不一致。</p><p id="5e92080e-7d30-834d-9ea9-810b6a434bd2" class="" dir="auto"><strong>建议：</strong> 核查族谱原文，&quot;台南&quot;是否为<mark class="highlight-red" data-notion-highlight="red">&quot;台州&quot;</mark>之误，&quot;高雄州&quot;是否为<mark class="highlight-red" data-notion-highlight="red">&quot;南雄州&quot;</mark>之误（台州、南雄均为宋代建制）。若确系原谱记载，应加注说明存疑。</p></div></aside><aside class="block-color-red_background callout" data-notion-callout="" data-notion-callout-icon="🔴" data-notion-callout-background="red_background" style="white-space:pre-wrap;display:flex" id="1f42080e-7d30-8349-8a59-81723ab6c624" dir="ltr"><div style="font-size:1.5em"></div><div style="width:100%"><p id="e0e2080e-7d30-831f-8ebf-018951023d94" class="" dir="auto"><strong>2. 姓氏人口合计与全村人口总数严重不符（第四篇·人口结构·姓氏人口）</strong></p><p id="f892080e-7d30-83cd-b1e9-8176e006db38" class="" dir="auto">姓氏人口表21姓合计：约 <strong>1590户、6918人</strong>。</p><p id="c732080e-7d30-83d1-ada3-012460e007da" class="" dir="auto">而第一章明确记载：2018年下津村有 <strong>1818户、6035人</strong>。</p><p id="5f42080e-7d30-828a-b099-816897ef3976" class="" dir="auto"><strong>问题：</strong> 户数差228户（表少），人数差883人（表多），两组数据明显矛盾。可能原因：①姓氏人口表统计口径包含已迁出户籍的族人；②2018年数据为常住人口；③表格数据来源年份不同。</p><p id="a6f2080e-7d30-839d-8ab7-8108fa04483e" class="" dir="auto"><strong>建议：</strong> 在姓氏人口表上方注明数据来源年份和统计口径，或与2018年户籍数据对齐修正。</p></div></aside><aside class="block-color-red_background callout" data-notion-callout="" data-notion-callout-icon="🔴" data-notion-callout-background="red_background" style="white-space:pre-wrap;display:flex" id="8d92080e-7d30-8221-856b-81ddb8955e52" dir="ltr"><div style="font-size:1.5em"></div><div style="width:100%"><p id="6922080e-7d30-82ce-8501-016d2f52c3df" class="" dir="auto"><strong>3. &quot;潮安县水稻亩产甲全国&quot;表述需斟酌（第五篇·经济·平整土地）</strong></p><p id="8072080e-7d30-838a-aeff-0159e963b5f2" class="" dir="auto">原文称&quot;为潮安县水稻亩产甲全国增光添彩&quot;，并提及&quot;放卫星&quot;要求&quot;千斤水稻，万斤薯&quot;。</p><p id="17c2080e-7d30-82fc-873f-814cff2e8ad1" class="" dir="auto"><strong>问题：</strong> 该段描述的时间约为1957–1958年&quot;大跃进&quot;时期，当时各地普遍存在浮夸虚报现象。&quot;亩产甲全国&quot;的说法缺乏可靠依据，若收入正式村史，可能影响全书可信度。</p><p id="28f2080e-7d30-822e-8755-8116e0d22b76" class="" dir="auto"><strong>建议：</strong> 改为客观表述，如<mark class="highlight-red" data-notion-highlight="red">&quot;在当时全县水稻生产中名列前茅&quot;</mark>，或加注历史背景说明。</p></div></aside><hr id="9e82080e-7d30-8274-8171-81ec5a2943c7" dir="auto"/><h2 id="0c82080e-7d30-82a1-b802-812c142ab019" style="display:inline-block" dir="auto">二、年号纪年核查</h2><p id="0d72080e-7d30-82e7-b5e5-01744427b248" class="" dir="auto">经逐一对照中国历代年号纪年表，以下年号与公元纪年的对应关系 <strong>均核实正确</strong>，无误：</p><ul id="ef82080e-7d30-83e9-80fe-817d3ef203f1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">后梁贞明三年 = 917年 ✅</li></ul><ul id="eaa2080e-7d30-833e-9fee-81dc6d0fc4c1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">宋咸平四年 = 1001年 ✅</li></ul><ul id="8ad2080e-7d30-82a8-9676-81fa5ddd8ff6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">宋景祐三年 = 1036年 ✅</li></ul><ul id="d302080e-7d30-8289-8ec5-010f9eea76d1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">宋绍圣四年 = 1097年 ✅</li></ul><ul id="4182080e-7d30-825c-818d-0192f221a2e9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">宋宣和六年 = 1124年 ✅</li></ul><ul id="bbf2080e-7d30-8337-ab19-0107ea9c0fab" class="bulleted-list" dir="auto"><li style="list-style-type:disc">宋靖康元年 = 1126年 ✅</li></ul><ul id="b602080e-7d30-8329-8abd-81cfb1863094" class="bulleted-list" dir="auto"><li style="list-style-type:disc">宋淳熙五年 = 1178年 ✅</li></ul><ul id="02e2080e-7d30-82bd-8e00-81e7f8f9280b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">元皇庆二年 = 1313年 ✅</li></ul><ul id="83a2080e-7d30-8241-9bad-01263f008109" class="bulleted-list" dir="auto"><li style="list-style-type:disc">明宣德十年 = 1435年 ✅</li></ul><ul id="d5a2080e-7d30-83d3-aab1-01be135c4be6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">唐武宗会昌年间 = 841–846年 ✅</li></ul><ul id="3a42080e-7d30-830c-b4a0-0147b988028d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">清康熙三十八年 = 1699年 ✅（干支己卯亦正确）</li></ul><ul id="0672080e-7d30-834a-bd4f-81cec634e478" class="bulleted-list" dir="auto"><li style="list-style-type:disc">汉献帝建安十六年 = 公元211年 ✅</li></ul><aside class="block-color-yellow_background callout" data-notion-callout="" data-notion-callout-icon="🟡" data-notion-callout-background="yellow_background" style="white-space:pre-wrap;display:flex" id="7992080e-7d30-82e0-b202-01569805bdf7" dir="ltr"><div style="font-size:1.5em"></div><div style="width:100%"><p id="f472080e-7d30-8329-9399-819e8d986954" class="" dir="auto"><strong>&quot;迄今已历1102年&quot;的计算（前言 &amp; 第二篇）</strong></p><p id="38e2080e-7d30-837d-9659-819f76ab30a0" class="" dir="auto">自后梁贞明三年（917年）至出版年2020年，实际历时 <strong>1103年</strong>，非1102年。若以编写启动年2019年计算，则为1102年。</p><p id="b9a2080e-7d30-8338-b0f7-01ab66697bf8" class="" dir="auto"><strong>建议：</strong> 若以出版年（2020年）为准，应修正为<mark class="highlight-red" data-notion-highlight="red">&quot;1103年&quot;</mark>。建议前言和第二篇统一表述。</p></div></aside><hr id="3532080e-7d30-8223-a1db-81693e070d7b" dir="auto"/><h2 id="3672080e-7d30-83d7-9769-81595c124376" style="display:inline-block" dir="auto">三、文字错误</h2><table id="4922080e-7d30-8207-8a2a-01137258dafe" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="7b42080e-7d30-82da-aa3f-81cbec327339" dir="ltr"><th id="|Y]P" class="simple-table-header-color simple-table-header"><strong>序号</strong></th><th id="}URe" class="simple-table-header-color simple-table-header"><strong>位置</strong></th><th id="B;kF" class="simple-table-header-color simple-table-header"><strong>原文</strong></th><th id=";C:A" class="simple-table-header-color simple-table-header"><strong>应改为</strong></th><th id="fPd:" class="simple-table-header-color simple-table-header"><strong>说明</strong></th></tr></thead><tbody><tr id="3382080e-7d30-8325-937c-813e84c72249" dir="ltr"><td id="|Y]P" class="">1</td><td id="}URe" class="">第三篇·卫生站</td><td id="B;kF" class="">2019年<strong>峻</strong>工使用</td><td id=";C:A" class=""><mark class="highlight-red" data-notion-highlight="red">2019年</mark><mark class="highlight-red" data-notion-highlight="red"><strong>竣</strong></mark><mark class="highlight-red" data-notion-highlight="red">工使用</mark></td><td id="fPd:" class="">&quot;竣工&quot;为正确写法，&quot;峻&quot;为别字。全书多处出现此误。</td></tr><tr id="8ad2080e-7d30-82bd-af74-81f13d4a8a4b" dir="ltr"><td id="|Y]P" class="">2</td><td id="}URe" class="">第三篇·村址建设</td><td id="B;kF" class="">1986年<strong>峻</strong>工</td><td id=";C:A" class=""><mark class="highlight-red" data-notion-highlight="red">1986年</mark><mark class="highlight-red" data-notion-highlight="red"><strong>竣</strong></mark><mark class="highlight-red" data-notion-highlight="red">工</mark></td><td id="fPd:" class="">同上</td></tr><tr id="78c2080e-7d30-82c4-9f13-811e377d6921" dir="ltr"><td id="|Y]P" class="">3</td><td id="}URe" class="">第八篇·我任公祠</td><td id="B;kF" class="">2020年1月15日<strong>新</strong>。</td><td id=";C:A" class=""><mark class="highlight-red" data-notion-highlight="red">2020年1月15日</mark><mark class="highlight-red" data-notion-highlight="red"><strong>新落成</strong></mark><mark class="highlight-red" data-notion-highlight="red">。</mark></td><td id="fPd:" class="">句子不完整，疑脱字。</td></tr><tr id="95c2080e-7d30-83a4-a1d7-81c3adccea84" dir="ltr"><td id="|Y]P" class="">4</td><td id="}URe" class="">第八篇·我任公祠</td><td id="B;kF" class="">「湮滥」意思是原本清楚的東西……</td><td id=";C:A" class=""><mark class="highlight-red" data-notion-highlight="red">（应删除或移至注释）</mark></td><td id="fPd:" class="">此段为编辑注释，非正文内容，且使用繁体字，与全书体例不符。</td></tr><tr id="1442080e-7d30-826c-8621-01c22b4cd5d0" dir="ltr"><td id="|Y]P" class="">5</td><td id="}URe" class="">第八篇·游神赛会</td><td id="B;kF" class="">&quot;叛景&quot;（化妆）队</td><td id=";C:A" class=""><mark class="highlight-red" data-notion-highlight="red">&quot;扮景&quot;（化妆）队</mark></td><td id="fPd:" class="">&quot;扮景&quot;为潮州方言正字，&quot;叛&quot;疑为录入错误。</td></tr></tbody></table><hr id="6102080e-7d30-8296-a7c7-016cb6a5034a" dir="auto"/><h2 id="e932080e-7d30-8334-9210-01b234a19824" style="display:inline-block" dir="auto">四、数据矛盾与不一致</h2><table id="9182080e-7d30-82d2-a619-8155fc7945e1" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="1972080e-7d30-828f-94a3-8188381c809e" dir="ltr"><th id="d?]}" class="simple-table-header-color simple-table-header"><strong>序号</strong></th><th id="=UWG" class="simple-table-header-color simple-table-header"><strong>位置</strong></th><th id="TrPL" class="simple-table-header-color simple-table-header"><strong>矛盾内容</strong></th><th id="wnsV" class="simple-table-header-color simple-table-header"><strong>建议处理</strong></th></tr></thead><tbody><tr id="7352080e-7d30-8280-9ef9-81df8f501dee" dir="ltr"><td id="d?]}" class="">1</td><td id="=UWG" class="">第一篇 vs 第三节</td><td id="TrPL" class="">山地面积：第一篇称&quot;约2.6平方公里&quot;（合3900亩），第三节2018年现状称&quot;山地面积1455亩&quot;</td><td id="wnsV" class="">两者可能因年代和征地导致减少，建议加注说明差异原因。</td></tr><tr id="6132080e-7d30-8343-a51b-0177d5599f49" dir="ltr"><td id="d?]}" class="">2</td><td id="=UWG" class="">第四篇</td><td id="TrPL" class="">自然村人口表仅列7个村落（表数据不全），但正文提及下津有14个自然村</td><td id="wnsV" class="">补全缺失的7个自然村数据，或注明&quot;部分数据待补&quot;。</td></tr><tr id="2762080e-7d30-82cb-a63f-81e4f0997b95" dir="ltr"><td id="d?]}" class="">3</td><td id="=UWG" class="">第二篇 vs 第七篇</td><td id="TrPL" class="">刘景：第二篇称&quot;奉诏使安南，因和戎有功&quot;；第七篇称&quot;台湾台南知州，高雄州知州&quot;</td><td id="wnsV" class="">两处描述不一致，且第七篇内容有史实疑问（见第一部分），需统一。</td></tr><tr id="1092080e-7d30-8305-89ed-01743e0e5684" dir="ltr"><td id="d?]}" class="">4</td><td id="=UWG" class="">第四篇·海外侨胞</td><td id="TrPL" class="">出国209户+港台澳38户=247户，传衍约2300余人；迁国内183户约1500余人；海南119人。合计约4000余人外迁，但未与全村人口总数交叉验证。</td><td id="wnsV" class="">建议增加迁出人口与在村人口的总量对照说明。</td></tr></tbody></table><hr id="c372080e-7d30-82af-84df-81d6f4bee847" dir="auto"/><h2 id="e8c2080e-7d30-823a-a226-81f65ba384e1" style="display:inline-block" dir="auto">五、内容缺漏</h2><hr id="36a2080e-7d30-82a9-b854-012eff196c5e" dir="auto"/><table id="0f52080e-7d30-8240-aee3-81c2f805f07f" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="c242080e-7d30-8358-a45f-81483d79e67e" dir="ltr"><th id="czkM" class="simple-table-header-color simple-table-header"><strong>序号</strong></th><th id="^qBI" class="simple-table-header-color simple-table-header"><strong>位置</strong></th><th id="gwiD" class="simple-table-header-color simple-table-header"><strong>缺漏说明</strong></th></tr></thead><tbody><tr id="90a2080e-7d30-83fb-a5f3-014b5a9df0d0" dir="ltr"><td id="czkM" class="">1</td><td id="^qBI" class="">第九篇·教育</td><td id="gwiD" class="">第一至四章（私塾教育、小学教育、民办教育、初中教育）内容缺失，页面仅从第五章&quot;幼儿教育&quot;开始，注明&quot;缺第205页内容&quot;。</td></tr><tr id="17b2080e-7d30-8256-a3c8-81a872c327a0" dir="ltr"><td id="czkM" class="">2</td><td id="^qBI" class="">第四篇·自然村人口</td><td id="gwiD" class="">14个自然村中仅列7个村落数据，其余待补。表中序号也不连续（仅有二、四、六、八、十、十二、十四）。</td></tr><tr id="60b2080e-7d30-83af-b8d1-815c06abee27" dir="ltr"><td id="czkM" class="">3</td><td id="^qBI" class="">第八篇·民居对联选介</td><td id="gwiD" class="">注明&quot;原表较长，已按原文顺序录入，保留后续再整理&quot;，内容实际为空。</td></tr><tr id="d8b2080e-7d30-8242-b018-81086da9ae47" dir="ltr"><td id="czkM" class="">4</td><td id="^qBI" class="">第八篇·诗词、文章选登</td><td id="gwiD" class="">均注明&quot;篇幅较长，后续可再拆分条目&quot;，实际内容未录入。</td></tr><tr id="e2a2080e-7d30-8200-a618-01de1ebd47f5" dir="ltr"><td id="czkM" class="">5</td><td id="^qBI" class="">第三篇·老年人活动中心</td><td id="gwiD" class="">注明&quot;赞助建楼乡贤芳名榜，后续可按照片逐条补齐&quot;，实际未列出。</td></tr><tr id="97d2080e-7d30-8222-98c6-01c4c6ec2ad6" dir="ltr"><td id="czkM" class="">6</td><td id="^qBI" class="">第九篇·下津学校碑记(二)</td><td id="gwiD" class="">&quot;因学校改建，捐资芳名榜资料部分失传&quot;，仅列2人。</td></tr></tbody></table><h2 id="a742080e-7d30-839e-abe3-81fa3e5f2e09" style="display:inline-block" dir="auto">六、已核实正确的重要史实</h2><p id="0e92080e-7d30-839c-976d-01ea40e73dca" class="" dir="auto">为确保村史可信度，以下关键内容经查证 <strong>确认无误</strong>：</p><ul id="1da2080e-7d30-834a-acb1-01f6bd19d3c3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">✅ 刘允为&quot;潮州八贤&quot;之一，绍圣四年（1097）进士——与《潮州府志》及多部地方史料一致。</li></ul><ul id="9352080e-7d30-8324-8108-01c0d9465449" class="bulleted-list" dir="auto"><li style="list-style-type:disc">✅ 刘昉编撰《幼幼新书》40卷，宣和六年（1124）进士，官至龙图阁学士——与《宋史》等文献吻合。</li></ul><ul id="1d12080e-7d30-839c-b4ed-016fd9eadaa1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">✅ 明宣德十年（1435）潮州知府王源主持修筑四厢堤防——与《广济桥志》等记载一致。</li></ul><ul id="3e62080e-7d30-8313-a040-81763fcb281f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">✅ 刘嵩家族墓2015年12月10日列为广东省文物保护单位——可查证。</li></ul><ul id="7bd2080e-7d30-827c-9475-01ba49df87aa" class="bulleted-list" dir="auto"><li style="list-style-type:disc">✅ 刘备建安十六年（公元211年）率师入川——与《三国志》记载一致。</li></ul><ul id="a2d2080e-7d30-8335-a81d-01c4c2a9aa56" class="bulleted-list" dir="auto"><li style="list-style-type:disc">✅ 唐武宗会昌年间（841–846）——年号对应正确。</li></ul><ul id="c162080e-7d30-8371-ae80-815c64e1100d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">✅ 清康熙三十八年（1699）己卯科——年份与干支均正确。</li></ul><hr id="3352080e-7d30-8290-b5a1-0199170a7528" dir="auto"/><h2 id="3732080e-7d30-821c-9208-010618afb505" style="display:inline-block" dir="auto">七、体例与格式建议</h2><ol type="1" id="8b72080e-7d30-827a-8e99-81a5b7515322" class="numbered-list" start="1" dir="auto"><li><strong>&quot;峻工&quot;应统一改为&quot;竣工&quot;</strong>——全书至少出现3处，建议全局替换。</li></ol><ol type="1" id="67d2080e-7d30-82d0-8122-81175bda4aa3" class="numbered-list" start="2" dir="auto"><li><strong>各表格应注明数据年份</strong>——姓氏人口表、自然村人口表等均未标明统计年份，易引起与正文数据的混淆。</li></ol><ol type="1" id="8492080e-7d30-830d-b212-817f8e28b3ce" class="numbered-list" start="3" dir="auto"><li><strong>人物篇生卒年格式不统一</strong>——部分用括号&quot;（1066–1163）&quot;，部分不注。建议统一格式。</li></ol><ol type="1" id="3e12080e-7d30-838c-8c5e-8175f459eb62" class="numbered-list" start="4" dir="auto"><li><strong>编辑性注释应与正文区分</strong>——如&quot;湮滥&quot;释义、&quot;原书第86页表头将&#x27;村落&#x27;误印为&#x27;姓氏&#x27;&quot;等注释，建议用脚注或方括号标注，避免混入正文。</li></ol><ol type="1" id="30f2080e-7d30-83ee-9c9f-010ed967a5fc" class="numbered-list" start="5" dir="auto"><li><strong>目录页码</strong>——目录中的页码参照原书纸质版，在电子版中已无实际指引作用，可考虑改为超链接。</li></ol></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

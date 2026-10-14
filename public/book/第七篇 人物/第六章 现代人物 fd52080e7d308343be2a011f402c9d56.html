@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第六章　现代人物</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="fd52080e-7d30-8343-be2a-011f402c9d56" class="page sans"><header><h1 class="page-title" dir="auto">第六章　现代人物</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h2 id="8b62080e-7d30-8205-a799-018a7c21e811" style="display:inline-block" dir="auto">第一节　土改干部</h2><ul id="4b62080e-7d30-82f1-8ebc-01b9a8806faa" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘大嗳：</strong> 字世居（1921–2000），1950年参加土改工作，曾任东津一村农会副主席，下津乡副乡长，中共下津乡党支部书记，东津乡党总支书记，意溪水利所所长，中共意溪镇（公社）党委常委、副书记。1986年获国家水利电力部&quot;献身水利、水保事业35年&quot;荣誉证书和纪念章一枚。</li></ul><ul id="9e02080e-7d30-8279-aa0a-01c280856018" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘世美：</strong> 1931年生，1950年参加土改工作，1953年始率先创办互助组、初级社，成为意溪区农业走集体化道路的知名人物。曾任下津乡乡长、前进高级社主任、中共下津前进社党支部书记、东津乡党总支副书记、西都乡党支部书记、意溪镇副镇长、意溪公社副社长。1964年任汕头地区农业局老农顾问，1992年始任下津老人组组长。1955年评为省级劳动模范，1956年2月出席广东省第一届劳动模范代表大会。1995年业绩荣登《当代民间名人大辞典》，2017年获广东省颁发60年党龄银章一枚。</li></ul><ul id="9ba2080e-7d30-8391-80aa-813ea6426964" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘宏贞：</strong> 1950年参加土改工作，先后在意溪、文祠、城西任公社社长。</li></ul><ul id="ff22080e-7d30-836a-8121-019734d4ddaf" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘文真：</strong> 1950年参加土改工作，曾任文祠镇党委书记、潮安县医院院长，红山疗养所所长。</li></ul><ul id="9342080e-7d30-8223-a0e2-81a47e121c82" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖淑兰：</strong> 1950年参加土改工作，派往厦寺学习并加入中共党员，1952年任中共下津乡党支部委员。后随夫徐凤翔（土改工作队队长，下津党支部创建人）调紫金县工作，任紫金县供销总社主任，正科级退休。</li></ul><ul id="d252080e-7d30-82b1-b534-019c1caf7da3" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘俊辉：</strong> （1934—？），1950年参加土改工作，1953年任下津乡青年团书记。曾任中共意溪公社组织委员、古巷公社社长、潮州市飞天燕瓷土矿副矿长、桥东街道办事处副主任。</li></ul><ul id="2a22080e-7d30-83aa-a29b-81d634f1b37b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘绍亮：</strong> 1950年参加土改工作，累职潮州市工商局副局长。</li></ul><ul id="de62080e-7d30-8319-b854-01b2cc3d59d1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘宗平：</strong> （1930—2008），1950年参加土改工作，曾任意溪派出所所长，潮安县公安局副局长，中共意溪公社党委书记，潮安县人民法院院长、潮安县人民检察院副检察长、中共潮安县纪检副书记、中共潮州市政法委副书记。</li></ul><ul id="d9c2080e-7d30-8326-a5ed-01e3bbab20ed" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘利成：</strong> 1929年生，1949年11月参加筹建东津乡农会工作。曾任东津乡农会副主席、东津乡民兵队长，潮安县政府办公室主任，累职广东省建设银行潮州分行行长（正处级）。</li></ul><ul id="fb42080e-7d30-8332-90d2-81ecb705d090" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德创：</strong> 1950年任东津乡农会主席。</li></ul><ul id="ac12080e-7d30-8298-9127-819c421493a4" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕湖：</strong> 1950年任东津乡农会文书。</li></ul><ul id="f022080e-7d30-83e1-864a-812c668a34c3" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>康国龙：</strong> 1950年任东津乡一村农会主席，参加土改工作，派往厦寺学习并加入中共党员。1952年10月，选任中共下津乡党支部第一任书记兼下津乡农会主席。</li></ul><ul id="5ff2080e-7d30-83ee-bdf0-0114a3045813" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘金坤：</strong> 1952年下津乡首任农会主席，1953年调意溪供销社工作，曾任枫溪供销社副主任。</li></ul><h2 id="e452080e-7d30-8255-a1e1-8146454a3551" style="display:inline-block" dir="auto">第二节　党政干部</h2><ul id="e002080e-7d30-826c-bf63-01ad418603d6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘泽鹏：</strong> 现任潮州市纪委监委四级调研员。</li></ul><ul id="77e2080e-7d30-82c1-aa65-014333b0db2a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德生：</strong> 深圳市政府办公室主任，副厅级。</li></ul><ul id="19a2080e-7d30-8353-abff-017bc9929b9a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德畅：</strong> 1990年任汕头龙湖经济特区政协委员。</li></ul><ul id="83b2080e-7d30-838c-9924-819786d318c5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘锦城：</strong> 中共汕头市金平区纪委副书记。</li></ul><ul id="4712080e-7d30-8239-82c2-0102fbfbead3" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘加悦：</strong> 广州市番禺区公安分局刑侦大队大队长。</li></ul><ul id="9ed2080e-7d30-83f4-bc21-81f727cd60f6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘宏弟：</strong> 潮州市广播电视台媒体技术中心负责人。</li></ul><ul id="9182080e-7d30-835b-ad74-818616f35c16" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘兆熊：</strong> 曾任广东省水利厅处级干部。</li></ul><ul id="f952080e-7d30-8358-a5b3-01533ee01a90" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘玉波：</strong> 字应祥，1930年生，1953年毕业于武昌大学。分配辽宁省辽阳兵工厂工作，任技术员、助理工程师、工程师，转业任韶关钢铁厂总工程师，后调深圳市任职，副市级退休。</li></ul><ul id="6af2080e-7d30-8205-a192-014a722d33b0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘佳柱：</strong> 1987年生，广东财经大学毕业，法律硕士，现任潮州市人民检察院第一检察部检察官。</li></ul><ul id="0162080e-7d30-82bb-b564-812789dd9d0b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘泽龙：</strong> 现任潮州市公安局政治处科长。</li></ul><ul id="c072080e-7d30-835c-a0da-81dd0c4dfb30" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘湘怀：</strong> 韩山师范学校毕业生，曾任潮安五中教师，先后在惠州、广州、东莞海关工作，现任东莞海关关长。</li></ul><ul id="fde2080e-7d30-82b6-82cb-8167ffb4dbf5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德钦：</strong> 毕业于金山中学，曾任饶平钱东镇卫生院院长、钱东镇镇长。</li></ul><ul id="24b2080e-7d30-82f4-a899-810b1326901a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘进祥：</strong> 潮州市侨联主任。</li></ul><ul id="0692080e-7d30-83f8-a320-816db593e421" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘阳平：</strong> 潮安国税局副局长。</li></ul><ul id="a122080e-7d30-82d7-a550-015cd00e02f3" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘浩然：</strong> 潮州市文广新局训练科科长，潮州市政协委员，广东省跆拳道教练委员会委员，荣获全国群众体育先进个人。</li></ul><ul id="1022080e-7d30-82bd-83d7-01e3a2fe049b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖秀珍：</strong> 1964年，获汕头地区女民兵射击比赛第一名，选入广东省军区任职，转业后任广州市委招待所后勤科科长，正科级退休。</li></ul><ul id="8e02080e-7d30-835a-a06d-81612b3d1960" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>姚丽雅：</strong> 硕士研究生，现任深圳市宝安区投资推广署项目部部长（正科级）。</li></ul><ul id="d1d2080e-7d30-828e-adca-81ed05b8a75f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘斯汉：</strong> 广州市黄埔海关科长。</li></ul><ul id="0a92080e-7d30-83ad-a6d9-01e5c7ee65c7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘棠：</strong> 潮州市政府副科长。</li></ul><ul id="cc42080e-7d30-826e-9f1b-01df0278de7a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘世勇：</strong> 湘桥国土局副局长。</li></ul><ul id="42f2080e-7d30-82a7-a112-815e62ba2a63" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘培钊：</strong> 现任潮州市公安局情报科科长。</li></ul><ul id="6b02080e-7d30-826c-91a6-8189968143f5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘少明：</strong> 曾用名少银，1973年生，1995年毕业于华南理工大学，公共管理研究生、硕士学位。曾任深圳市宝安环保局监察组长、中共宝安区组织部科长。参与组建龙华工作，任中共龙华组织部科长、副处长、龙华区机关事务局局长、党组书记。现任龙华国资局局长、党组书记（正处）。</li></ul><ul id="8d92080e-7d30-82f1-8bdf-013c02fa70fb" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖声钦：</strong> 曾任汕头港务局港务监督科科长。</li></ul><ul id="cf42080e-7d30-824e-b7e8-81bbf8cc3369" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘世涛：</strong> 现任潮州市水利局科长。</li></ul><ul id="a0b2080e-7d30-835a-afd3-819584895449" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖泽华：</strong> 中山大学毕业，曾任惠来县人民法院法官，现任揭阳市中级人民法院高级法官。</li></ul><ul id="3372080e-7d30-8290-9039-01fbfd8eb069" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀洲：</strong> 曾任桥东粮站站长。</li></ul><ul id="14e2080e-7d30-82e7-9ee6-017124cc115b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘春仁：</strong> （1924—1991），曾任下津乡建英初级社主任，中共下津大队党支部委员，桥东交通站站长。</li></ul><ul id="60c2080e-7d30-830d-b918-0105e2a23599" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘俊钦：</strong> 曾任下津大队第八生产队队长，下津大队治安主任、中共下津村党支部副书记，桥东畜牧防疫站站长。</li></ul><ul id="41d2080e-7d30-8332-bf24-01ad6fb6f7b8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘俊强：</strong> 1964年生，2002年任下津村党支部书记、村委会主任，2013年任下津村党委书记、村委主任，现任桥东街道办事处三旧改造办公室副主任。</li></ul><ul id="25d2080e-7d30-8373-a4e9-81cf0074330c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕艺：</strong> 潮州市市场监督管理局湘桥分局基层党委委员、二级主任科员。</li></ul><ul id="f532080e-7d30-82f3-ab4f-81760feebb96" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘启光：</strong> 桥东街道事业干部。</li></ul><ul id="fa02080e-7d30-8263-9320-01f24cccfa16" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘芷森：</strong> 曾任桥东农科站站长。</li></ul><ul id="3bc2080e-7d30-836c-b30d-81d5f983db98" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘芷林：</strong> 曾任桥东涸溪粮站站长。</li></ul><ul id="b7c2080e-7d30-8346-bad7-81db9eb750cf" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘汉玉：</strong> 曾任意溪供销社生产资料组组长。</li></ul><ul id="0d62080e-7d30-8233-a609-016cdac8b4ae" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘世权：</strong> 曾任彩塘供销社采购站站长。</li></ul><ul id="93a2080e-7d30-8203-b729-81e862909915" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘森耘：</strong> 曾任潮州市粮食局干部。</li></ul><ul id="0732080e-7d30-83b6-942d-818e5f989b97" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘俊忠：</strong> 1954年生，1976年任下津大队出纳，1980年任大队委员，1986年任党支部委员，1994年任党支部副书记、村委副主任，同年7月至2001年底任党支部书记、村委会主任。2002年起任桥东广播站党支部书记兼站长至退休。潮州市第十一届人大代表，广东省第九届人大代表。</li></ul><ul id="5a32080e-7d30-8239-b3bc-01b78bf19891" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘宗伟：</strong> 曾任桥东街道环管站站长。</li></ul><ul id="77c2080e-7d30-8247-9857-017e7df6ff46" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>黄芷孝：</strong> 曾任下津村党支部副书记，桥东街道人力资源站站长。</li></ul><ul id="b582080e-7d30-832c-88d9-8182e6859caa" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘泽浩：</strong> 文祠交警中队副中队长。</li></ul><ul id="66c2080e-7d30-8322-a562-813c889a3bf1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>张建生：</strong> 潮州市公安局警犬教导队队长。</li></ul><ul id="dd32080e-7d30-83e6-a60c-812ab5f012be" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕舜：</strong> 1983年生，北京人民公安大学毕业，现任东莞市监狱第七分监区区长（正科）。</li></ul><ul id="d342080e-7d30-8241-a1e3-019fc22aa441" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘俊楠：</strong> 潮州市公安局科员。</li></ul><ul id="2ca2080e-7d30-82eb-a600-0157faf6a25a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕楷：</strong> 潮州市公安局枫溪分局科员。</li></ul><ul id="61d2080e-7d30-836f-8c08-8180f6ed8c0d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘钦炎：</strong> 潮州市人民检察院科员。</li></ul><ul id="3052080e-7d30-82fa-8c7d-810829ad4044" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘云城：</strong> 广州市公安局芳村派出所中队长。</li></ul><ul id="2b82080e-7d30-8380-a448-81e057055dd6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘亮鹤：</strong> 潮州市交警支队副主任科员。</li></ul><h2 id="a002080e-7d30-827d-b3a8-81e471665f81" style="display:inline-block" dir="auto">第三节　军转干部</h2><ul id="c0e2080e-7d30-8251-855c-8149194388fa" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德楷：</strong> （1943–2016），1960年应征入伍，在中国人民解放军海军湛江部队服役，任防化连连长，累职副营长，转业后任潮州市粮食汽车队党支部书记。</li></ul><ul id="c0f2080e-7d30-82bc-9b94-81b7e09e9d1e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德卿：</strong> 1965年应征入伍，在中国人民解放军空军某部服役，累职副营级机械技师，转业后任飞天燕瓷土矿生产负责人，纸浆涂料厂生产科长。</li></ul><ul id="0bb2080e-7d30-825d-924c-813638cdc158" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘振雄：</strong> 应征入伍，累职潮州市消防局某中队指导员，现任湘桥区人民法院公务员。</li></ul><ul id="a1f2080e-7d30-82cd-a35b-01050a395b04" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕全：</strong> （1934—？），潮安一中毕业，1953年应征入伍，1955年获少尉军衔，累职副团级。1978年转业，任广东医药公司储运部经理，正处级退休。</li></ul><ul id="1d62080e-7d30-8205-b5a3-81e0ff7b4e59" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕泰：</strong> 1950年生，1968年应征入伍，在中国人民解放军某部服役，累职团司令部参谋。转业后历任潮安县（区）官塘镇镇长，中共官塘镇党委书记，潮安经济开发区副主任，潮州市交委工会主席，正处级退休。</li></ul><ul id="3912080e-7d30-820a-8b89-81d49e6bea81" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕锦：</strong> 1937年生，1956年应征入伍，在中国人民解放军空军部队服役，累职某部副营长，转业后任湖北省武汉市机床厂保卫科长。</li></ul><ul id="43c2080e-7d30-82de-8537-015790d623a8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘成海：</strong> 1929年生，应征参加中国人民解放军，参加东山岛战役，累职团长，转业后在云南工作，任云南省驻广州办事处党委书记。</li></ul><ul id="5c12080e-7d30-82ce-bbee-818aaf0e3abe" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘锡强：</strong> 1946年生，1965年应征入伍，在中国人民解放军空军部队服役，累职营长，转业后历任潮州市粘胶厂副厂长、潮州市纸浆厂厂长。</li></ul><ul id="9ee2080e-7d30-828c-b70d-81cd34923e43" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德波：</strong> 应征入伍，清华大学毕业，累职营长，转业后任湘桥区质监站站长，高级工程师。</li></ul><ul id="b5f2080e-7d30-82dc-bc7e-8190424822ee" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘汉贞：</strong> （1935–2003），1956年应征入伍在福建军区某部服役，累职副营长。转业后曾任潮安中医院院长、中共潮安县意溪公社党委组织部部长，潮州市飞天燕瓷土矿保卫科科长。</li></ul><ul id="81d2080e-7d30-83f4-90be-8172976b24c5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德森：</strong> 1942年生，1965年应征入伍，在空军部队成都飞机厂服役，累职机械工程师、副师级总工程师，奉命援外赴巴基斯坦工作。</li></ul><ul id="fbe2080e-7d30-83aa-bb4b-818562bda259" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕生：</strong> 1945年生，1963年应征入伍，先后在海军驻青岛、牛田洋部队服役，累职雷达站站长（副营级），转业后任潮州市人民政府保密员。</li></ul><ul id="3d32080e-7d30-8296-9442-01ab9e6e967a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘焕臣：</strong> 1925年生，1950年由广州市军管会派任广州市饮食服务公司总经理。</li></ul><ul id="5622080e-7d30-82ed-b7f3-81fd516573b2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘焕明：</strong> 1936年生，1955年应征入伍，任郑州军校教员，转业后在广东省肇庆专署财办工作，累职肇庆市技术监督局局长。</li></ul><ul id="05b2080e-7d30-8234-9dd1-01ebc1d1296f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘维明：</strong> 1944年生，1965年应征入伍，在空军航空部服役，累职空军41师修理厂厂长（正营级）、机械师，1984年转业，任潮州糖厂行政股股长。</li></ul><ul id="7bc2080e-7d30-82ee-a604-8198a014fe56" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘若岩：</strong> 青年时期应征入伍，在中国人民解放军海军服役，累职海南某部副营级机械师，转业任潮州市造漆厂厂委。</li></ul><ul id="0912080e-7d30-8239-9774-01e3604e34ed" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘世泉：</strong> 1930年生，韩山师范学校毕业后参加志愿军，累职某部正团级。</li></ul><ul id="bbd2080e-7d30-82f1-8022-8112163718ef" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘金旺：</strong> 湘桥区分司巷派出所指导员，湘桥区公安局治安股股长，正科级退休。</li></ul><ul id="27e2080e-7d30-82c9-bc3d-811f6942f69d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>陈建平：</strong> 1957年生，1975年高中毕业于意溪中学。1976年应征入伍在中国人民解放军89211部队后勤部汽车营三连服役，1978年荣记&quot;三等功&quot;被评为&quot;学习雷锋积极分子&quot;，1979年任副班长。1980年3月加入中国共产党。1981年3月至2017年8月，经潮州市民政局安置到潮州市工商行政管理局工作，期间1992年8月在潮州市经考试和考核合格，被录用为国家干部。1995年先后提任市工商局经济检查大队副队长（副科级）、副科长、枫溪分局副局长、主任（正科级），退休。</li></ul><ul id="b362080e-7d30-82b7-bcbb-01265f0fa580" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>黄歆明：</strong> 1948年生，1968年应征入伍，在牛田洋部队服役，累职营长，转业任潮州市农业银行科长。</li></ul><ul id="e302080e-7d30-83eb-a92d-812d31eae3ab" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德操：</strong> 应征入伍，累职连长，转业后任潮安县氨水厂干部。</li></ul><ul id="89f2080e-7d30-82d9-9866-81f5789f663b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘财河：</strong> 应征入伍，累职连长，转业后在江西省工作。</li></ul><ul id="2ea2080e-7d30-83af-bbb8-816baf70aa76" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘国梅：</strong> 应征入伍，累职排长，转业后任潮安县锻压厂厂长。</li></ul><ul id="d582080e-7d30-83d4-9dda-01ce445a6b5f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘楚彬：</strong> 应征入伍，转业后在潮州市人民医院任总务。</li></ul><ul id="d7f2080e-7d30-8259-945e-818ef662a9b1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘楚州：</strong> 应征入伍，转业后任意溪镇东郊小学校长。</li></ul><ul id="7802080e-7d30-827d-a0a4-8100d7fdae51" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘俊明：</strong> 湘桥区劳动局副局长。</li></ul><ul id="bc72080e-7d30-8397-9d73-01ba44ddd793" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘彬：</strong> 潮州市药品监督所科级退休。</li></ul><ul id="e842080e-7d30-8301-bece-815effed83fa" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀湘：</strong> 潮州市教育局副局长。</li></ul><h2 id="b4e2080e-7d30-83ee-9ddb-81271d7a9793" style="display:inline-block" dir="auto">第四节　企业干部</h2><ul id="3ec2080e-7d30-8370-8f72-01f9437caad4" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘洪：</strong> 广州雅西达公司总经理。</li></ul><ul id="43c2080e-7d30-8309-b935-81c26583b1a6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘世全：</strong> 1938年生。1958年赴广州在广东省航运公司当学徒，累职广东粤丰公司总经理。</li></ul><ul id="5732080e-7d30-82ca-a5d8-8196de185098" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘孟熊：</strong> 曾任韶关机械厂高级工程师，处级干部。</li></ul><ul id="c862080e-7d30-82b0-a8dd-01c5401a4561" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘勇铭：</strong> 韶关电力厂工程师。</li></ul><ul id="7642080e-7d30-83d2-84e8-01f2151f4d29" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘怀忠：</strong> 1968年生，现任广东商业外贸出口基地总经理。</li></ul><ul id="fa92080e-7d30-824e-85de-01fe9351518c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘英江：</strong> 山西钢铁厂工程师。</li></ul><ul id="d9c2080e-7d30-8295-a01a-81c0689108d7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕信：</strong> 福建三明任总工程师。</li></ul><ul id="f2a2080e-7d30-8245-9783-01608da7f4f3" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘世培：</strong> 1953年支援海南建设，累职中……（注：原文中断）</li></ul><ul id="b9a2080e-7d30-82bb-8951-0197525c5df9" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘世让：</strong> 1953年支援海南建设，累职海南省……部书记、直属单位党总支部书记（正科级）。（注：原文有断行）</li></ul><ul id="18c2080e-7d30-8295-a738-01a09d2bef87" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖令焕：</strong> 1947年生，1966年支边海南，1987年毕业于广东农垦管理干部学院。大专文化，中共党员，1994年获高级经济师职称。曾任海南省国营红田农场经管科长至场长助理，正处企业副职退休。在报刊发表经济论文四篇及谱牒论文三篇，1997年至2020年，主编谱牒书刊15部。业绩登《海南省高级专业技术人才名录》《中国专家大辞典》《中华百家姓氏通鉴》等书。</li></ul><ul id="4aa2080e-7d30-8212-81ae-013f613add63" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘宏阳：</strong> （1905—1983）曾任潮州市国营塑料厂工会主席。</li></ul><ul id="5ea2080e-7d30-830b-a92a-015d014c5841" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀家：</strong> 中国石油天然气总公司生产处处长，1994年退休，定居北京。</li></ul><ul id="7122080e-7d30-832e-aa3f-81a9049eb1b8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀邦：</strong> 曾任广东省第四建筑公司生产科长，定居广州。</li></ul><ul id="56f2080e-7d30-83d0-a47c-81b192916fbe" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀潮：</strong> 河南省洛阳市石油公司工程师，定居洛阳。</li></ul><ul id="ecb2080e-7d30-82f2-96c0-8110d24884df" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀真：</strong> 高级工程师，广州市地质勘察基本林工程总公司三水分公司总工程师，退休后定居佛山市三水区。</li></ul><ul id="2b82080e-7d30-83b3-a23d-814b94ce9398" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀乐：</strong> 中国石油天然气总公司第七建设公司物资供应站正处级主任，经济师，定居山东青岛。</li></ul><ul id="9f22080e-7d30-83c2-84dc-01a899814648" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖源成：</strong> 乳名什菜（1921–1995），1952年始任潮安县总工会干事，1955年调任潮州抽纱公司管理生产经理，1958年任该公司经理。1959年，他领导38名抽纱能手，奋战55天，采用72种绣制手艺，创作大型潮绣作品《百花齐放》，以及用麻布制作《大跃进》壁挂，领队携往北京向建国十周年庆祝大典献礼。市（县级市）副局级退休。</li></ul><ul id="bf72080e-7d30-8274-918b-013fc639350c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘明光：</strong> 1962年生，天津航空学院毕业，曾任中南民航后勤处处长，现任南方民航公司研究处处长。</li></ul><ul id="d562080e-7d30-8283-8e90-01e0865f365c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘旭波：</strong> 潮州市房地产交易所所长（正科级）。</li></ul><ul id="bb72080e-7d30-83ac-b7ea-81a891f0020e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德远：</strong> 现任科技部星火集团法人代表。</li></ul><ul id="bab2080e-7d30-8250-a8ab-0119e6f7eff1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀香：</strong> 毕业于美国芝加哥大学，获建筑设计硕士学位，任总工程师，定居美国。</li></ul><ul id="24c2080e-7d30-83b9-8222-8179a14bfa22" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘喜钦：</strong> 曾任下津乡治安委员会副主任，意溪公社瓷矿场副场长。</li></ul><ul id="a312080e-7d30-8379-b55f-01eb856cbe4a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘群：</strong> 中共广州黄埔电机厂党支部书记。</li></ul><ul id="bd72080e-7d30-8394-bf0b-81878989d75f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘俊良：</strong> 桥东建筑公司经理，湘桥区第五届政协委员、人大代表。</li></ul><ul id="0092080e-7d30-83ee-945e-81f69fcbd097" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘忠伟：</strong> 建筑工程师。</li></ul><ul id="e222080e-7d30-8234-b1b8-818a5491b8c5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德林：</strong> 1942年生，1962年任下津大队共青团支部书记，曾任下津大队革委会副主任，党支部副书记、桥东建筑党支部书记，助理经济师。</li></ul><ul id="1292080e-7d30-83ca-a411-01e362a269ff" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘海桂：</strong> （1917–1996），曾任中共东津瓷矿场党支部书记，中共意溪造纸厂党支部书记、厂长。</li></ul><ul id="8b82080e-7d30-8287-8412-8104ac1bfb7c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘俊复：</strong> 1955年生，1996年至1998年任中共潮州市车船修造厂党支部书记、厂长。</li></ul><ul id="3ce2080e-7d30-834d-9075-01904931bb30" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖小雏：</strong> 湘桥保险公司经理。</li></ul><ul id="9b82080e-7d30-837e-b952-814254f157bc" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀南：</strong> 潮州市糖厂生产经理。</li></ul><ul id="b6f2080e-7d30-82cf-811e-819dea83def6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘锡全：</strong> 香港远洋运输有限公司、中远海运船员有限公司深圳分公司远洋船船长。</li></ul><ul id="c652080e-7d30-822e-9fa5-01e6f40638d4" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>张海坤：</strong> 曾任意溪供电所所长。</li></ul><ul id="94b2080e-7d30-82c5-8e27-81a423365424" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘永秋：</strong> 1975年至1979年任中共下津村支部委员。曾任中共潮州市飞天燕瓷土矿党支部书记、矿长。</li></ul><ul id="d022080e-7d30-8319-b08e-8171e1bb096c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘潮森：</strong> 中共下津村党支部第二批吸收党员，与郭春木组建瓷土矿党支部，1955年组建第五农业生产合作社。公社化以后，曾任下津大队副大队长，分管经营管理。组建意溪公社瓷粉厂，任厂长。</li></ul><ul id="4e42080e-7d30-8225-b5c4-81e01080b3d0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘金城：</strong> 1955年9月组建东津木器社，任该社主任。1958年任意溪农械厂车间主管。1961年任意溪木器厂厂长、党支部书记。1968年任意溪公社工交主任。1969年任潮安县二轻局绣衣总厂厂长，党支部书记、潮安县二轻系统党总支副书记。1984年起在潮安县国营工业公司负责管理生产至退休。</li></ul><ul id="6522080e-7d30-82e2-a49c-01b8da9b331e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘国勋：</strong> 曾任潮州市农业银行计划股股长。</li></ul><ul id="1952080e-7d30-82b1-89f4-01498842bb03" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘群英：</strong> 揭阳市电力公司纪委书记。</li></ul><ul id="abc2080e-7d30-836a-9bd0-01acf79c6a6e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>郭春木：</strong> 曾任东津瓷矿场党支部书记。</li></ul><ul id="15a2080e-7d30-83f2-ad09-81eb536be53c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>康忠来：</strong> 1938年生，青年时期应征入伍，退伍后分配海运工作，累职外轮轮科副科长。</li></ul><ul id="9002080e-7d30-8226-ae85-01ad5088d469" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>康忠炎：</strong> 1945年生，1964年应征入伍，1969年退伍分配梅县煤矿工作，累职梅州矿务局财务科长。</li></ul><h2 id="fce2080e-7d30-8344-9618-01b080e072b6" style="display:inline-block" dir="auto">第五节　事业干部</h2><ul id="91a2080e-7d30-82c7-85ec-015b6ba784d4" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘慕华：</strong> 字景廷（1916–1990），少年时期在刘寿年药铺当药童，潜心了解各种药材治病功效，自学成材。1960年任潮安县人民医院院长。注重培养子女学习医学知识，并把医学经验传与儿女，现子孙从医者11人，被时人称为&quot;杏林世家&quot;。</li></ul><ul id="b562080e-7d30-82ab-9120-8173e7ee3a8d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘仲熊：</strong> 湖北省医科大学儿科系主任，儿科研究所所长，第一临床儿科主任、教授。现任湖北省儿科学会主任委员。</li></ul><ul id="baa2080e-7d30-8347-955b-0167fc137c2d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>甘佩珍：</strong> （刘仲熊妻子），湖北省糖尿病学会主任委员，湖北医科大学第一临床医学院内分泌科主任、教授。</li></ul><ul id="a982080e-7d30-82e2-aa6b-01e7c72817b6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘镜荣：</strong> 1965年生，1995年任下津小学校长，先后调北关小学任校长，中共城西中心小学党支部书记、校长，获潮州市优秀教育工作者称号。湘桥区第二、三届人大代表。</li></ul><ul id="f582080e-7d30-8262-a758-0107f2274ede" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘少浩：</strong> 1962年生，曾任意溪卫生院院长、太平街道医院院长。</li></ul><ul id="6cb2080e-7d30-8333-9c71-811cf37415a7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘志敏：</strong> 1932年生，1952年毕业于私立义安中学（潮安一中前身），先后在意溪、文祠多所学校任校长，意溪镇教委副主任。</li></ul><ul id="8622080e-7d30-82f7-8507-81246b2b4012" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕庞：</strong> 广东省警官学院教师。</li></ul><ul id="db42080e-7d30-82c2-bdfb-817febacd9cc" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德锐：</strong> 虹桥教委办主任。</li></ul><ul id="cea2080e-7d30-834e-b68d-016554db859f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘新强：</strong> 笔名刘三齐，1971年生，广州美术学院毕业，现任广东省画院办公室主任（副处）、画家。</li></ul><ul id="a302080e-7d30-83fd-a375-81b94a31614e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘利炎：</strong> 1934年生，1956年毕业于潮安一中，考入湖南师范学院，毕业后在湖南耒阳师范学校任教，升副教导主任。1962年调回潮安二中任副教导主任，尔后累任潮安五中教导主任、校长。获中学高级教师职称。潮州市先进教育工作者称号。潮州市第九届人大代表。</li></ul><ul id="5502080e-7d30-8216-9f34-01c573bb58e5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘景昌：</strong> 1977年生，毕业于广州体育学院，现为韩山师范学院体育学院副教授。</li></ul><ul id="0992080e-7d30-828c-bba0-81b3419971bc" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘树欣：</strong> （1947–1999），1971年毕业于中山医科大学，分配韶关地区精神病医院（院址在乐昌县）工作，1981年调任潮州市精神病医院（院址在红山）业务副院长，副主任医师。</li></ul><ul id="6c12080e-7d30-8291-80d1-810a661078e5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀锐：</strong> 毕业于美国奥利冈大学，获医学博士学位，在美国加州创办医院。</li></ul><ul id="1f72080e-7d30-83c9-8a77-8188a4df6293" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀燊：</strong> 在巴西大学工作，获终身教授，定居新加坡。</li></ul><ul id="9642080e-7d30-8353-ba8b-0117f082721d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀国：</strong> 从事电磁学研究，1972年获美国加州大学硕士学位，任泰国大学教授。</li></ul><ul id="c5b2080e-7d30-82f4-b6f3-01f0763ec968" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀铭：</strong> 获医学博士学位，定居台湾。</li></ul><ul id="d0f2080e-7d30-82fa-8c3b-81244bb964fa" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖湘丽：</strong> 女，澳洲雪梨医院主任医师。1997年获澳洲皇家全科医生学会资深会员。</li></ul><ul id="f402080e-7d30-8212-a85d-819ba6472090" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖令晨：</strong> 江苏镇江高中毕业后，赴美国留学，获博士学位，现在美国工作。</li></ul><ul id="ddb2080e-7d30-8272-96d9-815915d3a1d7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘松喜：</strong> 曾任意溪书院教导主任，意溪区人民代表。</li></ul><ul id="a832080e-7d30-8291-96f8-013ac33372f8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘世孝：</strong> 获潮州市特级教师荣誉称号。</li></ul><ul id="a942080e-7d30-82ab-a9a1-01306cd8e159" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>丁丽华：</strong> （红平妻）潮州市湘桥区城西中心小学校长。</li></ul><ul id="4602080e-7d30-823d-b896-810201bd6f2a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘秋生：</strong> 黄金塘小学校长。</li></ul><ul id="f652080e-7d30-82b0-ba8e-816d2cdedf87" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘世铨：</strong> 1942年生，曾任下津小学校长。</li></ul><ul id="e4a2080e-7d30-8268-86eb-017c63d2f874" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德星：</strong> 中学高级教师。</li></ul><ul id="8842080e-7d30-8227-83fd-812e092faf87" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖映锐：</strong> 意溪中学教导主任。</li></ul><ul id="3022080e-7d30-83ed-8432-813f374cec46" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖振亮：</strong> 1951年生，中共广东金融学院党委副书记、副校长、教授。佛山农商银行独立董事。</li></ul><ul id="1dd2080e-7d30-8249-9495-812688c68f9a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘志军：</strong> 桥东六亩小学校长。</li></ul><ul id="6c52080e-7d30-8264-a4aa-81fe7abc0bd7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘金武：</strong> 意溪医院副院长。</li></ul><ul id="2ad2080e-7d30-8286-94a4-81606e1deae8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘国镇：</strong> 潮州市疗养院院长。</li></ul><h2 id="96d2080e-7d30-83ca-adbe-81376a0ff52e" style="display:inline-block" dir="auto">第六节　学位高级职称名录</h2><table id="aea2080e-7d30-83d8-909d-810984ea4ee6" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="2522080e-7d30-82d1-8364-01bce5b68954" dir="ltr"><th id="?JSc" class="simple-table-header-color simple-table-header"><strong>姓名</strong></th><th id="EAcq" class="simple-table-header-color simple-table-header"><strong>学位职称</strong></th><th id="^J[\" class="simple-table-header-color simple-table-header"><strong>地区</strong></th></tr></thead><tbody><tr id="1c92080e-7d30-8304-93b2-016c75ab1223" dir="ltr"><td id="?JSc" class="">刘映尚</td><td id="EAcq" class="">工学博士、高级工程师</td><td id="^J[\" class="">北京</td></tr><tr id="25b2080e-7d30-8381-ad70-817e839d5793" dir="ltr"><td id="?JSc" class="">廖耀锐</td><td id="EAcq" class="">医学博士</td><td id="^J[\" class="">美国</td></tr><tr id="2b32080e-7d30-8309-a1f5-0184c2bbb103" dir="ltr"><td id="?JSc" class="">廖耀铭</td><td id="EAcq" class="">医学博士</td><td id="^J[\" class="">台湾</td></tr><tr id="8342080e-7d30-8367-9680-013671bf3015" dir="ltr"><td id="?JSc" class="">廖令晨</td><td id="EAcq" class="">医学博士</td><td id="^J[\" class="">美国</td></tr><tr id="1692080e-7d30-831d-bf0b-813d70b12fd5" dir="ltr"><td id="?JSc" class="">刘佳柱</td><td id="EAcq" class="">法律学硕士</td><td id="^J[\" class="">广州</td></tr><tr id="0332080e-7d30-82d4-b23e-014d0be1fa8d" dir="ltr"><td id="?JSc" class="">廖耀香</td><td id="EAcq" class="">建筑设计硕士</td><td id="^J[\" class="">美国</td></tr><tr id="1332080e-7d30-8321-ac77-81ac94b7438a" dir="ltr"><td id="?JSc" class="">廖耀国</td><td id="EAcq" class="">电磁学硕士</td><td id="^J[\" class="">泰国</td></tr><tr id="d832080e-7d30-8325-8c7d-0179e02f0732" dir="ltr"><td id="?JSc" class="">刘少明</td><td id="EAcq" class="">公共管理硕士</td><td id="^J[\" class="">深圳</td></tr><tr id="b232080e-7d30-823f-89f8-81259f335917" dir="ltr"><td id="?JSc" class="">刘孟熊</td><td id="EAcq" class="">高级工程师</td><td id="^J[\" class="">韶关</td></tr><tr id="5232080e-7d30-83ad-b806-01a878567d7f" dir="ltr"><td id="?JSc" class="">廖耀真</td><td id="EAcq" class="">高级工程师</td><td id="^J[\" class="">广州</td></tr><tr id="0c02080e-7d30-8282-b835-8125115afe76" dir="ltr"><td id="?JSc" class="">刘玉波</td><td id="EAcq" class="">韶关钢铁厂总工程师</td><td id="^J[\" class="">韶关</td></tr><tr id="9852080e-7d30-83f7-b61b-816adbc3ac04" dir="ltr"><td id="?JSc" class="">刘德森</td><td id="EAcq" class="">总工程师</td><td id="^J[\" class="">巴基斯坦</td></tr><tr id="c422080e-7d30-8363-8978-011860a8cf74" dir="ltr"><td id="?JSc" class="">廖令焕</td><td id="EAcq" class="">高级经济师</td><td id="^J[\" class="">海南</td></tr><tr id="13a2080e-7d30-82ef-86f9-81466ec4b965" dir="ltr"><td id="?JSc" class="">刘仲熊</td><td id="EAcq" class="">湖北省医科大学教授</td><td id="^J[\" class="">湖北</td></tr><tr id="7c82080e-7d30-83d3-8110-81fe98a5dd8d" dir="ltr"><td id="?JSc" class="">甘佩珍</td><td id="EAcq" class="">湖北省医科大学教授</td><td id="^J[\" class="">湖北</td></tr><tr id="9392080e-7d30-8247-a77a-819b687db95d" dir="ltr"><td id="?JSc" class="">廖耀燊</td><td id="EAcq" class="">终身教授</td><td id="^J[\" class="">巴西</td></tr><tr id="a4e2080e-7d30-821a-9146-81872322c7f4" dir="ltr"><td id="?JSc" class="">廖振亮</td><td id="EAcq" class="">教授</td><td id="^J[\" class="">广州</td></tr><tr id="18d2080e-7d30-82e1-8803-01619807d6a4" dir="ltr"><td id="?JSc" class="">刘景昌</td><td id="EAcq" class="">韩山师范学院副教授</td><td id="^J[\" class="">潮州</td></tr><tr id="63d2080e-7d30-821b-a6eb-813a26b5546d" dir="ltr"><td id="?JSc" class="">刘利炎</td><td id="EAcq" class="">中学高级教师</td><td id="^J[\" class="">潮州</td></tr><tr id="fbb2080e-7d30-8324-b350-0178022bc46d" dir="ltr"><td id="?JSc" class="">刘德星</td><td id="EAcq" class="">中学高级教师</td><td id="^J[\" class="">潮州</td></tr><tr id="d412080e-7d30-83cf-ad97-014041d66cac" dir="ltr"><td id="?JSc" class="">刘树欣</td><td id="EAcq" class="">副主任医师</td><td id="^J[\" class="">潮州</td></tr><tr id="ebe2080e-7d30-8283-b025-012b9ae630fe" dir="ltr"><td id="?JSc" class="">刘德波</td><td id="EAcq" class="">高级工程师</td><td id="^J[\" class="">潮州</td></tr></tbody></table><h2 id="e7c2080e-7d30-837b-be0a-81b86f6cef5a" style="display:inline-block" dir="auto">第七节　村两委</h2><ul id="4412080e-7d30-8331-a68c-01ea2d263754" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘金存：</strong> （1926–2000），曾任下津群益社主任、连长、中共下津连党支部副书记，中共永安大队党支部书记。</li></ul><ul id="aa52080e-7d30-83c7-8a81-813724438e7b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘世英：</strong> （1935–2016），曾任下津大队会计、下津砖瓦厂厂长、中共下津大队党支部副书记。</li></ul><ul id="2072080e-7d30-835e-9e1f-81f6d0565dea" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德钊：</strong> 曾任下津第三排排长，下津大队副大队长、大队长。</li></ul><ul id="b952080e-7d30-83d8-95a2-81f89825a209" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕钦：</strong> 曾任下津大队会计、村委。</li></ul><ul id="34a2080e-7d30-8298-864c-81635bd0cbd7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>张玉音：</strong> 女，曾任中共下津大队党支部副书记。</li></ul><ul id="f1e2080e-7d30-836b-a4b4-010b858a192c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕湘：</strong> 曾任下津村村委。</li></ul><ul id="a542080e-7d30-8330-961c-0178bf1c5107" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘春祥：</strong> 1934年生，1963年始曾任下津大队治安委员、治安主任，1970年任意溪公社瓷厂副厂长，1976年至1993年任中共下津村党支部书记。1986年获全国计划生育先进工作者称号。</li></ul><ul id="3632080e-7d30-82be-8403-81dd0fd5da64" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘金发：</strong> 曾任下津大队副大队长、大队长，革委会主任，党支部书记。</li></ul><ul id="ea12080e-7d30-829e-b28b-81d930f056a5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德来：</strong> 1950年参加土改工作，1952年任中共下津乡党支委。曾任下津大队大队委员、副大队长、大队长。</li></ul><ul id="c302080e-7d30-827c-baab-01e54d23d958" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕水：</strong> 曾任下津大队党支部委员、民兵营长。</li></ul><ul id="e4a2080e-7d30-836d-81e2-81f1713fcbb0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘锡河：</strong> 曾任下津大队大队委员。</li></ul><ul id="a782080e-7d30-832f-8f12-01d6b2997dbc" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘汉正：</strong> （1943–1994），曾任下津大队革委会委员、党支委副书记，1993年至1994年任中共下津大队党支部书记。</li></ul><ul id="de62080e-7d30-8381-ab76-81db7082beac" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘焕钦：</strong> （1914–1993），曾任中共下津大队支委、保管员，下津砖瓦厂厂长。</li></ul><ul id="87e2080e-7d30-82f5-a1cb-01c57fed3c81" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘任桂：</strong> 1944年生，1970年任下津大队共青团支部书记，曾任下津大队革委会委员。1965年选为广东省首届贫下中农代表大会代表。</li></ul><ul id="8822080e-7d30-82dc-8068-017e871439a0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德夫：</strong> 曾任下津村委、会计。</li></ul><ul id="1752080e-7d30-83d9-8349-01c48b6e998c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘德层：</strong> 曾任下津村委。</li></ul><ul id="cff2080e-7d30-829b-948e-017e41e38641" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>谢丽斐：</strong> 曾任中共下津村党支委员，妇女主任。</li></ul><ul id="d722080e-7d30-8213-bcf4-814e55bf2a9f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘光昌：</strong> 曾任下津大队副大队长。</li></ul><ul id="57d2080e-7d30-8223-bb66-81c279663051" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀明：</strong> 曾任下津党支部副书记、党委副书记、第三党支部书记，村委副主任。</li></ul><ul id="7692080e-7d30-8314-8bbe-819c938c86a1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>林汉钦：</strong> 曾任中共下津村党支部委员、下津大队革委会副主任。</li></ul><ul id="b9e2080e-7d30-8300-bd1c-8141c88dfdd0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>张海春：</strong> 曾任下津大队革委会委员。</li></ul><ul id="0ed2080e-7d30-8344-9a03-81eccdb57194" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖振波：</strong> 曾任中共下津大队党支部委员，治安主任。</li></ul><ul id="3da2080e-7d30-8212-94cf-8113b96ad9cc" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖耀光：</strong> 曾任下津大队治安主任，革委会副主任。</li></ul><ul id="e912080e-7d30-8235-b332-819e0986b9e9" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>康舟文：</strong> 曾任下津大队治安主任，村委委员。</li></ul><ul id="3092080e-7d30-829a-8540-8146bb3797ba" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>吴淡霞：</strong> 曾任下津村第一任妇女主任，中共下津村党支部委员。</li></ul><ul id="4692080e-7d30-8378-8cd3-01757049c7b6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>陈永华：</strong> 曾任下津村委、会计，中共下津村党委委员，第一党支部书记。</li></ul><ul id="d222080e-7d30-83a5-bf1a-01afa820c8f1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘婵凤：</strong> 曾任下津大队革委会委员。</li></ul><ul id="b0c2080e-7d30-8221-b96a-817788d321e9" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕乾：</strong> 下津村委副主任、支部副书记，中共下津村纪委书记、中共下津村党委副书记，第四党支部书记。</li></ul><ul id="10a2080e-7d30-822f-a7cf-01e7d029c3a1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘金亥：</strong> 下津村村委副主任，中共下津村党委副书记，第五支部书记。</li></ul><ul id="ca92080e-7d30-8220-a5cd-013775f62bdf" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘若宏：</strong> 女，现任中共下津村党委委员，下津村妇女主任，第六党支部书记。</li></ul><ul id="76b2080e-7d30-834f-b5d4-81798e459d4f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘裕龙：</strong> 现任中共下津村党委委员，下津村村委副主任、治安主任。</li></ul><ul id="ad72080e-7d30-8224-aa89-816146536d97" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘瑞生：</strong> 现任下津村党委委员，纪委书记、第二党支部书记。</li></ul><ul id="0232080e-7d30-82f9-834c-018a3cbcc7e7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘湘：</strong> 中共下津党委委员，外出党支部书记。</li></ul><ul id="4742080e-7d30-8304-a066-01cbc2afe012" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘泳华：</strong> 中共下津村党委委员，第三党支部书记。</li></ul><ul id="12a2080e-7d30-8227-a6fe-018fa706a203" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘竞相：</strong> 中共下津村党委委员，第一党支部书记。</li></ul><ul id="0602080e-7d30-836a-869f-81b636141cfd" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘昆宜：</strong> 下津村委委员，兼第六村民小组组长。</li></ul><h2 id="0922080e-7d30-83f1-adb0-0170e1eded4a" style="display:inline-block" dir="auto">第八节　生产队长、村民组长、村企业主管</h2><p id="a6f2080e-7d30-8225-9cec-814ddd36f9db" class="" dir="auto">康忠锋、康得名、刘裕湘、刘德文、刘裕生、刘俊生、刘裕池、刘振城、刘裕河、刘裕藩、刘振才、刘建文、刘绍梓、刘忠龙、刘岳松、刘宗林、刘德湘、刘昆池、刘锡坤、刘汉潮、刘海潮、刘庆昌、刘进阳、刘德贞、刘秋雄、刘钦榜、刘汉杰、刘彬和、刘炎丰、刘裕猷、刘坤成、刘世真、刘坤泉、刘炎发、刘永青、刘瑞荣、刘绍塔、刘绍生、廖振强、廖耀武、廖振钿、廖令景、廖耀楷、康舟丰、康振明、管来木、管应杰、赖镇森、林金镇、赖锡勤、黄维钦、张与如、柯森桂、刘福湘、康忠义、康忠楷、黄民生、张镇亮。</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

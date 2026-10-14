@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第三章　家谱文化</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="97f2080e-7d30-82dc-b56d-8152f7551863" class="page sans"><header><h1 class="page-title" dir="auto">第三章　家谱文化</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="1a32080e-7d30-82a8-b7ac-81351d667f06" class="" dir="auto">国史、县志、家谱是中华历史文化的三大支柱。家谱显示肇姓始祖的渊源及源流，列祖列宗的历史地位和贡献。宗族传衍端赖谱牒记载同宗共祖的血缘关系，迁移创祖之分支及世系流传。由于时境变迁，谱牒失修失传。改革开放以来，政通人和，续修家谱蔚然成风。</p><h2 id="dee2080e-7d30-83a2-be11-015055b81fa5" style="display:inline-block" dir="auto">第一节　谱牒出版发行</h2><p id="5962080e-7d30-836b-ba1a-010bf34ceca4" class="" dir="auto">2001年10月，《潮州东津廖氏家谱》出版发行。2002年6月，《我任公祠宗谱》出版发行。2002年8月，《桃坑东津茂雪公系刘氏族谱》出版发行。2003年5月，由刘成英主编的《粤东桃坑刘氏家族史》出版发行。2005年，《刘氏桃坑东津派振台公家谱》出版发行。2007年12月，由刘文磊主编的《潮州刘氏溯源》谱牒出版，在下津小学举行颁谱仪式，会场对联：皇历岂容疑汉室渊源千秋业；帝谱谁能改刘家荣耀万代辉。潮州市刘氏代表近千人参加仪式，溪口刘氏锣鼓班莅场演奏志贺，而后全体游行宣扬。2009年，《桃坑东津窟尾沟三房刘氏族谱》出版发行。2010年3月31日，由廖令焕主编的《廖氏族史探索》谱牒出版；5月1日在下津小学举行颁谱仪式，会场对联：源出武威汝南历周汉晋唐宋元明清世推望族；派盛楚豫闽粤数公侯卿相垣合督抚代显伟人。邀请东津刘、梁、薛等姓理事会代表莅会赏光，促进姓氏之间的文化交流。潮州电视台现场采风，在民生栏目播放宣传。《刘氏龙图公房族谱》出版发行，盐墩、茂利、铺仔前三个自然村的世系编入该谱。</p><h2 id="59b2080e-7d30-8324-93ec-0185919cd480" style="display:inline-block" dir="auto">第二节　郡望</h2><p id="0392080e-7d30-82fa-9ac1-01e4501c0b74" class="" dir="auto">郡望是中华家谱文化的特有产物，郡是古代的行政单位，郡望即郡中之望族，表示姓氏的历史地位。郡望起源于汉代，盛于魏晋。至宋代，御制《百家姓》界定各姓氏的总郡望。各姓氏分支开派又拥有宗派郡望。</p><ul id="f162080e-7d30-8341-a078-01278ba65bbd" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、总郡望选例——彭城郡</strong>　彭城郡原为西汉楚国，汉宣帝地节元年（公元前69年）以楚国改置彭城郡。唐武德四年（621）改为徐州。历史上的彭城郡辖境相当于今江苏省徐州市、铜山县、沛县东南部及邳县西北部，安徽濉溪县东部及山东微山县一带。彭城郡与沛郡在地域范围上有部分重叠。因刘邦祖籍丰县，起家于沛县，而丰县、沛县后来都属彭城郡，所以天下刘氏以彭城为祖籍，彭城历来被视为刘姓的正宗郡望，宋代以后更成为刘氏的统一郡望。</li></ul><ul id="87f2080e-7d30-828b-9419-81a11f1816e4" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、宗派郡望选例——武威郡</strong>　武威郡，汉武帝元狩二年（公元前121）置郡，故城在今甘肃省民勤县东北，辖境相当今甘肃省黄河以西、武威市以东地区。武威命郡名出自汉武帝的威风及汉将霍去病的武功和军威。武威郡历来是兵家必争之地，北周武帝间，廖延龄临危受命，授武威郡太守，以政德封武威郡公，其嗣裔以武威为郡望，以彰祖德宗功。武威廖氏占中华廖氏人口百分之七十。</li></ul><h2 id="e802080e-7d30-833f-9d33-013054555cb6" style="display:inline-block" dir="auto">第三节　堂号</h2><p id="2232080e-7d30-82ea-b123-8182cf78e970" class="" dir="auto">堂号是中国宗法社会特有的产物，它的产生与发展，与修谱、建祠堂、公厅有着密切的联系。堂号本身有着敦亲睦族，弘扬孝道，启迪后人奋发向上，维护和巩固宗族及家庭基层组织的稳定和彰显祖德的作用。堂号选例：中山堂。中山堂是刘姓中一个以地域命名的堂号，也是刘姓的发源地之一。中山刘氏在刘氏各宗派中有一个显著特点，就是人丁极为兴旺。开派始祖中山靖王有100多个儿子，是刘氏各派开基祖和当时各刘姓亲王中儿子最多的一个。后裔子孙更是千枝万叶，构成世界刘氏的主体之一。</p><h2 id="ea22080e-7d30-83c7-b595-017227dc52b2" style="display:inline-block" dir="auto">第四节　族训家训</h2><p id="c842080e-7d30-837f-b812-01b620cdfb80" class="" dir="auto">族训、家训是国法以外的补充法规，传承先祖所制定的族训、家训，以教育、告诫子孙遵纪守法，注重社会公益，尊老爱幼，敦亲睦邻，促进社会和谐。人生处世，据德以仁，凡事不越规矩外，与人为善，好人好己，其果必正，其后必昌！</p><ul id="d1e2080e-7d30-82bc-9a54-01fbe9e4934b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、家训选例——刘氏家训</strong><ul id="55d2080e-7d30-827a-beaf-01622c91afff" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>敦孝弟</strong>　孝弟为百行之首，凡为人子者，不可忍灭天性，兹我族子孙，宜敦孝弟于一家。</li></ul><ul id="de72080e-7d30-82d1-bdcd-818f9930f6c2" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>睦宗族</strong>　宗族为万年所同，虽分房系支派，实源同一脉，不可视为秦越，兹我宗族宜敦一本之谊，笃亲亲之道。</li></ul><ul id="da42080e-7d30-8357-9a49-01ccb8fa25e7" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>和乡邻</strong>　乡邻同井而居，出入相友，守望相助，不可相残相斗，宜视异姓如骨肉之亲。</li></ul><ul id="f072080e-7d30-827d-ba3c-81ff5622e795" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>明礼让</strong>　礼让为处世之道，非拜跪坐揖之交，必使亢戾不萌骄泰不作庶成谦逊之风。</li></ul><ul id="f842080e-7d30-8385-a933-81dd6c920bd0" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>务正业</strong>　士农工贾，各有其业，业精于勤，荒于嬉。凡务其业者，宜自食其力，切戒盘游无度。</li></ul><ul id="0362080e-7d30-82c3-9a5e-01d41ad7fe54" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>端士品</strong>　士为名之首，隆其名，贵有其实，凡为士者，宜居仁由义，以成明体，达用之学，若荡检偷闲，不求上进，后悔莫及。</li></ul><ul id="d242080e-7d30-8211-97db-0117632d6c93" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>隆师道</strong>　师道为教海之源，隆师重道，正以崇其教也，尊之崇之。</li></ul><ul id="75f2080e-7d30-83c7-a03e-01e89edbd224" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>修坟墓</strong>　坟墓为藏祖先之魂骸，每年宜整修祭扫，切勿挖掘抛露，致祖宗怨恨。</li></ul><ul id="b172080e-7d30-8390-ae39-014c4bf61788" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>戒犯讳</strong>　同姓子侄，每派宜择定名字以为名，凡属内之嗣孙，不得犯父兄伯叔之名，当讳之。</li></ul><ul id="a702080e-7d30-827d-99a6-01e106288b7c" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>戒争讼</strong>　争讼非立身保家之道，争必失，讼则终凶，宜以忍处之，勿致倾家荡产之悔。</li></ul><ul id="d242080e-7d30-82d8-bd82-81f4126d08af" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>戒赌博</strong>　赌博非人生正业，一入场中，百业俱废，人格也轻，宜自守本分，切勿贪财，害累终身。</li></ul><ul id="2a92080e-7d30-83e9-ac1f-810af4031960" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>戒淫恶</strong>　淫为万恶之源，宜检身防过，免损名节。</li></ul><ul id="e9b2080e-7d30-83c4-b1b9-018904e84c8e" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>戒犯上</strong>　自古尊卑上下各分昭然，不得以卑凌尊，以下犯上，宜尊长敬老。</li></ul><ul id="8e32080e-7d30-8238-b1b0-01a81e302df8" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>戒轻谱</strong>　家谱是一家一族之宝，宜珍重收藏，以传后世详悉源流，查考世系。</li></ul></li></ul><ul id="bc92080e-7d30-82cf-b5e6-01ca48d1432d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、族训选例——廖氏族训（传世训）</strong><p id="6ef2080e-7d30-833e-a7e0-01953a489ce9" class="" dir="auto">天理当存，存者盛之；地理当好，好者旺之；人理当尽，尽者安之；书理当习，习者荣之。</p><p id="4cb2080e-7d30-83f5-a6b5-01be1f0ec271" class="" dir="auto">人生俱此四理而行，则仰不愧，俯不怍，天地庇，鬼神佑，祖宗福，父母顺，兄弟和，夫妻恭，子侄敬，朋友信。又能何患乎身名之不著于国家，徽声之不传于后世哉？</p></li></ul><h2 id="5302080e-7d30-83b1-8b1f-01f2bc00e196" style="display:inline-block" dir="auto">第五节　诗词</h2><p id="7cc2080e-7d30-8325-8c21-014de5b39cf0" class="" dir="auto">诗词是各种体裁的统称，其特点是高度集中地凝聚着作者强烈的思想感情，富于想象，语言精炼而形象，有鲜明的节奏和韵律。</p><ul id="b722080e-7d30-8302-b065-819140c802ad" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、桃坑刘氏开基祖颖公诗词</strong><p id="cb12080e-7d30-83cd-9ba7-01d4332efb57" class="" dir="auto"><strong>五言诗</strong></p><p id="c302080e-7d30-827f-b584-01b3331a495e" class="" dir="auto">在昔吾先人，胡为流落居；请读五代史，垂泪满襟裾。</p><p id="f952080e-7d30-83b8-8cfd-81825df60742" class="" dir="auto">中叶车马散，飞尘帝王都；干戈盈六合，兵骑塞四途。</p><p id="b3b2080e-7d30-826e-ae98-0190bc15383e" class="" dir="auto">公卿尽萍梗，宗社为兵墟；人命轻菅茅，士族成土苴。</p><p id="0f62080e-7d30-8391-861a-01c917afe5ba" class="" dir="auto">当此离乱世，谋身贵能图；华亭千载鹤，先考实无辜。</p><p id="0ef2080e-7d30-8221-8e03-81d6152abae9" class="" dir="auto">长思当世事，哀痛在桑榆；广南非闾里，移来韩背涯。</p><p id="6cc2080e-7d30-82ed-9565-81c9f22c183f" class="" dir="auto">罗列山水好，乡村六七家；知耕亦知读，此处堪托庐。</p><p id="3042080e-7d30-8300-b707-0166384912b1" class="" dir="auto">醉时展长卧，醒看伴仙湖；呜呼相嘻兮，生我不辰兮；</p><p id="e7e2080e-7d30-829b-a159-81dd15fa9d89" class="" dir="auto">昔也兄弟依，今也兄弟离；广南湖水地，骨肉两分殊。</p><p id="23e2080e-7d30-8292-9c7c-0178f5eaf184" class="" dir="auto">兄不知弟苦，弟不忆兄孤；先人在何处，白云云外呼。</p><p id="2ed2080e-7d30-83b0-bd61-013382706743" class="" dir="auto">赋此聊居诸，不识后何如；子兮稍成立，孙兮渐相须。</p><p id="3192080e-7d30-83da-b031-017c9d9ec368" class="" dir="auto">拂泪强成韵，日月天地具；又念河东派，拨此音讯稀；</p><p id="9542080e-7d30-8324-a714-8196e44ba320" class="" dir="auto">谱牒源流远，恩义两相无；远者杳难思，近者空泪珠；</p><p id="dc82080e-7d30-82e8-b58c-81c9aa4c6561" class="" dir="auto">各各忧肠肚，闻者咏已乎。</p><p id="ba12080e-7d30-8247-8a6a-81fe67b196cf" class="" dir="auto"><strong>永思词</strong></p><p id="0872080e-7d30-82e4-ab81-01a68b817363" class="" dir="auto">炎帝天下　祀事孔脩　厥后讳累　受姓封刘　自夏而显</p><p id="a5a2080e-7d30-8264-8283-010e71bb3fa4" class="" dir="auto">历商而周　续延于沛　祀汉承流　中山世裔　谱牒堪脩</p><p id="8b02080e-7d30-83d5-bfd6-813a379ab699" class="" dir="auto">由晋而唐　蕃胤并休　观古思汉　观史思刘　广南云悠</p><p id="a262080e-7d30-8320-87f2-81a931f2515b" class="" dir="auto">韩山木稠　原起九京　示我以忧　章词泪写　告吾孙俦</p><p id="6a02080e-7d30-83fc-aa19-81f927d7e586" class="" dir="auto">溯流及本　原委有由　广南之水　河东分萃　潮海更张</p><p id="eb62080e-7d30-82b1-b7fd-8141ae429718" class="" dir="auto">中山脉类　桂子兰孙　式喜以慰</p></li></ul><ul id="45c2080e-7d30-8280-90ed-81858511bcd0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、刘允诗选</strong><p id="3902080e-7d30-83c4-964d-81020c7d5e73" class="" dir="auto"><strong>《咏韩山》</strong></p><p id="1a32080e-7d30-8374-96fc-8132680195b8" class="" dir="auto">惆怅昌黎去不还，小亭牢落古松间；</p><p id="6f62080e-7d30-8292-9262-01cd0e762f9c" class="" dir="auto">月明夜静神游处，三十二峰江上山。</p><p id="44b2080e-7d30-8234-bec7-01564a73da08" class="" dir="auto"><strong>《梦游洞府》八首 ①　其一</strong></p><p id="5b92080e-7d30-82fc-be21-811348f9457f" class="" dir="auto">银箄层台玉砌成，五云深处百花明；</p><p id="7072080e-7d30-8294-85f0-014107ff0e38" class="" dir="auto">兽环响彻重门启，无限青娥喜笑迎。</p><p id="8752080e-7d30-82e9-9b74-019e170db91e" class="" dir="auto"><strong>其二</strong></p><p id="0da2080e-7d30-8310-a395-8178df45f1be" class="" dir="auto">青娥前引度回廊，帘卷云间旧院堂；</p><p id="9292080e-7d30-8386-9d63-01d9d7201284" class="" dir="auto">松桂满庭龟鹤在，俨然丰观道家装。</p><p id="fe82080e-7d30-82c9-974e-8182723b0efc" class="" dir="auto"><strong>其三</strong></p><p id="aca2080e-7d30-82a4-b323-812d24367ad9" class="" dir="auto">步入东堂百步余，虚房犹记旧来居；</p><p id="dbd2080e-7d30-8244-818f-01e66824a5b6" class="" dir="auto">纱窗掩映琼签轴，尽是当年读遍诗。</p><p id="a7f2080e-7d30-8247-acc1-0161094ee2e9" class="" dir="auto"><strong>其四</strong></p><p id="3b92080e-7d30-83bc-9206-01b481d49e9b" class="" dir="auto">云母屏间看旧诗，醉吟阿母碧桃枝；</p><p id="4a22080e-7d30-8347-aac3-810bf4295da5" class="" dir="auto">群仙指点未题处，更乞凌虚白鹤词。</p><p id="1582080e-7d30-82f6-b8b8-81ea1ee3080d" class="" dir="auto"><strong>其五</strong></p><p id="4f42080e-7d30-82f0-9323-819102bd19e4" class="" dir="auto">瞳胧瑞日照觚棱，溶泄祥烟绕栋甍；</p><p id="ff92080e-7d30-8212-b328-8193080863a1" class="" dir="auto">松桂雅知人趣向，风来偏作步虚声。</p><p id="6372080e-7d30-83fe-838d-018b61a61ac5" class="" dir="auto"><strong>其六</strong></p><p id="ab12080e-7d30-83c4-9c93-8137a674befc" class="" dir="auto">侧金坛畔虬龙老，甃玉池边绶鸟长；</p><p id="5602080e-7d30-82c2-a9fa-8130d8d886fe" class="" dir="auto">吟折紫芝香满手，数声鸣凤在疏篁。</p><p id="4282080e-7d30-8361-8368-81ebf5fbea31" class="" dir="auto"><strong>其七</strong></p><p id="c4e2080e-7d30-8334-b539-81779b94a584" class="" dir="auto">兽炉烟和百花香，玉蕊琼枝侍两傍；</p><p id="ab02080e-7d30-8345-b5c2-8127295faac0" class="" dir="auto">一曲云和鸾鹤舞，劝人争奉九霞觞。</p><p id="ecc2080e-7d30-8275-8054-817f3e4650a9" class="" dir="auto"><strong>其八</strong></p><p id="1492080e-7d30-83e4-979d-817131984ad6" class="" dir="auto">步出珠宫月渐移，青鬟罗拜问归期；</p><p id="53d2080e-7d30-8310-8805-814437320aba" class="" dir="auto">尘缘若断人间事，看取蟠桃正熟时。</p><p id="03f2080e-7d30-833f-9880-017184a5f069" class="" dir="auto"><strong>注：</strong> ① 刘允&quot;梦游洞府&quot;诗：《广东通志·粤大记》刘允传：&quot;刘允著文存200余篇。&quot;《三阳志》：&quot;公于六经、传疏、诸史百家，以及天文、地理、医卜杂书，靡不皆贯，&quot;所著诗文今存者二百余篇藏于家，据刘少集《家谱引》云：&quot;家不久又遭煨烬，今莫能详。&quot;现惟存《刘氏家传方》一书传世，余皆无遗矣！《梦游洞府》诗八首，来源于《潮州志》丛谈志·异部十八&quot;开元宫洞主&quot;一文中，《桃坑刘氏族谱》&quot;金紫公传&quot;文中亦有此记载。</p></li></ul><ul id="8952080e-7d30-83c4-ab7b-819818e53ba1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>三、历代名宦诗赞选</strong><p id="5252080e-7d30-8252-9d9c-81aced14ebf4" class="" dir="auto">1、宋潮州通判廖德明《赞金紫公》诗</p><p id="0392080e-7d30-8234-98e1-8155bebbe8ae" class="" dir="auto"><strong>《赞金紫公》</strong></p><p id="0d62080e-7d30-8282-9447-0189721c7c94" class="" dir="auto">辞爵弗受，解章弗绾；却还真游，琼楼玉馆。</p><p id="1682080e-7d30-822e-939e-0183a8b760b0" class="" dir="auto">青娥有约，素屏留诗；问君来时，蟠桃为期。</p><p id="ab42080e-7d30-8285-a0b5-0195296c84fd" class="" dir="auto">2、明潮州知府林和《赞金紫公》诗</p><p id="b472080e-7d30-822d-bf1f-01f95bc6d204" class="" dir="auto"><strong>《赞金紫公》</strong></p><p id="d8a2080e-7d30-8309-86ef-01352c44c130" class="" dir="auto">气清质粹，诗婉而葩；况有子孙，簪组群华。</p><p id="27b2080e-7d30-822a-9027-816769194d80" class="" dir="auto">人曰梦词，意固语滞；予曰庶几，仙风道骨。</p><p id="4822080e-7d30-82cb-927a-0157eee0521a" class="" dir="auto">3、潮州知府车份《游东湖诗》</p><p id="5552080e-7d30-8367-83e2-0153ae3b9e6e" class="" dir="auto"><strong>《游东湖诗》</strong></p><p id="60d2080e-7d30-8212-b8c1-01ef5080ac33" class="" dir="auto">冠盖相连满道旁，观风东野见祠堂；</p><p id="1752080e-7d30-8312-a3e5-01de5b623ce7" class="" dir="auto">巍峨庙宇依先礼，济楚儿孙振后光。</p><p id="cfa2080e-7d30-8360-8deb-81a9f2f85bcc" class="" dir="auto">金紫流芳根本远，银青遗派水源长；</p><p id="5ea2080e-7d30-821c-a7c1-81c287251227" class="" dir="auto">可喜圣朝加崇厚，还看褒封锡诰黄。</p><p id="8582080e-7d30-8380-aa02-01bfc9c6b619" class="" dir="auto">4、潮州府通判伍旭《赞刘氏重建新家庙》诗</p><p id="6a82080e-7d30-8305-b4b9-816d003d3e90" class="" dir="auto"><strong>《赞刘氏重建新家庙》</strong></p><p id="4682080e-7d30-82ad-b175-81f983398563" class="" dir="auto">政余遥望海天涯，东郭云迷宅一区；</p><p id="8982080e-7d30-83c5-b45d-0174850c41cf" class="" dir="auto">父老重建新庙宇，云礽克绍旧门闾。</p><p id="3a32080e-7d30-8328-98ba-81e07af938a8" class="" dir="auto">左穆右昭情深远，东阼西阶礼蔼如；</p><p id="c672080e-7d30-821a-9fc1-811a5cae09a8" class="" dir="auto">如觉名家知重本，观风到此正踌躇。</p></li></ul><ul id="5082080e-7d30-8325-8644-8188162406d2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>四、刘昉诗选</strong><p id="4f32080e-7d30-8377-84bd-814014f11c94" class="" dir="auto"><strong>莆阳邱君与刺史由梅州乞养归隐潮州赋赠</strong></p><p id="2462080e-7d30-8350-b5ca-81cabdbc5259" class="" dir="auto">君家旧莆阳，到处即仙乡。</p><p id="2682080e-7d30-83fc-817e-01a36787c301" class="" dir="auto">梅镇旌旗返，琴峰花草香。</p><p id="7732080e-7d30-83a0-8a60-01a39fd0db60" class="" dir="auto">菽水味何旨，椿萱寿益长。</p><p id="e592080e-7d30-83dd-a0c7-812ff07fec6e" class="" dir="auto">挂冠不妨早，名德重韩江。</p></li></ul><h2 id="8392080e-7d30-828b-8ef9-01620ab8e227" style="display:inline-block" dir="auto">第六节　文章选登</h2><ul id="8562080e-7d30-82e9-94db-011a2d825d3f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、林大钦《东湖胜概集》序</strong><p id="2782080e-7d30-8218-80b7-814e54d1dc14" class="" dir="auto"><strong>《东湖胜概集》序　林大钦</strong></p><p id="50e2080e-7d30-837d-819c-818951a4cc84" class="" dir="auto">余自弱冠拜晚丹先生为师。先生，金紫裔也。今南平修《宗祠录》，请太史舒君芬为序。仁孝之心，油然可见。一经教子，不负科名。肯斋乃先生侄也，歌《鹿鸣》而佐黄堂，其本于伯兄之教有日矣。余每入郡，主宋养泉家。来谒于余，携来诸公诗章、桃坑八景、先朝制诰，嘱余为序。余非能文也，然此盛举也，不得已而为之辞也。详考中舍少集公《谱引》，乃汉中山靖王之后。历岁延远，有讳嵩公，仕唐昭宗为大理寺卿，领兵部事，分据广东，未几为厥所图。其子讳颖公，洁身遁姓，因婚于潮，遂构庐于水东之桃坑，而孙讳表公，仕宋为大理寺评事。继而推官、朝请、金紫，兼以龙图、银青，诸公辈出。龙图、银青共子十三人，俱以科显名。而龙图孙曰少集者，亦由进士而官至大夫太子中舍也。其馀州、郡典教、不可胜记。由唐而宋，由元而明，代不乏人。金紫公德行文章，八贤推重，其有功斯民甚大，良由德厚于流光，源深泽长而致然也。先日，畏斋始祖之议，晚丹《祠录》之修，肯斋《族谱》之传，此三人者，异世而同心也。今日，肯斋汲汲于诗序之请，恐世远人湮，久而失其传。夫固仁人孝子之用心，可谓至且尽矣。其为后世虑至深远也矣。芳声垂誉，令闻远播。他日仰公者不犹如宋诸先公乎！乃僭书于简首。</p><p id="bb82080e-7d30-8346-9790-01b916341270" class="" dir="auto">时嘉靖乙未年五月望日</p><p id="4ba2080e-7d30-8309-91c3-81f7c35f6807" class="" dir="auto">（录自《潮州桃坑刘氏族谱》）</p><p id="31f2080e-7d30-821c-affb-017be418a723" class="" dir="auto">（林大钦，字敬夫。海阳人，嘉靖壬辰科状元。官翰林院修撰。）</p></li></ul><ul id="ce02080e-7d30-837e-a3ae-01623e4dc9c2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、刘景乞致仕疏</strong><p id="e5f2080e-7d30-82e4-a588-81949fa48895" class="" dir="auto"><strong>刘景乞致仕疏</strong></p><p id="6e12080e-7d30-8287-8f20-0166f87dacc0" class="" dir="auto">窃臣之事君，死生惟命，此古今不易之大义也。今臣景年迈，疾疚已深，任重力绵，不能勉强，则情可悯，罪可宽也。伏念臣忠恪一心。拳拳体国，早年筋力未衰，万里奔驰，才虽未逮而力可注。今久病丧心，施为颠倒，愿陛下垂怜蝼蚁之微，敢犯雷霆之威，伏望圣心垂念臣衰残，俾遂致仕之愿，以保全其末路，则洪造曲成之恩大矣。</p><p id="a5d2080e-7d30-833a-867b-81265b59ed73" class="" dir="auto">上允其言，诏许致仕归焉！</p><p id="9d32080e-7d30-8215-a5af-01f36ea9c026" class="" dir="auto">绍兴二十九年七月</p><p id="5492080e-7d30-833d-99aa-81b3712d3dc4" class="" dir="auto">（录自《潮州桃坑刘氏族谱》）</p><p id="5672080e-7d30-8295-8028-810ec97d3e79" class="" dir="auto">按：东津刘昉、刘景为宋朝重臣。其与朝廷往来的制谕章疏，难以一一记载。仅择此篇以示。</p></li></ul><ul id="b0c2080e-7d30-835c-9501-01b597a14f00" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>三、宋高宗敕诏敕诰</strong><p id="0862080e-7d30-836e-83ee-816056a6e502" class="" dir="auto">1、宋高宗皇帝敕安南和戎诏：</p><p id="e742080e-7d30-8275-9ee2-81cbfcead3c6" class="" dir="auto">素闻安南作叛，无有镇压其邪心者。惟尔刘景识谋献策……（原文不全，见下诰）。</p><p id="a6c2080e-7d30-833e-b3f8-01e6f8c34ff9" class="" dir="auto">2、大宋高宗皇帝敕封银青开国男刘景诰：</p><p id="0ff2080e-7d30-829c-90c4-81ae2c9d600b" class="" dir="auto">劳卿前往安南，协和蛮邦。九载勤劳，万里风霜，师不血刃，今日凯旋。毋负朝廷付托之意，有济国家患难之端。尔合州府提刘景，特加银青光禄大夫南海开国男。锡以诰命，沐此恩光。</p></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

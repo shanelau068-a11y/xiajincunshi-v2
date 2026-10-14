@@ -1,0 +1,3109 @@
+{
+  "date": "2026-10-14",
+  "counts": {
+    "html": 110,
+    "chapters": 11,
+    "genealogy": 662,
+    "people": 268,
+    "events": 110,
+    "photos": 75,
+    "searchDocs": 109,
+    "referenceRecords": 1237,
+    "referenceNeedsReview": 1233
+  },
+  "errors": 0,
+  "warnings": 44,
+  "information": 471,
+  "issues": [
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖东隐",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖光景",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖兴可",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "炎帝",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "蔡春潮",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "曾新汉",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈莲峰",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈旺",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈邕",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "郭德福",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "郭德简",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "黄义成",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "姬叔封",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康部祥",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康大成",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "李福木",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "李老大",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "林浩涛",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘策",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘佳琪",
+      "detail": "原文只记名字，是刘氏女性的子女；当前沿用旧显示姓名，姓氏须核对，不应自动按母姓补刘。"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘勤生",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘仰松",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘源明",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "王忠良",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "吴应秋",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "许功甫",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "钟锦麟",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖琳瑄",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖琼瑄",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖瑞瑄",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康才林",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘翠华",
+      "detail": "原文只记名字，是刘氏女性的子女；当前沿用旧显示姓名，姓氏须核对，不应自动按母姓补刘。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘桂宜",
+      "detail": "原文只记名字，是刘氏女性的子女；当前沿用旧显示姓名，姓氏须核对，不应自动按母姓补刘。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘济孙",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘启泳",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘启泳",
+      "detail": "原文只记名字，是刘氏女性的子女；当前沿用旧显示姓名，姓氏须核对，不应自动按母姓补刘。"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘启跃",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘启跃",
+      "detail": "原文只记名字，是刘氏女性的子女；当前沿用旧显示姓名，姓氏须核对，不应自动按母姓补刘。"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘咏华",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘咏华",
+      "detail": "原文只记名字，是刘氏女性的子女；当前沿用旧显示姓名，姓氏须核对，不应自动按母姓补刘。"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "余可申",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "坤成",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "江伟平",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "余家铎",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "进发",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈少伟",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "张振钊",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘鸣岐",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗耀",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世隆",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘亚狗",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘庆松",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德洪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕杆",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘留罗",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘木荣",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘木欣",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕标",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘新炎",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕森",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕耀",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍旺",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世照",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘松坤",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世宣",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘俊乾",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘俊彬",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘俊林",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德新",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘潮安",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘森河",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗湖",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍构",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍锦",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍扬",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍发",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘信亮",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘芝发",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘芝茂",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘梓生",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘汉生",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘永德",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘永宁",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世禄",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世汉",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘白番",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘春元",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德安",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘俊元",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘俊丰",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘昆鹏",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘维智",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘庆名",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘溪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘森三",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘森四",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宏标",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘命钦",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘婵桂",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘婵龙",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘喜德",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘庆寿",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世家",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗祥",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘镜清",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘维阳",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘瑞彬",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世珍",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘顺和",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世守",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世木",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世佳",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍晓",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘耀汉",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘惠波",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘仰文",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘耀南",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德报",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘镜泉",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘兆祥",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘若波",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘镜波",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘钧波",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘映波",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘硕波",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘镇波",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘应祥",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘照堂",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘照廷",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘昆盛",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘衍韩",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世毫",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘维胜",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘维勿",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘森木",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘焕明",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘怀忠",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕新",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕龙",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕成",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘廷顺",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕千",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍芸",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘颖",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘穆",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘济",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘涣",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘瀚",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘泽",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘洛",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘潞",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘汭",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘淮",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘渍",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘铨",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘公孙",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘簧",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "warning",
+      "area": "族谱待核",
+      "name": "刘廉",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘少集",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘镇",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘英发",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘义",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘志学",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘茂楠",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘贻昇",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘贻信",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘贻大",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍烈",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍德",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍存",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德树",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗发",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德寿",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德贞",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德勋",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德才",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘锦云",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍丰",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘寿年",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘树楠",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世成",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德进",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德仁",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘沛林",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘鸿杰",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍仪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍潜",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍淡",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍满",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘理如",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘理来",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘理素",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世思",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘弟仔",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世四",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世武",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世意",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘金春",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘金辉",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘应溪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德英",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德银",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德强",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德钧",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘亚八",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘廷松",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘廷楷",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍义",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世学",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世美",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世昌",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世强",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘锦坤",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德恭",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德成",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德明",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德敬",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘正发",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世鑫",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德阳",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍宜",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘钟松",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德华",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德贤",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕钦",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘金省",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘金城",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕丰",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕宏",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘骧本",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世祯",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世明",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘廷芝",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘广港",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘艺良",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕鑫",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘仲熊",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘东",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘厝边",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘秋秋",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德熙",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕水",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德祥",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕源",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕昭",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德元",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘崇亮",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘岳熊",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘玉熊",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世全",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘长学",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘兆熊",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘孟熊",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘洪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕钊",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕舜",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘群",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘思荣",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘铭成",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘佳悦",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世从",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世杰",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世河",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘振武",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘其俊",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘松昌",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘秋桐",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德光",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘旭贞",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘锦城",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德猪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世钦",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世海",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕思",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕志",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世静",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗传",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍计",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘两杰",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘绍炳",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘镇标",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘镇森",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘桂财",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘贤熊",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘加润",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘银钊",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘哑仔",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘永钦",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘玉文",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘鹏",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德平",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘木歆",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘德松",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘桃南",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘大痴",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘九嗳",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘大舜",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘坤松",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗得",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘成谦",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗龙",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗标",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘明进",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘清泉",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘濬川",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘锡雄",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘深泉",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗安",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘映东",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘映青",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘世德",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘国章",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘家琪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘家骧",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘家骏",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘家驷",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘家锐",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘家骥",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘家聪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘家驺",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘良举",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘映泽",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕汉",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘裕林",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘子丹",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘潮",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘荣",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗兴",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗敬",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗金",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘宗森",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘开七",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘耀文",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘炳林",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖开潮",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖烈然",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖崖柏",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖润松",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖自忆",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖永记",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖绍光",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖先荣",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖振发",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖绍宾",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖狮哥",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖狮弟",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖东平",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖木溪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖再木",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖振溪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖明正",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖明丰",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖先板",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖先科",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖先权",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖老哑",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖振正",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖弟九",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖五",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖振美",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖木盛",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖绍章",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖先勤",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖先松",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖先源",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖永道",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖永禄",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖永理",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖来家",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖方墙",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖绍贞",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖亚五",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖作传",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖炎通",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖添树",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖广渤",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖锦元",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖木章",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖碧堂",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖绍林",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖德芳",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖德光",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖惠通",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖松兴",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖大道",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖振映",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖振汉",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖振亮",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖兴以",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖先治",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖先告",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖大麟",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖海木",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖海平",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖振合",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖令芝",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖振池",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖振权",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖源贤",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖双舟",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖耀城",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖耀加",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖炎潮",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖大松",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖源通",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖耀锦",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖双强",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖海茂",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖源贞",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖映庭",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖海松",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖海藩",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖振杰",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖十一",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖十三",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "廖振垂",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈翔",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈寔",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈夫则",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈夷锡",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈存叟",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈桂轩",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈桂林",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈桂山",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈泽华",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈番新",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈再强",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈建平",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "陈建溪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康厝林",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康木芝",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康木顺",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康新荣",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康舟仁",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康舟丰",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康振明",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康永万",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康永才",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康永年",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康国龙",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康才香",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康忠来",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康忠炎",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康忠林",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康舟文",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康忠进",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康忠楷",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "康忠义",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "共普",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "洪天赐",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "洪木贞",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "潘明溪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "洪桐龙",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "脚桶黄开基祖（推定黄良士）",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "黄良丰",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "黄永",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "黄世春",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "黄福泰",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "黄福英",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "黄福朝",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "黄民生",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "山边寨黄氏洗马桥支",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "山边寨黄氏海鹅头支",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "黄炳森",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "黄芝孝",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "林锦炎",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "林绍章",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "张启盛",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "钟炳元",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "柯卢",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "海鹅头老人组",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "理微",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "李利贞",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "李老大（甘草木）",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "李得荣",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "李得添",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "李得和",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "李得茂",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "李得新（冯发新）",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "李亚积",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "李老三（名失传）",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "郭春溪",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "郭春木",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "郭得庆",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "刘潮森",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "李泽权",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "方英俊",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "方绍远",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "共勋",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "洪金汉",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "洪汉清",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "info",
+      "area": "待核世系",
+      "name": "张肇基",
+      "detail": "尚无结构化世系证据；页面不按姓名猜辈份"
+    },
+    {
+      "severity": "warning",
+      "area": "地图",
+      "name": "下津祠堂",
+      "detail": "地点、简介和坐标仍为示例，需实地核实"
+    },
+    {
+      "severity": "warning",
+      "area": "地图",
+      "name": "村小旧址",
+      "detail": "地点、简介和坐标仍为示例，需实地核实"
+    },
+    {
+      "severity": "warning",
+      "area": "地图",
+      "name": "古井",
+      "detail": "地点、简介和坐标仍为示例，需实地核实"
+    },
+    {
+      "severity": "warning",
+      "area": "地图",
+      "name": "石桥",
+      "detail": "地点、简介和坐标仍为示例，需实地核实"
+    },
+    {
+      "severity": "warning",
+      "area": "地图",
+      "name": "庙宇遗址",
+      "detail": "地点、简介和坐标仍为示例，需实地核实"
+    },
+    {
+      "severity": "warning",
+      "area": "地图",
+      "name": "老宅群",
+      "detail": "地点、简介和坐标仍为示例，需实地核实"
+    },
+    {
+      "severity": "warning",
+      "area": "地图",
+      "name": "南畈农田",
+      "detail": "地点、简介和坐标仍为示例，需实地核实"
+    },
+    {
+      "severity": "warning",
+      "area": "原文口径",
+      "name": "姓氏人口与2018年人口",
+      "detail": "21姓合计1590户、6918人；人口发展篇记2018年1818户、6035人。年份和户籍/常住/宗族口径需核对，未改原文数字。"
+    },
+    {
+      "severity": "warning",
+      "area": "原文缺漏",
+      "name": "自然村人口表",
+      "detail": "表中只有7行数据；与14个自然村的表述需要核对。"
+    },
+    {
+      "severity": "warning",
+      "area": "原文时间",
+      "name": "前言 fb82080e7d3083cfb0d4816f3d892320.html",
+      "detail": "1102年是917年至2019年的差值。原文“迄今”应按编纂时间理解，不宜当作网站当前年份。"
+    },
+    {
+      "severity": "warning",
+      "area": "原文口径",
+      "name": "山地面积",
+      "detail": "土地资源篇同时记山地约2.6平方公里（3900亩）及2018年1455亩；需说明年代和征地后的统计口径。"
+    },
+    {
+      "severity": "warning",
+      "area": "原文待核",
+      "name": "刘景官职",
+      "detail": "第七篇 人物/第一章 古代人物 cd72080e7d3083b6992b0154aab98074.html记台南知州/高雄州知州；先祖创乡篇记奉诏使安南。请核族谱与原始文献，不能擅改成另一个官名。"
+    },
+    {
+      "severity": "warning",
+      "area": "原文文字",
+      "name": "第三篇 乡村建设/第二章 房屋建设 f352080e7d3082769dda8139b0832674.html",
+      "detail": "出现“峻工”，通常应为“竣工”；原书留存，等待审定后修订。"
+    },
+    {
+      "severity": "warning",
+      "area": "原文时间",
+      "name": "第二篇 先祖创乡 5272080e7d3082f1b970018faf48978c.html",
+      "detail": "1102年是917年至2019年的差值。原文“迄今”应按编纂时间理解，不宜当作网站当前年份。"
+    },
+    {
+      "severity": "warning",
+      "area": "原文时间",
+      "name": "第八篇 文化 5302080e7d3083b790548134ce7beffa.html",
+      "detail": "1102年是917年至2019年的差值。原文“迄今”应按编纂时间理解，不宜当作网站当前年份。"
+    },
+    {
+      "severity": "warning",
+      "area": "参考表待核",
+      "name": "蔡春潮",
+      "detail": "“出东郊母姨嗣蔡为祖”的具体收嗣关系未列，需人工核对。"
+    },
+    {
+      "severity": "warning",
+      "area": "参考表待核",
+      "name": "曾新汉",
+      "detail": "出生年由年龄推算，待人工校验。"
+    },
+    {
+      "severity": "warning",
+      "area": "参考表待核",
+      "name": "刘映波",
+      "detail": "迁徙名录人物，原文未说明父母、配偶、子女关系。 此姓名前文其他乡也可能出现，需人工确认是否同一人。"
+    },
+    {
+      "severity": "warning",
+      "area": "参考表待核",
+      "name": "刘映波",
+      "detail": "迁徙名录人物，原文未说明父母、配偶、子女关系。 此姓名前文其他乡也可能出现，需人工确认是否同一人。"
+    },
+    {
+      "severity": "warning",
+      "area": "参考表待核",
+      "name": "刘绍丰",
+      "detail": "迁徙名录人物，原文未说明父母、配偶、子女关系；注意前文其他乡也可能出现同名刘绍丰。"
+    },
+    {
+      "severity": "warning",
+      "area": "参考表待核",
+      "name": "刘绍丰",
+      "detail": "迁徙名录人物，原文未说明父母、配偶、子女关系；注意前文其他乡也可能出现同名刘绍丰。"
+    },
+    {
+      "severity": "warning",
+      "area": "参考表待核",
+      "name": "刘世德",
+      "detail": "迁徙名录人物，原文未说明父母、配偶、子女关系。 此姓名前文其他乡也可能出现，需人工确认是否同一人。"
+    },
+    {
+      "severity": "warning",
+      "area": "参考表待核",
+      "name": "林绍章",
+      "detail": "出生年按1959年八岁推算，需人工确认。"
+    }
+  ]
+}

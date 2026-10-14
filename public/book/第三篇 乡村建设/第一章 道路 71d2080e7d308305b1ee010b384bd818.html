@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第一章　道路</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="71d2080e-7d30-8305-b1ee-010b384bd818" class="page sans"><header><h1 class="page-title" dir="auto">第一章　道路</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="d022080e-7d30-832a-b647-01d34a63718a" class="" dir="auto">衣食住行，是民生的四件大事。千里之行，始于足下——道路。</p><h2 id="5ce2080e-7d30-83d9-b1a5-01758e46c06f" style="display:inline-block" dir="auto">第一节　公路</h2><p id="17d2080e-7d30-830e-a12c-816c5bfa8e51" class="" dir="auto">穿越下津村境的公路有三条，使下津成为交通方便之乡村。</p><ul id="5542080e-7d30-83c1-8f49-811ede38bc66" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、安黄公路</strong>　古代，笔架山虎头东侧延伸燕仔山（堪舆者称虎脚），挡住了由观音岭进城的去路。古驿道绕燕仔山方抵达观音岭。1950年修筑安黄公路，辟开拦路虎脚，天堑变通途，下津乡负责白云至岗山路段。该公路从铺尾与茵藤堤交界处的火神爷宫路段至摇篮尾路段，穿越下津村境约3公里。</li></ul><ul id="bc72080e-7d30-831a-a4c7-810925aad51a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、安凤公路</strong>　明万历年间弯堤自1600年至1613年决堤三次，使田园形成长池和沙墩。1951年填池筑公路，公路西称内长池，下津乡负责银潭路段。该公路在观音岭连接安黄公路，自分路口至三房后津界路口路段，穿越下津村境长0.75公里，路宽7.5米。</li></ul><ul id="97a2080e-7d30-83c1-891f-018b913a0a0c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>三、意东三路</strong>　2004年，为减轻安凤公路车流量的压力，修筑意东三路（S231），宽50米。该公路在宗子山下衔接新开辟的安黄公路，自分路口至塘湖山新湖路口通过，穿越下津村境约1.5公里。</li></ul><h2 id="9c62080e-7d30-8266-85f2-01b751fa2661" style="display:inline-block" dir="auto">第二节　古道</h2><p id="3022080e-7d30-8374-9924-017ff32b3ce2" class="" dir="auto">下津地域自宋代始，就有驿道和马路通过。明宣德年间修筑的东厢堤及清乾隆年间修筑的杜猴寨堤和茵藤堤，先民也以堤顶当路行走。为方便上堤，在东厢堤今下津堤段建有四个石阶（俗称路头格），也在杜猴寨堤建两个石阶。先祖在两堤石阶之间修筑乡道，方便进城和农事。</p><ul id="c1b2080e-7d30-834b-b2a8-0127f30acaa4" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、廖厝古道</strong>　廖厝古道由水心亭通往廖厝码头堤段石阶，途经明经第、画门神、脚桶黄、土地爷宫。清代，潮州邮递总铺为方便东津乡民，在土地爷宫侧设邮递站，乡民常走该道到站领取侨汇或寄收信物。</li></ul><ul id="2052080e-7d30-8380-bab9-018c2ac74476" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、窟尾沟古道</strong>　窟尾沟乡古道通往廖厝埔堤段石阶，由三房西面雨亭途经周厝前路、做屐桃、蔡厝埔、廖厝埔。</li></ul><ul id="d972080e-7d30-839e-87be-81b6525effbd" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>三、巷内乡古道</strong>　巷内乡古道通往弯堤石阶。由五马池沿假山，经盐墩、洪厝。</li></ul><ul id="5122080e-7d30-83f2-ac22-010a0d5126b5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>四、铺仔前古道</strong>　铺仔前通往陈厝堤段石阶，途经绞队井、茂利、竹抱顶、潘厝、陈厝。</li></ul><ul id="e272080e-7d30-82a4-bb93-013e66218d9e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>五、茵藤堤路</strong>　昔先，虎池与韩江相通，东津乡先民所植早稻常年失收。多次筑堤，都被洪水冲毁。清康熙年间，东津薛联桂历官江西粮储参政，他将筑堤屡屡不成奇事奏报朝廷，康熙帝在奏折上划红圈准奏。皇恩浩荡，堤遂筑成。乡民走捷径，沿堤进城。茵藤堤北起弯堤码头，南至铺尾火神爷宫。自此，东津乡与铺尾以宫分界，笔架山东北坡属东津乡境，西北坡属桥头乡境。</li></ul><h2 id="8a32080e-7d30-83c1-8acb-011241a08355" style="display:inline-block" dir="auto">第三节　古道演变村道</h2><ul id="c142080e-7d30-83eb-a775-01a3330bc152" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、田洋主道</strong>　古代，由于受田园产权所限，由各乡通往田间的道路既狭窄又弯曲。<ol type="1" id="03c2080e-7d30-82f0-871c-0197fe33fb3d" class="numbered-list" start="1" dir="auto"><li>窟尾沟乡通往田洋主道　窟尾沟乡通往田洋主道有：<p id="2972080e-7d30-828a-975a-8181826f70f6" class="" dir="auto">①通往红毛灰桥　该路沿盐埠，途经草尾宫（旧址）至老吕墩北侧，转东往石敢当，上杜猴寨堤起盐路头，经画马宫，堤外路至红毛灰桥。若过桥沿海鹅头、山边寨至狗槽上岭为原割山草之道路。若过桥沿后溪东岸，经金狮博地眠、八卦地、石堀内，上虎洞采矿场为原挑白土（瓷土）路。在起盐路头沿杜猴寨堤，经雨亭山、鸭口环可达桃坑。</p><p id="ab02080e-7d30-83d0-94e0-013ed2211e2c" class="" dir="auto">②通往东湖底　该路途经河沟头、埔东宫、马路洋、裴厝路、裴厝堤，过堤沿大片洋路过溪到达东湖底、廖厝山、大坑口田洋。</p></li></ol><ol type="1" id="0a42080e-7d30-8297-b883-01cbfb268aae" class="numbered-list" start="2" dir="auto"><li>巷内乡通往田洋主道　巷内乡通往田洋主道有：<p id="eea2080e-7d30-82e6-b3a1-81d38075b04e" class="" dir="auto">①通往红毛灰桥　该路一段由关刀池顶，经大坟耳至园尾，一段由冬施（沤肥窟）傍，经灰堤窟至园尾，合路后途经五禾埔、桃园、六支灯、杜猴寨，上杜猴寨路头，过堤沿堤外路至红毛灰桥。</p><p id="3822080e-7d30-82b9-b300-8116c2d911ed" class="" dir="auto">②通往桃坑　沿巷内乡路行至六支灯，折南沿中长池路（乡民于何时填池作路未考）至亭脚山，而后一条沿古驿道进桃坑。一条沿岭头路，经长沟桥进桃坑。</p></li></ol></li></ul><ul id="4fa2080e-7d30-8343-9962-01d13b08b73b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、改建乡道</strong>　1955年下半年，下津乡各初级社合并高级社试点成功，一切生产资料为前进高级社集体所有，解决了土地产权私有问题。1958年掀起大跃进高潮，下津乡决定改直道路。<ol type="1" id="e032080e-7d30-836b-a905-0118f0dc0426" class="numbered-list" start="1" dir="auto"><li>长美路　1958年，修通、扩大窟尾沟至安黄公路的道路。辟开老吕墩，用沙垫田筑路，衔接原六支灯至亭脚山的道路。该路北自新祠堂，南至安黄公路亭脚山路段。1999年，下津村再次扩大道路，由土路建设为水泥路，路面宽7米，路长约700米。并命名为长美路，与安凤公路、意东三路成为下津村南北要道。</li></ol><ol type="1" id="c792080e-7d30-836e-8b61-81d83a656cda" class="numbered-list" start="2" dir="auto"><li>宫前路　1959年改直扩大老吕墩北侧至杜猴寨堤起盐路头的道路。2011年，再度扩大加高，建设水泥路，路面宽7米，路长550米。该路西接长美路，东接意东三路。</li></ol><ol type="1" id="0352080e-7d30-8289-ace2-8188681d77b9" class="numbered-list" start="3" dir="auto"><li>新湖路　1958年改变原由安凤公路进窟尾沟乡的线路，斩去原洽年田顶一带围路的荆棘，将原走窟尾沟乡前的路，改在仰松公厅前，大房池垫池砌石档土。疏通新厝前障碍物，垫田修筑至塘湖山。2012年，再次扩路垫高，砌石护坡，而后铺水泥面，命名新湖路。该路东接意东三路，西接安凤公路。其中新祠堂至意东三路路面宽7米，路长466米。</li></ol><ol type="1" id="3942080e-7d30-82d3-b244-01c57594d804" class="numbered-list" start="4" dir="auto"><li>下津路　1958年，改直扩大原巷内至堤外红毛灰桥的道路。工程重点清理安凤公路东侧、园尾、六支灯的沤肥粪窟（俗称&quot;冬施&quot;）群。1992年，自安凤公路交界处至桃园，铺设水泥路面，该路段称桃园路。1994年，自桃园路至下津学校加高扩大路面，砌护路档土墙，铺设水泥路面，路宽8.8米。2017年，改直加宽下津学校至意东三路，并铺设水泥路面。下津路东接意东三路，西接安凤公路，全长1.8公里，路宽8.8米。</li></ol><ol type="1" id="0492080e-7d30-826f-8571-01fe43cd8bd8" class="numbered-list" start="5" dir="auto"><li>津界路　改直窟尾沟通往廖厝埔路头的古道，东自安凤公路下津信用社，经中津蔡厝前、南折饲料厂、桑树脚、脚桶黄至环堤公路。</li></ol><ol type="1" id="da42080e-7d30-8313-9329-81268342255b" class="numbered-list" start="6" dir="auto"><li>山边路　1964年，修筑后溪红毛灰桥东岸堤至黄田山部队后勤军路，途径海鹅头、山边。1975年改直后，增筑海鹅头至孝子坟路段，衔接安黄路。</li></ol><ol type="1" id="8192080e-7d30-8201-8979-0162a76a7a88" class="numbered-list" start="7" dir="auto"><li>神农祠至军营　1961年，修筑神农祠旁安黄公路至黄田山部队狗腰道路。该路沿水尾木桥途经山边与洗马桥之间的田洋。</li></ol><ol type="1" id="5ea2080e-7d30-83cf-81be-0160dd9ebd00" class="numbered-list" start="8" dir="auto"><li>山边至沙瓠　1981年改直、扩大原田间小路。2005年，该路加高，铺盖水泥路。</li></ol></li></ul><h2 id="8642080e-7d30-8275-8853-014c2a043aff" style="display:inline-block" dir="auto">第四节　桥梁</h2><p id="38f2080e-7d30-83f0-8df9-01980b033bf6" class="" dir="auto">东津后溪集文祠、桂坑二水，流经下津村境溪面增宽，水深流急，水运发达。古代后溪建有两座桥梁。</p><ul id="7d02080e-7d30-8329-a450-0111c3ae3c0c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、古桥</strong><ol type="1" id="5322080e-7d30-837b-bac0-813e9f8beda5" class="numbered-list" start="1" dir="auto"><li>洗马桥　洗马桥建于宋代，全桥用石柱和石条板筑造，是潮州通往泉州的驿道桥。</li></ol><ol type="1" id="c072080e-7d30-83b2-926a-8151aaa54763" class="numbered-list" start="2" dir="auto"><li>红毛灰桥　红毛灰桥建于清代，为钢筋水泥结构。建桥所用水泥是外国产品，外国人的头毛红色，因而，时人称该桥为红毛灰桥。</li></ol></li></ul><ul id="c1e2080e-7d30-8376-a52a-81a603583843" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、木桥</strong><ol type="1" id="73d2080e-7d30-82db-9f0a-81f1caac8a4e" class="numbered-list" start="1" dir="auto"><li>八卦地木桥　1958年，成立意溪瓷矿场，为方便工人上山采矿和乡民挑白土，由瓷矿场牵头联合下津乡建造，该桥为杉木结构。1973年改建石桥。</li></ol><ol type="1" id="af82080e-7d30-834a-bee8-81a1a6b6e3f4" class="numbered-list" start="2" dir="auto"><li>水尾木桥　水尾木桥建于1961年，由意溪公社建造。该桥是神农祠通往军营路的桥梁，桥距安黄公路神农祠路段约80米，全桥为杉木结构。</li></ol></li></ul><ul id="6052080e-7d30-82e6-b8fd-8183f11d1d9e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>三、混凝土桥</strong><ol type="1" id="a512080e-7d30-83c4-b9d8-8176d2269291" class="numbered-list" start="1" dir="auto"><li>瓷土矿桥　该桥建于1980年，由飞天燕瓷土矿建造。为钢筋水泥结构。全桥长66米，宽10米。2018年由桥东办事处主持重建，长64.5米，宽11米。</li></ol><ol type="1" id="8032080e-7d30-82f3-95c2-8126ed572b4b" class="numbered-list" start="2" dir="auto"><li>长兴桥　该桥建于2005年，由桥东神农工业区建造，是安黄公路摇篮尾路段通往洗马桥自然村的桥梁。为钢筋水泥结构，全桥长48米，宽10米。</li></ol><ol type="1" id="8582080e-7d30-8285-b324-81967cab2703" class="numbered-list" start="3" dir="auto"><li>山边桥　该桥于1973年，由意溪公社兴建，2004年被洪水冲毁。</li></ol></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第三章　水利</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="c8a2080e-7d30-8251-9720-01241fef9362" class="page sans"><header><h1 class="page-title" dir="auto">第三章　水利</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h2 id="7222080e-7d30-828a-80a9-81b84e37174e" style="display:inline-block" dir="auto">第一节　堤防</h2><p id="3522080e-7d30-837a-9fa3-011408c02e45" class="" dir="auto">下津境内有三条堤（含堤段）：</p><ul id="7492080e-7d30-835b-9268-8159ef10358f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、东厢堤</strong><p id="0a22080e-7d30-8344-95e3-019963f24cb5" class="" dir="auto">明宣德十年（1435），潮州知府王源主持全面修筑潮州城四厢堤防。</p><p id="2cc2080e-7d30-825f-8ed3-819a76d3d12c" class="" dir="auto">东厢堤北起东厢都橡埔，南至水南都急水。其中，自橡埔堤头至韩山麓为一、二铺堤，自涸溪至水南都急水止为第三铺堤。至清乾隆年间，一铺堤段称意溪堤，二铺堤段称东津堤。</p><p id="27c2080e-7d30-83cf-8207-011bd0335e96" class="" dir="auto"><strong>东津堤段决堤与修堤历史</strong></p><p id="0432080e-7d30-8392-95f7-0147c526e64a" class="" dir="auto"><strong>弯堤：</strong> 明万历二十八年（1600）决弯堤，潮州府推官姚会嘉率众修堤。四十年（1612）弯堤又溃，当年堵复。四十一年（1613）弯堤复圮。东厢、秋溪、龙眼城、苏湾诸都“禾没殆尽”。当年因荒歉收，近堤劳苦民众已无力从事义务的修堤劳动。明万历四十三年（1615），海阳知县沈凤超采用中砌地龙，以杜渗泄，外培荒石，以御冲激，上加石矶，以阻狂澜的修复办法，于正月动工，三月竣工。清康熙五十七年（1718），六月初一，弯堤决20余丈，由乡民堵复。</p><p id="1fa2080e-7d30-828c-9c61-81923579bd8c" class="" dir="auto">1964年6月17日，韩江水位涨至16.95米，弯堤旋洞，出现险情，由黄田山部队派出指战员进行抢险，保住大堤安全。</p><p id="a9a2080e-7d30-8398-85dc-8168d914703d" class="" dir="auto">清康熙三年（1664），东津堤段（今上津）堤溃，由江西参政薛联桂（今上津人）捐修。并建议意溪堤和东津堤的堤面铺户租金作每年修堤费用。</p><p id="3042080e-7d30-8371-b624-01fcc2d0069d" class="" dir="auto"><strong>廖厨码头堤：</strong> 清咸丰三年（1853）六月，廖厨码头堤段决堤50余丈，潮州知府吴均、海阳知县帖临藻发出通知按田亩派筑。</p><p id="3282080e-7d30-82cc-ad9d-01f95121faa3" class="" dir="auto">清宣统三年（1911）七月十三日凌晨2时，三师公堤决30余丈，由新加坡东津人刘光澄发动华侨捐洋银28219元，1912年8月修堤竣工，在堤顶雨亭立“辉煌顶斯碑”，并勒“记事碑”于三师公庙内。</p><p id="20f2080e-7d30-83e4-9c0a-012fa8750bb6" class="" dir="auto"><strong>新中国成立后的堤防建设：</strong> 自新中国成立以来，下津堤多次进行培修加宽加高加固，1962年开始分批拆除堤顶铺屋，至1988年堤顶加高2米，堤面宽4米，达到抗击20年一遇的防洪标准，1996年，堤面顶高20.4米，宽6—8米，2000年开始建设抗击50年一遇的防洪标准，至2019年，工程基本完成。</p></li></ul><ul id="b452080e-7d30-830d-87e6-018fc4615821" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、杖猴寨堤</strong><p id="abe2080e-7d30-83b4-97e9-015820172d05" class="" dir="auto">清乾隆五十九年（1794），海阳知县韩义发动百姓修筑堤防，东津乡民修筑杖猴寨堤及裴厨堤。</p><p id="3ad2080e-7d30-834f-baea-01846b4a1057" class="" dir="auto">1970年8月中秋夜决堤，全村受浸，村民搬上山居住避洪水。下津大队主持修复。</p></li></ul><ul id="4fd2080e-7d30-82a6-ac3e-81d41704e8e7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>三、后溪堤</strong><p id="3072080e-7d30-825b-b1ca-8161d9219c18" class="" dir="auto">1958年冬，修筑大片洋堤。</p><p id="4352080e-7d30-8333-9b08-017dd1b002a7" class="" dir="auto">1959年冬，修筑塘湖山至摇篮尾白岭后溪堤。</p><p id="1a32080e-7d30-831b-8653-8125e2c150f6" class="" dir="auto">1960年冬，修筑祝厨垭（金狮博地眠）至洗马桥与黄金塘堤段交界处。</p></li></ul><h2 id="77a2080e-7d30-83a8-85c4-81ce777a261f" style="display:inline-block" dir="auto">第二节　疏通洗马桥溪段</h2><p id="3612080e-7d30-8219-990e-81c1c0341302" class="" dir="auto">1973年12月3日至23日，疏通后溪洗马桥溪段。总长1209米，其中新挖溪道494米，溪底宽52米。完成土方11.1万立方米。</p><h2 id="abb2080e-7d30-83c4-80f6-011ad4f8e878" style="display:inline-block" dir="auto">第三节　灌溉</h2><p id="6282080e-7d30-821c-a4fe-01c109fac630" class="" dir="auto">1956年，东津乡（上、中、下津及石牌）在韩江堤安津宫前开建半堤涵，涵高95厘米，宽85厘米，为动力抽水灌溉。1962年改为电力抽水灌溉。1984年因河床变化，水源被沙堵塞，填塞半堤涵。</p><p id="1c02080e-7d30-82df-9d8b-819862439aa3" class="" dir="auto">1957年，开建水尾闸。</p><p id="4b82080e-7d30-82be-b4ce-01e218497cea" class="" dir="auto">1972年，开建韩江陈厨堤外电动站，筑渠2500米。</p><p id="c4f2080e-7d30-8342-8c3e-0170a00f9cb3" class="" dir="auto">1964年，开建海鹅头抽水站，筑渠1500米。</p><p id="02e2080e-7d30-824b-b35e-81b663fd467c" class="" dir="auto">1980年，开建洗马桥抽水站，筑渠500米。</p><p id="1ab2080e-7d30-83cc-bd4c-01568a039356" class="" dir="auto"><strong>六亩闸：</strong> 1957年秋至1958年春建成，工程由意溪镇副镇长刘世美主持，派下津刘光金（乳名亚愚）管理。六亩闸主要作用一是控制韩江水倒灌入后溪，二是蓄水灌溉。</p><p id="16b2080e-7d30-83ee-8077-013da092d76b" class="" dir="auto">1978年，兴建后溪电排（排灌）站。</p><h2 id="e5f2080e-7d30-826c-847e-81be45164111" style="display:inline-block" dir="auto">第四节　平整土地</h2><p id="ebb2080e-7d30-833c-9016-81f3793ccf88" class="" dir="auto">1957年，下津前进高级社开展改造低产田，改良土壤，修整排灌渠的平整土地工作。</p><ul id="9ca2080e-7d30-827e-be12-81ace3937024" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、改造低产田</strong><ol type="1" id="0f92080e-7d30-82c4-9d95-813a2a4da58d" class="numbered-list" start="1" dir="auto"><li>低洼田采取逐片修排水沟，逐区挖环田沟，将黄腺积水引入排水沟，使土壤透气。</li></ol><ol type="1" id="5262080e-7d30-826c-b883-81fd3cb50f1a" class="numbered-list" start="2" dir="auto"><li>高坡田采取修渠引水灌溉。</li></ol><p id="eef2080e-7d30-832a-9c7d-01abb556ac8f" class="" dir="auto">通过改造，使原滥洋田单造亩产200余斤提高到300多斤。</p></li></ul><ul id="3362080e-7d30-826e-977e-01f0953ec203" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、改良土壤</strong><ol type="1" id="2dd2080e-7d30-838f-9cc5-013521a3a9a5" class="numbered-list" start="1" dir="auto"><li>沙质田采取加塘泥或粘土，提高土壤肥力。</li></ol><ol type="1" id="d1c2080e-7d30-83c3-9968-010656e49b02" class="numbered-list" start="2" dir="auto"><li>粘质田采取加沙，使土壤透气。</li></ol><p id="c482080e-7d30-833b-8105-818e047ffbee" class="" dir="auto">通过改良，使原单造亩产400斤提高到600斤以上。</p></li></ul><ul id="b722080e-7d30-8203-a0f6-81de66318f69" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>三、平整土地</strong><ol type="1" id="6ee2080e-7d30-83a8-ab45-0133912322cd" class="numbered-list" start="1" dir="auto"><li>田块高低不平的采取搬高垫低。</li></ol><ol type="1" id="0d22080e-7d30-8214-828c-016af708c3a5" class="numbered-list" start="2" dir="auto"><li>田块不整齐的采用移直田埂，使田块整齐。</li></ol><ol type="1" id="d092080e-7d30-8339-b0e7-01368b68cb8c" class="numbered-list" start="3" dir="auto"><li>搬沙墩垫低洼地，扩大耕地面积。</li></ol><ol type="1" id="12c2080e-7d30-8360-9e36-81f4b505a499" class="numbered-list" start="4" dir="auto"><li>改直田洋道路，搬高填低，灌溉渠沿道路旁修筑，便于引水进田。</li></ol><p id="32f2080e-7d30-8347-bc40-81258699a5b5" class="" dir="auto">下津乡前进农业高级社由于落实“农业八字宪法”，措施得力，使水稻亩产迅速提高，40%的种植面积年亩产跨纲要（800斤），百分之六十的种植面积年亩产超千斤，达“放卫星”要求“千斤水稻，万斤薯”指标，为潮安县水稻亩产甲全国增光添彩。</p></li></ul><ul id="2892080e-7d30-839c-ba9b-01f4f6d1ad1f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>四、堤墩填长池</strong><p id="93e2080e-7d30-836e-8d7f-81966ffe6a70" class="" dir="auto">1970年，治韩工程定在下津大队境内引韩，动员下津村民迁徙草岚武未遂。治韩队伍从四面八方进入下津施工。1971年初，上级撤销治韩在下津的计划，工程半途而废。下津土地千疮百孔，农作物满目疮瘇。</p><p id="b322080e-7d30-831c-801d-01019a2ae078" class="" dir="auto">1972年，下津大队领导班子动员各生产队长搬堤墩填长池，重整田园。</p><p id="63c2080e-7d30-82e4-9c2d-010e4b66c444" class="" dir="auto">大队抓准农闲时间安排各生产队派工，逐年将杖猴寨堤、五禾埔沙岭及全村各座沙墩搬填长池和低界地。搬填工作由“老人试猪脚”（试点）看到成效，逐年搬填，至1981年平整结束，历时10年。</p></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

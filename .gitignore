@@ -1,0 +1,14 @@
+node_modules/
+dist/
+tmp/
+test-results/
+reports/browser/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+public/images/下津村史.pdf
+scripts/github-api.ps1
+vite.config.js
+vite.config.d.ts
+reports/*.png

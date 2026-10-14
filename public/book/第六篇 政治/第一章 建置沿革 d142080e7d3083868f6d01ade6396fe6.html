@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第一章 建置沿革</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="d142080e-7d30-8386-8f6d-01ade6396fe6" class="page sans"><header><h1 class="page-title" dir="auto">第一章 建置沿革</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h2 id="9882080e-7d30-8242-aa46-81df8c7f0660" style="display:inline-block" dir="auto">第一节　潮州政区沿革</h2><ul id="1472080e-7d30-8278-86c1-0179570d7856" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、潮州史前政建置</strong><p id="ca62080e-7d30-83fd-a35a-01ef4b60e42c" class="" dir="auto">潮州秦属南海郡。汉武帝元鼎六年（公元前111），置揭阳县。<br/>东晋咸和六年（公元331）析揭阳县为海阳县。<br/>义熙九年（413），置义安郡，辖海阳、潮阳、绥安、义招、海宁五县。<br/>南朝梁（502–557），改义安郡，置瀛州。</p></li></ul><ul id="09e2080e-7d30-823e-9b05-013406862b93" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、隋代始立潮州</strong><p id="0872080e-7d30-83c9-8161-01b76681bd61" class="" dir="auto">隋开皇十一年（591），改瀛州始立潮州。<br/>海水定期涨落称“潮”，“州”为古代行政单位。昔先，潮水沿韩江涨往今意溪头塘，而后退潮回海，潮州取潮水往复之意而得其名。</p></li></ul><ul id="57f2080e-7d30-838c-8b42-816288be7b10" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>三、历代政沿革</strong><p id="a882080e-7d30-8347-a656-818d9ed5b8f9" class="" dir="auto">唐天宝元年（742），改潮州为潮阳郡。唐乾元元年（758），废潮阳郡复称潮州。<br/>宋代，潮州辖三大县：海阳、潮阳、揭阳三大县，因此潮州就有“三阳”之称。<br/>元代，元世祖十六年（1279），改潮州为潮州路，辖海阳、潮阳、揭阳、程乡四大县。<br/>明洪武二年（1369），改潮州路为潮州府，府的建制一直沿用至清末。<br/>明代，潮州府辖海阳、潮阳、揭阳、程乡、惠来、饶平、大埔、平远、澄海、普宁、镇平十一县。<br/>清代，潮州府辖海阳、潮阳、揭阳、惠来、饶平、大埔、澄海、普宁、丰顺九县及南澳同知和潮州港。<br/>潮州港：清咸丰八年（1858），《天津条约》列潮州为通商口岸。潮州府于澄海县沙汕头置潮州港。清同治六年（1862）辟为汕头埠。民国十年（1921）设立市政厅，与澄海县分治。1930年置为汕头市。因此，就有“潮汕”之称。<br/>民国元年（1912），废府建制。海阳县治设潮州城，称潮州镇。<br/>1953年7月，潮州镇置为县级市。<br/>1959年7月，城关镇人民公社复称潮州镇。<br/>1958年11月，潮州市改为潮安县城关镇人民公社，降为镇级建制。<br/>1979年8月1日，潮州镇范围和下津、六亩、黄金塘、卧石、社光五个大队地域，恢复潮州市建制。<br/>1991年12月7日，潮州市升格为地级市，辖潮安、饶平、湘桥二县一区。</p></li></ul><h2 id="d742080e-7d30-833f-a46e-01bcd27c646c" style="display:inline-block" dir="auto">第二节　海阳县潮安县沿革</h2><ul id="dca2080e-7d30-82f8-a689-01a2b30193eb" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、海阳县改为潮安县</strong><p id="0d72080e-7d30-8354-8e93-013d1a52fbda" class="" dir="auto">海阳县因南濒海洋（南海）而命县名海阳（阳与洋皆音）。<br/>民国三年（1914），全国重复地名时，因山东省有海阳县同名，广东省海阳县改为潮安县。<br/>潮安县名由来传说有二：其一，取“潮州府”之“潮”字及“义安郡”之“安”字。其二，潮邑合境平安。</p></li></ul><ul id="ba62080e-7d30-82f4-9c68-012c6eecde4c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、潮安县沿革</strong><p id="65a2080e-7d30-82fe-b649-81d874877f3b" class="" dir="auto">1949年10月23日，成立潮安县军事管制委员会。<br/>1950年3月15日，潮安县人民政府正式成立。<br/>1968年，潮安县革命委员会成立。<br/>1980年，恢复潮安县人民政府。</p></li></ul><h2 id="39d2080e-7d30-835f-8ea6-018199d5cbaf" style="display:inline-block" dir="auto">第三节　湘桥置区</h2><p id="1152080e-7d30-8312-924d-01a44c9c6ee5" class="" dir="auto">湘子桥，一桥三名称。东边十二洲，称湘子桥。西边十二洲称广济桥。江心十八条梭船，古时用藤索连结，能随水位涨落而浮（升）降，故之称“浮桥”。潮邑民间习惯称全桥为湘子桥。<br/>1988年，湘子桥列为全国文物重点保护单位，文物部门用“广济桥”命文物保护单位名称。<br/>1991年12月7日，潮州市置湘桥区，按民间习惯称法，用湘桥命区名。</p><h2 id="f992080e-7d30-83bd-83c2-018f9ba578f0" style="display:inline-block" dir="auto">第四节　下津乡名由来</h2><ul id="30a2080e-7d30-8352-9e9c-01f33f5c81df" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、置乡前地名沿革</strong><p id="02a2080e-7d30-82f2-82f2-8183b2581a89" class="" dir="auto">昔先，潮州城东近郊地域，西有韩江，东有后溪。江溪二水交积成湖，故名东湖。是泽、塡、渚地带。<br/>唐代，东湖人烟稀少，江有鳄鱼为患，山有野象出没。<br/>宋元时期，各姓氏先祖由福建迁入东厢，择墩埔等高地开基创乡，逐渐形成东湖聚落。<br/>明宣德年间，修筑东厢堤，官府为方便潮城和东厢的百姓往来，在潮城上水门设一渡口，也在东湖设一渡口。字典释“津”字本义为渡口。因而，上水门渡口称“津上”，东湖渡口称“东津”。时人由潮城乘船来东湖，船家问往何方，乘客皆曰往东津。久之，东湖遂改称东津村。<br/>清承明制，东津村隶属东厢都。<br/>民国三年（1914），海阳县东厢都改称潮安县东厢区，东津村隶属关系不变，乡村设保甲制。<br/>民国十九年（1930），撤东厢区，东津村隶属潮安县秋东区。<br/>民国三十五年（1946），潮安县裁区并乡，置东厢乡，东津村属之。刘德城（窟尾沟人）任东厢乡乡长。<br/>民国三十八年（1949），潮安县置八个区，东津村改称东津乡，隶属秋东区（1950年改为第四区）。是年10月23日，潮安全境解放，即日成立潮安县军事管制委员会。登荣、意溪合设荣意署。<br/>1950年3月15日，潮安县人民政府正式成立，荣意区署改为第三区人民政府，东津乡从秋东区（第四）划属第三区。</p></li></ul><ul id="e182080e-7d30-825e-84ee-816c4a13784b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、下津置行政乡</strong><p id="3272080e-7d30-82a6-8cc4-01d91931cad9" class="" dir="auto">1952年，东津乡析置上津、中津、下津三个行政乡。上津处东津上段而得名，中津处东津中段而得名，下津处东津下段而得下津乡名。</p></li></ul><h2 id="d782080e-7d30-834b-8d1f-81fd98d9b706" style="display:inline-block" dir="auto">第五节　下津行政名称沿革</h2><p id="db72080e-7d30-836e-a8b7-812e0cf22ac6" class="" dir="auto">1952年—1956年1月，行政乡建制，称下津乡政府，治所设廖元兴儒林第。<br/>1956年2月—11月，高级社建制，称东津乡前进农业生产合作社。<br/>1956年12月—1958年11月，高级社建制，称潮州市郊新合乡前进农业生产合作社。<br/>1958年12月—1961年，军事化建制，称下津连，下辖五个排。<br/>1961年—1968年，生产大队建制，称意溪公社下津生产大队，下辖19个生产队。<br/>1968年4月—1976年，革命委员会建制，改称下津大队革委会，下辖12个生产队。<br/>1976年—1984年8月15日，生产大队建制，下辖24个生产队。<br/>1984年8月16日—1998年3月31日，管理区建制，称下津管理区，下辖9个村。<br/>1999年4月1日始，村民委员会建制，称下津村委会，下辖9个村民小组。</p><h2 id="5a12080e-7d30-8349-8a18-814caa33caa0" style="display:inline-block" dir="auto">第六节　下津隶属沿革</h2><p id="7692080e-7d30-8223-aa62-816227a3830c" class="" dir="auto">1952年—1956年，下津乡隶属潮安县第三区。<br/>1954年—1955年，中共潮安县第三区委治所设下津乡厚斋公厅。<br/>1956年2月，撤第三区分置意溪镇、河内乡（下津乡刘宏贞任乡长）、东津乡。下津前进高级社隶属东津乡政府管辖。同年12月，一镇二乡合并称意溪镇。<br/>1956年12月—1958年11月，东津乡前进高级社划属潮州市郊新合乡管辖，乡治设在小新乡。<br/>1958年9月，成立意溪人民公社。同年11月，潮州市改为城关镇人民公社，撤潮州市郊新合乡。下津前进高级社划属意溪人民公社，改称下津连。<br/>1979年设城东公社。1980年1月1日，下津由意溪公社划属城东公社，公社治所设下津虎池安黄公路笔架山东北坡下。<br/>1982年，因饶平县有城东公社同名，潮州市城东公社改称桥东公社，下津隶属关系不变。<br/>1984年撤公社名称，桥东公社改称桥东街道办事处，下津隶属之。<br/>1991年12月，桥东街道办事处划属湘桥管辖，下津隶属关系不变。<br/>2010年9月，桥东街道办事处移治所于下津村宫前路东端南侧。</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

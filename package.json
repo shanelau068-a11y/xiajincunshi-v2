@@ -1,0 +1,57 @@
+{
+  "name": "xiajincunshi-v2",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "dev:lan": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "build:pages": "npm run check && node scripts/publish-review.js && npm run build && node scripts/prepare-pages-dist.js && node scripts/release-manifest.js",
+    "audit:content": "node scripts/audit-content.js",
+    "test:content": "node --test tests/content.test.js",
+    "test:browser": "playwright test",
+    "check": "npm run audit:content && npm run test:content",
+    "preview": "vite preview --host 127.0.0.1",
+    "preview:lan": "vite preview --host 0.0.0.0",
+    "import:book": "node scripts/import-book.js",
+    "import:genealogy": "node scripts/import-genealogy-from-book.js",
+    "clean:genealogy-nonpersons": "node scripts/clean-genealogy-nonpersons.js",
+    "import:people": "node scripts/import-people-from-book.js",
+    "import:timeline": "node scripts/import-timeline-from-book.js",
+    "import:search": "node scripts/import-search-docs.js",
+    "clean:book-icons": "node scripts/clean-book-icons.js",
+    "import:gallery": "python scripts/import-gallery-images.py",
+    "sync:gallery": "node scripts/sync-gallery-data.js",
+    "import:genealogy-reference": "python scripts/import-genealogy-reference.py",
+    "merge:genealogy-reference": "node scripts/merge-genealogy-reference.js"
+  },
+  "dependencies": {
+    "dompurify": "^3.4.17",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.468.0",
+    "minisearch": "^7.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/leaflet": "^1.9.21",
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "cheerio": "^1.2.0",
+    "postcss": "^8.4.49",
+    "prettier": "^3.9.10",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

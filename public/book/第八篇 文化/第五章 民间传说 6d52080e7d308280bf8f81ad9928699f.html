@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第五章　民间传说</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="6d52080e-7d30-8280-bf8f-81ad9928699f" class="page sans"><header><h1 class="page-title" dir="auto">第五章　民间传说</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h2 id="53b2080e-7d30-835e-8b30-0118706c1a2f" style="display:inline-block" dir="auto">第一节　刘昉之民间传说</h2><ul id="8212080e-7d30-838d-80c6-81c83e5dc14f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、龙图公骑竹马</strong><p id="9e92080e-7d30-8278-914b-014a281f23da" class="" dir="auto">龙图公刘昉早上三更骑竹马上朝，晚上骑竹马回家，夫妇房中细语。其母偶然发觉媳妇房中喁喁喃喃，以为自己耳鸣，经多次后觉得有异，追问媳妇昨夜你房中之音何人，媳据实以告&quot;是你子&quot;，婆不信，并言若是这样，候他来时告我。当晚龙图公骑竹马回家来，媳妇告知婆婆&quot;他来了&quot;。婆婆来到房中，真的见到儿子及竹马，得知竹马是仙人所赐，就来一试，马上骑上。</p><p id="0922080e-7d30-829b-9745-81600d76bad1" class="" dir="auto">这一试，隔天龙图公骑竹马上朝时，竹马走得很慢（阴气所伤），太阳将出来而未到京。龙图公一急，伸手向太阳一捉，太阳就在手掌中，但见天翻地黑，不见太阳，京城亦黑暗无光，未上早朝。这样经三日夜才到京，从此竹马失灵。</p></li></ul><ul id="0b22080e-7d30-8265-9ffb-8133a41dfa63" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、刘母戏林鉴成</strong><p id="da42080e-7d30-82a0-b968-81a3acc2809f" class="" dir="auto">宋代刘昉虽说在朝廷做了龙图阁学士，人称他刘龙图，但他不讲排场，不仗势欺人，每次回家乡潮州东津来看望母亲，总是独自骑一匹马，先在城外下马歇息，到天黑才悄悄进家。潮州知府林鉴成就不同，他平时欺压百姓，每次出巡总是八人大轿前呼后拥，好不威风。</p><p id="5302080e-7d30-83e1-a981-010a2444c2ec" class="" dir="auto">有一次刘龙图回家，母亲便把林鉴成在潮州的所作所为告诉他，要他出面教训这个坏官。刘龙图说：&quot;何须儿出面呢！&quot;接着就教给母亲一个惩治林鉴成的办法来。</p><p id="6e12080e-7d30-82d3-ba31-81dd1f24583d" class="" dir="auto">不久，林鉴成路过东津，刘母就搬了一把交椅放在大路中，上面放着儿子的官袍官帽，地上放着儿子的官靴子。林鉴成坐在轿里，老远看见前面堂堂正正摆着一套朝廷一品官员的袍服，自知惹了麻烦，慌忙下轿，跪在地下。这时正是暑天，烈日当空，晒得他浑身大汗，头昏脑胀，又不见有人前来喊他起身，只好咬着牙关继续跪下去。那些平时狐假虎威的随从，见上司如此，也只好跟着活受罪。</p><p id="61b2080e-7d30-82ba-ba40-0129c7cb5023" class="" dir="auto">这时恰巧有两只狗在厮咬，把袍帽等物撞翻在地，林鉴成这才急忙乘机爬起来，溜回城里，从此再也不敢放肆了。</p></li></ul><ul id="c492080e-7d30-82a7-a7d2-81b4bdd6aceb" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>三、收妖为马</strong><p id="b0f2080e-7d30-820d-9725-017af9c6419d" class="" dir="auto">刘龙图中举前，常在窗前夜读。有一个晚上，忽从窗外伸进一只小手，弄灭他的烛火。初时，他不介意，以为是邻居的孩子贪玩，后来连续数夜如此，便警觉起来，于是待那搅火的手又伸进来时，当即抓住隔窗盘问。</p><p id="62f2080e-7d30-8226-ad4b-018c91bdfc32" class="" dir="auto">&quot;你是哪家的小子，为什么夜夜来搅我的火？&quot;</p><p id="6092080e-7d30-83e2-b631-81cefddf290e" class="" dir="auto">&quot;我是你邻居。&quot;</p><p id="7592080e-7d30-8387-9216-014ec39fd1f8" class="" dir="auto">&quot;邻居，哪一家？&quot;</p><p id="2f32080e-7d30-828e-b0c0-817de60ba042" class="" dir="auto">&quot;就在屋背头。&quot;</p><p id="2bf2080e-7d30-820c-a8df-81d6cb818819" class="" dir="auto">&quot;胡说，屋背头，屋背头有什么人家？你到底是人还是鬼？&quot;</p><p id="f352080e-7d30-831a-9ee6-015ad681345f" class="" dir="auto">&quot;相公息怒，不必多问。&quot;</p><p id="0a42080e-7d30-83e1-ab4d-819b8af141e7" class="" dir="auto">&quot;好，你不实说也罢。&quot;</p><p id="22c2080e-7d30-83cb-be66-0134cd45cc7f" class="" dir="auto">刘龙图随即提笔朝那只小手写了一个&quot;大&quot;字，即时，那小手就呼呼地大起来了。隔窗响起呱呱的尖叫声，令人毛骨悚然，接着发出阵阵凄厉的哀求声：&quot;相公饶命，相公高抬贵手，小的实情禀告，相公屋背头有一支单单独独的桂竹子，每天日头出时竹尾朝东，日头落山竹尾朝西就是我。&quot;</p><p id="1a32080e-7d30-836f-a2f5-81f8d6eaff02" class="" dir="auto">刘龙图听了半信半疑，立即把竹子精手背上的&quot;大&quot;字抹去，改写一个&quot;小&quot;字，果然竹子精的手迅速缩小还原，收出窗外隐去。</p><p id="b4d2080e-7d30-8247-82f1-01e656733b1a" class="" dir="auto">第二天天一亮，刘龙图就到屋背看，那里有一棵桂竹子，就把它砍回家中做成竹马，收妖为马。刘龙图中进士后，白天在京城做官，夜间骑竹马飞回家中与妻子团聚，天将亮时又骑竹马飞到京城赴早朝，天天如此。久而久之妻子怀了孕，母亲不知情，误认为儿媳有不轨行为，特审问儿媳，媳不得不实情禀告。母不信，媳则说：&quot;不信你就晚间来问你儿子&quot;。于是母在半夜前往偷看，果然听见儿子与媳妇在说话，遂即扣门而入，母惊喜，并取竹马试骑。糟糕，这一骑，竹马失灵了。</p><p id="66a2080e-7d30-8351-91c2-0140e3b88c87" class="" dir="auto">刘龙图想到每天往京城参加早朝，文武百官都要准时上殿参见皇帝，自己失去了竹马，赶不上早朝，要遭问罪处斩，立即星夜启程赶往京城，手掌心里写了个&quot;日&quot;字，将五指握得紧紧的，让日头出不来。这一夜特别长，皇帝和百官睡觉久等不到天亮，待刘龙图赶到京城放开手掌时，太阳已近落山。刘龙图虽免处斩，但被贬出京城，降为广东博罗县县令。</p></li></ul><ul id="8502080e-7d30-83da-9893-01bf2e16b5c8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>四、镇治湖妖</strong><p id="ed12080e-7d30-8249-a3e3-8151d7cd6490" class="" dir="auto">博罗，当时还十分荒凉，特别是那大湖里的妖怪，常出来吃人，扰乱百姓，凡是新任县官还未上任就被湖妖伤害。刘龙图明知其险，迫于君命不能不去。他便硬着头皮冒着性命危险往博罗赴任和镇治湖妖。上任前一晚，他想了一个办法，先把周身涂满麦糖，然后就往糠头里钻，从头到脚全是糠头，等待湖妖来而见机行事。</p><p id="acf2080e-7d30-83dd-af08-01a386a726fc" class="" dir="auto">当晚前半夜平平静静，半夜一过湖水翻滚，一大群水怪冒出来了，围住刘龙图看了又看，问：&quot;你是哪里的妖怪？&quot;</p><p id="7a42080e-7d30-82a6-98e9-81d5764ad6f1" class="" dir="auto">&quot;我是三百多年的糠头精。&quot;</p><p id="8512080e-7d30-8222-bb96-01d05409e979" class="" dir="auto">&quot;糠头精为什么会有人的膻味？&quot;</p><p id="a4a2080e-7d30-82e1-a85e-01085d560b61" class="" dir="auto">&quot;糠头常与做米的妇女打交道，怎么不粘点人味。&quot;</p><p id="dd62080e-7d30-824d-853e-01d7cdd200cf" class="" dir="auto">&quot;唔，好！听说有个新上任的县官刘龙图，你有没有见过？&quot;</p><p id="1ee2080e-7d30-82cb-b85d-8161b8b25fc0" class="" dir="auto">&quot;没有见过。&quot;</p><p id="31d2080e-7d30-833e-a83a-81c06380b0e6" class="" dir="auto">&quot;听说刘龙图很厉害，你怕不怕？&quot;</p><p id="8962080e-7d30-8276-a075-01f445f04791" class="" dir="auto">&quot;哈，哈，哈，好家伙，够朋友。老实说，我们都是天不怕，地不怕，专惹县太爷，专食县太爷，只怕一件。&quot;</p><p id="8132080e-7d30-8266-bf9a-8140270f029a" class="" dir="auto">&quot;对，只一件，谁也不会知道我们只怕一件——龙骨车，哈哈哈。&quot;</p><p id="e952080e-7d30-82a9-ae11-012e3efa29de" class="" dir="auto">众水妖一心想抓到刘龙图，不仅没有识破刘龙图装扮的糠头精，反而在刘龙图面前泄露了致命的秘密。</p><p id="3e82080e-7d30-8251-a80a-01ad8ac3bfd7" class="" dir="auto">天亮后，刘龙图立即换装走马上任。并命令全县龙骨车全部集中到湖边车水。终于抽干了湖水，除了湖中的怪，让人民永远安居乐业。</p><p id="ac62080e-7d30-829c-9400-811b0fe7fc60" class="" dir="auto">（录自《潮州桃坑刘氏族谱》）</p></li></ul><h2 id="26a2080e-7d30-83ac-a53c-81cd2d3aa0ff" style="display:inline-block" dir="auto">第二节　十五岁阿公坟的传说</h2><p id="b9b2080e-7d30-83b2-bb44-01512b78517b" class="" dir="auto">明朝万历年间，潮州府城湘子桥东笔架山侧，有一山丘，势如饿虎扑食，故名&quot;虎头山&quot;。梁家小店位于虎头之上，虽茅店柴扉，却因地处交通要道，生意尚算兴隆。店主梁伯膝下唯一闺女，年方二八，父女相依为命。</p><p id="d9c2080e-7d30-82b6-a36a-0193476c3a95" class="" dir="auto">近乡有秀才刘生，乃前朝达官之胄，其父刘员外为人还算宽厚仁爱，刘生谨遵祖训，勤攻书史，15岁便中秀才。刘生越虎头、步江畔、过湘桥至学宫习文论经，毋论赤日炎炎，抑或寒风刺骨，还是雷雨交加，天天如是，从无间断。</p><p id="6ec2080e-7d30-826a-8785-01bb0be840cb" class="" dir="auto">梁姑娘助严亲操持生计，每每观刘秀才店前经过，早萌爱慕之心，况刘生偶因途中遇雨，必趋店暂避。虽道是&quot;男女授受不亲&quot;，怎奈一回生二回熟，无人之时，便攀谈一二。梁伯亦疼爱刘生，有意将女许配，无奈门不当户不对，难以启齿。</p><p id="dfc2080e-7d30-82c2-b959-01903811278f" class="" dir="auto">星移物换，暑往寒来。一日薄暮，刘生归家，经至虎头时，倾盆大雨从天降，荒村风急，萧萧彻骨；韩江檣倾楫摧，笔架山阴风怒吼，前不见路人，后不见旅者，梁家小店已关门打烊。刘生遂轻叩木门，求借避雨。</p><p id="0102080e-7d30-82c6-84b2-017c6daae7d0" class="" dir="auto">闻叩门之声，梁女以为老父办货回归，急忙开门，见是刘生，姑娘双颊顿生春晕。迎进屋中，生火与其取暖，温酒让其充饥。刘生感激不尽。</p><p id="c192080e-7d30-8327-9aaa-819078b051da" class="" dir="auto">却说梁氏姑娘，虽不是名媛闺秀，也属小家娇娃，更兼秉性聪慧，且酷喜戏文，诸如&quot;梁祝化蝶&quot;、&quot;待月西厢&quot;、&quot;文君私奔&quot;，皆津津乐道也。只恨慈母早逝，家严无暇顾及女儿终身大事，为何女儿家不可自择佳婿？真个百思不解，早存心欲学英台会山伯，仿崔莺试张生，效文君追相如。如今老天作美，可人儿避雨至此，正好面诉衷情。思忖起来，两腮飞霞。</p><p id="90d2080e-7d30-8378-8941-811bbb4db855" class="" dir="auto">书香后裔刘生，向不拘泥于礼教之羁绊，况又目睹梁女之芳容，钦佩梁女之为人，窃以为上穷碧落，下极黄泉，唯此女最为娟好。今又见彼如此殷勤，怜香惜玉之情油然而生。</p><p id="c7e2080e-7d30-82e3-9236-0124a132211d" class="" dir="auto">围炉取暖，互诉衷曲，俱表爱慕之心。此际玉人，丰姿愈见妖媚；秀才醉眼朦胧，神采益现焕发。一个有情，一个有意，干柴近烈火，其燃难免；旷夫怨女，遂成百年之好。怎奈秀才路感风寒，不幸中风，姑娘又羞又怕，手足无措，眼睁睁看着心上人一命归阴司。</p><p id="f562080e-7d30-834b-96dc-81e096d12997" class="" dir="auto">事发后梁伯方归，见状大惊。本欲报官，又恐祸及家门，只得祷告神明，剖白心迹，掘地3尺，将刘生埋于店后。幸好天不知鬼不觉，此事便草草收场。</p><p id="1e82080e-7d30-8259-8b30-816ab788ac5f" class="" dir="auto">翌日，刘员外不见儿回，差人遍觅，终无魂影，报知官府，事亦枉然。</p><p id="3222080e-7d30-82e5-8d57-01cc0d944739" class="" dir="auto">再说梁姑娘已有孕在身，自此不敢越门槛一步。10月之后，产下一男，好生抚养。转瞬6载，自思长此下去，总非良策。梁伯遂携女抱孙，往刘员外家负荆请罪。</p><p id="3042080e-7d30-82d7-9037-016d1991c27b" class="" dir="auto">员外悲愤交集，思想儿子掩体无棺，遗骨无坟，不禁潸然涕下。意欲缉其归案，无奈梁氏苦苦哀求，梁伯跪地不起。恻隐之心，人皆有之，思儿怜孙，遂认梁氏为媳，孙儿归宗。</p><p id="b912080e-7d30-823c-a160-014610646577" class="" dir="auto">光阴荏苒，日月如梭，不觉又过10年。刘孙继父志，承祖业，奋发向上，考中秀才。3场考试，再中进士。衣锦荣归，重修其父之墓，后世人故名此墓为15岁阿公坟，此坟便在原先店址。</p><p id="46d2080e-7d30-82d7-840b-81e2dd48a73f" class="" dir="auto">（录自刘宏沛《梦中的小溪》）</p><h2 id="eb22080e-7d30-8273-a34b-0168e7391452" style="display:inline-block" dir="auto">第三节　孝子黄良丰的传说</h2><p id="1c12080e-7d30-8303-9a64-816b6eb404f9" class="" dir="auto">清代光绪年间卢蔚猷纂修的《海阳县志》载，&quot;孝子黄良丰墓在笔架山后。&quot;关于黄良丰的传说，我小时候曾听祖父讲过。</p><p id="1ba2080e-7d30-82c7-9f99-01b6b8437af0" class="" dir="auto">明朝崇祯年间，潮州府城东东津乡有个农民姓黄名良丰，严亲早逝，家境贫寒，上无片瓦，下无立锥之地，母子二人相依为命，但黄良丰待母至孝。</p><p id="7db2080e-7d30-82a5-9a4a-81237a33aeab" class="" dir="auto">明末时候，湘子桥二十四洲的石桥墩上南北两侧都建有庙宇、茶亭，还有卖水果、小食及小商品的商铺，形成了&quot;一里长桥一里市&quot;的繁荣桥市。自桥东面，一直延伸到意东长堤，也是一段繁华的商业地带。由于意溪乡面临韩江，河面宽广，水流平缓，地理条件优越，明代以后便是闽、粤、赣三省杉、竹、木的集散地，从而带来竹器、农具、家私等行业的兴起，随之而来各行各业也在堤市上经营。这段地带有杉行、佣行、客栈、布铺、米店、药店、木工店、长生店，还有屠宰、凉果、烟酒、餐饮、香枝、豆制品、饼食、理发、木屐、竹笠……大小商铺作坊林林总总不下六七百户。意东堤市与湘子桥的桥市连成一片。因为各家工商业户日常需要饮水、泡茶、煮饭，就出现了挑桶卖水的行当。</p><p id="cd02080e-7d30-8280-922d-016c621656e8" class="" dir="auto">黄良丰就是一名挑桶卖水的苦力。他每天早起伺候双目失明的母亲吃过早饭后，就挑着一担水桶，到井边汲水，然后挑水到桥市上堤市上沿途叫卖。黄良丰挑水有个特点，他从来不换肩，从来不歇脚。如有铺户买他的水，他每次都要跟买主讲明这担水那一桶是屁股后面的，并当着买主的面把它倒掉，其原因是他认为屁股后面那一桶可能有屁味，不能饮用或煮饭。别人卖水一担二文钱，而黄良丰挑一担卖一桶，只能卖一文钱，但他从不计较。黄良丰爱清洁、讲信用，铺户们也乐于买他的水用。他每天挣得几文钱，就籴米回家，侍奉娘亲。几十年如一日，风雨无阻，冬夏如常，直到母亲去世。黄良丰收入微薄，为了赡养母亲，不敢娶妻。娘亲死后，他孑然一身，加之终年劳累，贫病交困，不久也撒手人寰。</p><p id="ae92080e-7d30-830b-99c0-013f7e397c64" class="" dir="auto">为褒扬黄良丰事亲至孝的美德，乡里族人禀明有司，筹资为他收殓，并建坟墓使他入土为安，树碑以彰其德并示后人。</p><p id="d102080e-7d30-829a-af84-819b997a3bb7" class="" dir="auto">笔者小时候回乡下老家时，走的是乡间小路，往返时都要经过孝子坟，记得那时坟堆已没，只剩下块宽约二尺高约五尺的墓碑立在路边，墓碑上刻着&quot;明孝子黄良丰之墓&quot;。墓址位于今桥东洗马桥附近。可能1958年建华侨瓷厂（今华庆公司）时被搬走，后来已不知去向。</p><p id="c9c2080e-7d30-8294-88e2-81b1d52b3df6" class="" dir="auto">（录自刘宏沛《梦中的小溪》）</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

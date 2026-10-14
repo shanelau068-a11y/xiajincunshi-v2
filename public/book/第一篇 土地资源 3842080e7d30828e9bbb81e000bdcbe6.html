@@ -1,0 +1,768 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第一篇　土地资源</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3842080e-7d30-828e-9bbb-81e000bdcbe6" class="page sans"><header><h1 class="page-title" dir="auto">第一篇　土地资源</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><hr id="44e2080e-7d30-8238-afc1-815910350f79" dir="auto"/><p id="dd02080e-7d30-83b0-a6a5-018788f41a2b" class="" dir="auto">土地是人类赖于生存的资源，下津地处城东，经历代先祖的不断开发，使原来的泽、塭、渚地带逐渐成为耕地。丘陵地带部分成为山林，部分成为田园，为村民世代繁衍生息奠定了一定的生活物质基础。山地的瓷土矿藏，自宋代以来便成为乡民的经济支柱。</p><h2 id="1922080e-7d30-833d-88bb-81a82c88efd5" style="display:inline-block" dir="auto">第一章　地理位置</h2><h3 id="0552080e-7d30-82b8-9383-016ec2bbd6be" style="display:inline-block" dir="auto">第一节　地理位置</h3><p id="2d72080e-7d30-8369-a4e5-01195f49908d" class="" dir="auto">下津村位于东经116°39′，北纬23°40′交叉内。地处笔架山麓之东北面、黄田山麓之西面。安黄公路、意东三路、安凤公路穿村经过。村西临韩江，隔江与潮州城相望。</p><p id="c1a2080e-7d30-83dd-8dd7-012a4769f606" class="" dir="auto">桥东街道办事处治所设于下津村，本村位于桥东街道辖境之北部。村治所距办事处约0.8公里。</p><h3 id="c662080e-7d30-8334-8114-81c17684f487" style="display:inline-block" dir="auto">第二节　村境范围</h3><p id="4fe2080e-7d30-822c-b852-812d9efcba1e" class="" dir="auto">（原书此处含“下津村在桥东街道的位置示意图”，地图略）</p><p id="e292080e-7d30-82a0-9928-01d8c2d6d155" class="" dir="auto">下津村东面与黄田山部队以军界碑为界，东南面与桥东街道六亩村、黄金塘村毗邻，南面与桥东街道卧石村以水缸山分水岭分界，西南面以火神爷宫垂直向上的笔架山东北坡与桥东居委的笔架山西北坡交界。西濒韩江，临岸长约800米，其中堤段长580米，北面与意溪镇中津村分疆。</p><h2 id="d342080e-7d30-829f-98b7-817c38af6c62" style="display:inline-block" dir="auto">第二章　自然环境</h2><h3 id="3842080e-7d30-8311-9da7-01d85262a82d" style="display:inline-block" dir="auto">第一节　土地资源</h3><p id="05c2080e-7d30-8320-9d10-8108df14d25a" class="" dir="auto">下津村属半丘陵地带，土地面积约4.07平方公里。其中山地面积约2.6平方公里，属低山丘陵地貌；平地（含潮塘水面）面积约1.47平方公里，属冲积层土壤。村东面、南面两面环山，植被茂盛，原生林有樟木、榕木、松木等。山地土壤有赤红土、白土（瓷土）。</p><p id="12e2080e-7d30-8296-a32f-01b7227ce122" class="" dir="auto">一、瓷土资源</p><p id="2872080e-7d30-8341-a2e3-811b9012fcba" class="" dir="auto">下津村境及周边瓷土资源有二大山系。</p><p id="a7e2080e-7d30-83b3-a5c9-817b0ff730a2" class="" dir="auto">一是水缸山一带，矿藏西起绵德中学背，东至神农祠山，延至宗子山、大旗山摇篮尾、白岭。</p><p id="66b2080e-7d30-82c8-9f20-0179c5b0af4e" class="" dir="auto">二是飞天燕一带，主要矿点有土白坑、海鹅头山、龙秋坑、梅断径、和尚头山、石马内和陈厝山。</p><p id="70a2080e-7d30-827e-b824-81efd3cdbd82" class="" dir="auto">飞天燕瓷土矿东西长约1.1公里，南北宽约1.6公里，矿藏面积约1.76平方公里。露天部分瓷土蕴藏量约3200万吨，属高温性质的瓷土资源。</p><p id="4062080e-7d30-82c9-b0c5-81518b2726aa" class="" dir="auto">二、水资源</p><p id="8ec2080e-7d30-82ae-bf1f-819bf76f00e5" class="" dir="auto">村北面有文祠水和桂坑水汇合成后溪，后溪流经本村长约2.7公里，村西面临韩江，韩江流经本村长约0.8公里。江溪径流充沛，境内潮塘密布，蓄水量大，水资源丰富。</p><p id="8172080e-7d30-8389-a2e6-011460f1e0c8" class="" dir="auto">三、耕地资源</p><p id="9252080e-7d30-82b1-b949-818bfecd6dc1" class="" dir="auto">平原地带为冲积层，土壤有潮沙、溪沙，俗称“溪生土”，是开垦耕地的资源。</p><h3 id="0a42080e-7d30-836b-8b39-81f1129bf6d0" style="display:inline-block" dir="auto">第二节　气候</h3><p id="3742080e-7d30-833f-9044-012d56c8344d" class="" dir="auto">下津村属亚热带海洋性季风气候，具有下列气候特征：</p><p id="dce2080e-7d30-83ca-b460-81dfdab059f1" class="" dir="auto">一、雨量充沛，但分布不均</p><p id="3d82080e-7d30-82ec-9742-0127a02e0212" class="" dir="auto">平均年雨量达1668.3毫米。年最多2324.4毫米（1961年），年最少1128.7毫米（1967年）。汛期（4至9月）雨量占全年的84%，枯水期（10月至次年3月）只占16%。一年之中，雨量呈双峰型，即6月上旬为最高峰，7月下旬为次高峰。</p><p id="6d32080e-7d30-838c-a030-81b946a8ef53" class="" dir="auto">二、气候温暖，夏长冬短</p><p id="62c2080e-7d30-825a-8e27-8110f27d4261" class="" dir="auto">年平均气温21.7摄氏度，年平均最高气温23.3度（2002年），年平均最低气温20.8度（1976年）。极端高温39.6度（1962年8月1日），极端低温-0.5度（1967年1月17日）。每年间只有1、2月平均气温小于15度，从3月至12月平均气温都大于15度。最高温是7月的28.3度，最低温是1月的13.2度。若以旬平均气温小于12度定为冬季，大于22度为夏季，中间为春秋季，则下津地域旬平均气温无冬季，夏季从4月21日起至10月20日止，占18旬；春秋季占18旬。</p><p id="1732080e-7d30-83be-9190-816332972cd6" class="" dir="auto">三、日照充足，但差异较大</p><p id="99c2080e-7d30-8240-931c-010faf22d9ed" class="" dir="auto">年日照时数平均1991.0小时，最多达2345.3小时（1963年），日平均6.4小时；最少1786.4小时（1972年），日平均4.9小时。高低年差值558.9小时，日均差1.5小时。有80%年份日照总时数在1840小时以上。各月分布不均，7月最多达237.8小时，日平均8.8小时；2月最少只有104.8小时，日平均3.7小时，日均差达5.1小时。日照各旬差异更为明显，7月中旬至8月下旬最多，在80小时以上；2月下旬最少，只有23.3小时。</p><p id="1892080e-7d30-83cf-8806-01bafa923c2d" class="" dir="auto">四、风多东南，时有灾害</p><p id="2332080e-7d30-83d7-97d1-8156bc50f841" class="" dir="auto">冬季吹西北偏北风，其他季节盛行东南风。秋末冬春，时有低温霜冻，低温阴雨和寒露风；夏、秋常有暴风和台风，个别年份有春旱，龙卷风或冰雹，为害农作物及村民生命财产安全。</p><h3 id="1eb2080e-7d30-837f-af6f-0109458fbfe7" style="display:inline-block" dir="auto">第三节　自然灾害</h3><p id="33e2080e-7d30-8274-a2f5-011ba5501160" class="" dir="auto">下津村所处地理位置，自古多受风、洪、涝、旱及地震之灾，历受深重灾难。</p><p id="e512080e-7d30-8287-8f79-011be6174b37" class="" dir="auto">农作物病虫害，水稻主要有：稻瘟、纹枯病、白叶枯病、螟虫等病虫害，番薯主要有薯瘟。</p><p id="bb32080e-7d30-8224-9c59-015786ca9cde" class="" dir="auto">畜牧主要有猪瘟（猪丹毒、猪肺疫），三鸟主要有瘟疫及禽流感等。</p><h2 id="1372080e-7d30-83ac-8739-011127e076df" style="display:inline-block" dir="auto">第三章　土地演变</h2><h3 id="dde2080e-7d30-82b7-9303-011faf777d37" style="display:inline-block" dir="auto">第一节　先祖开垦耕种地名</h3><p id="7a42080e-7d30-838b-b161-81107260aa5b" class="" dir="auto">一、宋代至明代宣德十年</p><p id="b652080e-7d30-824c-ac00-01423a3c9f0d" class="" dir="auto">在未筑东厢堤之前，先祖垦殖地名有桃坑内、神农祠、宗子山、摇篮尾、盐墩、洪厝园、廖厝埔、廖厝山脚、陈厝园等。</p><p id="9652080e-7d30-8363-b6fa-8179f199a92e" class="" dir="auto">二、明宣德十年至清代</p><p id="14d2080e-7d30-83e6-9f96-81d776b58d0c" class="" dir="auto">先祖垦殖地名有：长池墩、三房后、七坵、康厝前、大区田、桃园、虎池、坵头、寨后、塘湖、石敢当、堤外、大片洋、可篮、狗腰、沙瓠、绵羊山、山边前、溪畔、大坑口等。</p><p id="74c2080e-7d30-823d-be8e-013bf10f5672" class="" dir="auto">三、民国至解放初期</p><p id="a1a2080e-7d30-82e8-a8b4-01bdd59cb07a" class="" dir="auto">先祖增扩耕种地名有：乌石、猫鼠岭脚、水塘、草寨、下湖、响水、溪葛、东湖底（也称大滩底）等地。</p><h3 id="dd52080e-7d30-8202-a212-81d1b00b0084" style="display:inline-block" dir="auto">第二节　土地变动情况</h3><p id="0df2080e-7d30-8295-954c-015bc1c27a14" class="" dir="auto">下津村毗邻潮州城，自解放初期始，政府相关部门一直征用下津土地。</p><p id="12e2080e-7d30-8320-9f83-81892653d03c" class="" dir="auto">解放初期，建设黄田山部队驻地，征用现军界碑内的下津乡土地。</p><p id="0cc2080e-7d30-83dd-8049-019d0c941a0d" class="" dir="auto">1950年，东津乡由秋东区划属第三区，乌石一带的耕地划属磷溪。</p><p id="aa62080e-7d30-832b-ab8c-812d31da5595" class="" dir="auto">1957年，韩山师范学校征用廖厝山、向西祠作农场。</p><p id="d742080e-7d30-82f1-a4ac-817080cfd347" class="" dir="auto">1957年，由潮安县副县长沈立功主持建设潮安县侨瓷厂，政府先后征用下津神农祠一带土地。</p><p id="b762080e-7d30-8372-8d84-81eb330d2a22" class="" dir="auto">1957年，潮安县建设砖瓦厂，征用下津寨后一带土地。</p><p id="a7c2080e-7d30-82b9-9dca-8175b1e91739" class="" dir="auto">公社化时期，下津划出塘湖、大片洋、东湖底、可篮、大坑口一带耕地，划入宗子山、摇篮尾、桃坑内部分耕地。</p><p id="6452080e-7d30-8292-b004-0161614184f4" class="" dir="auto">1958年以来征用下津土地有：</p><ul id="f0b2080e-7d30-8252-8ce8-012ff598aa8d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">汕头地区煤建公司建设煤仓，征用下津虎池一带土地。</li></ul><h3 id="33f2080e-7d30-83a4-87e4-013163c3b091" style="display:inline-block" dir="auto">第三节　土地现状</h3><p id="5632080e-7d30-82ce-b5cc-014b01851cd6" class="" dir="auto">2018年，下津村版图面积约6105亩，其中，山地面积1455亩，耕地面积286亩，工业用地1200亩，住宅、道路、公共设施及厂矿、河道面积3164亩。</p><p id="6c32080e-7d30-83a0-9ee2-8115adc58f57" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

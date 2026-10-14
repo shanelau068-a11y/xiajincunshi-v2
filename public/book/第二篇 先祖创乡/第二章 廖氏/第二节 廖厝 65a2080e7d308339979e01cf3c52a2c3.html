@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第二节　廖厝</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="65a2080e-7d30-8339-979e-01cf3c52a2c3" class="page sans"><header><h1 class="page-title" dir="auto">第二节　廖厝</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="9ed2080e-7d30-8305-8230-0145692fb522" class="" dir="auto">廖厝位于下津村的西北部，西面濒韩江东岸，北面与中津村分界，南面与陈厝、茂利、铺仔前、巷内相邻，东面临安凤公路与窟尾沟毗邻。</p><p id="1f82080e-7d30-8244-bc02-81f2a87f95b0" class="" dir="auto">廖开潮于宋端宗年间（1276—1277），因避战乱，携家眷，由莆田乌分门楼石榴花街石榴花巷井脚迁徙入潮，卜择潮城韩江东岸开基，始创地在今画门神一带，因而得廖厝埔地名。</p><p id="eaa2080e-7d30-826f-822f-01d9a54ea48c" class="" dir="auto">廖厝经历代先祖的不断开发，拥有画门神、绞队井、桑树脚、廖厝埔，弯堤廖厝，廖厝码头廖厝，明经第，水仙亭，廖厝祠，廖厝山、廖厝码头等聚落名称和地名。</p><p id="93c2080e-7d30-838c-b422-0142666c6cfb" class="" dir="auto">开潮公传至五世廖烈然，廖崖柏、廖润松、廖自忆分为四大房。廖厝创乡迄今743年，传23世，有78户，344人。</p><p id="2952080e-7d30-828e-a34a-814af3183678" class="" dir="auto">廖厝先祖，世代以农、工、商、运为业。工业以制作木器、竹器为主，素有男木器女竹器之传统工艺。木器产品有木屐、水桶、尿桶、面桶、脚桶、马桶等家具和用具。&quot;廖合利&quot;铺号所制作的嫁妆五大用品水桶、面桶、腰桶、脚桶、马桶载入蔡绍彬所编修的潮州历史文化丛书第十二本《潮州城街巷志》第77页。竹器产品主要有竹筅、香枝、篦青枝等。尤以家庭妇女破竹筅工艺精湛，产品耐用闻名。</p><p id="78a2080e-7d30-8266-9e81-01435ea2494e" class="" dir="auto">廖厝土地爷宫建于韩江之滨，廖厝祠建于廖厝乡之中心。廖厝山是祖墓山，现属上津村境。清乾隆二十一年（1756），潮州知府金绅主持修筑东厢码头十九座，其一以廖厝聚落于江边而命名廖厝码头。</p><p id="9bb2080e-7d30-8246-b949-810549ce6871" class="" dir="auto">明万历年间，廖广渤以拔贡任台州判署。</p><p id="9412080e-7d30-8272-a867-016832c77d26" class="" dir="auto">明崇祯年间，廖厝有十八秀才。</p><p id="88c2080e-7d30-834a-9d44-8112c708e385" class="" dir="auto">清代，廖碧堂获贡生员、武举人功名，还有文武进士各一人。</p><h2 id="1b02080e-7d30-8201-8d33-814867d32898" style="display:inline-block" dir="auto">一、画门神</h2><p id="3cd2080e-7d30-838e-b1b7-012a5395db9d" class="" dir="auto">在门上画神像起源于唐太宗，相传，李世民晚年常作恶梦，请秦琼、尉迟恭夜间站在寝宫大门口，便酣然入睡。后来，李世民见两位老帅支撑不住，就叫画师将他俩人的像画在大门上。尔后，民间兴建宗庙也在祠堂大门上画秦琼、尉迟恭的神像，旨在保护福祉康宁。</p><p id="e6f2080e-7d30-82f5-b17d-8174f9c47790" class="" dir="auto">画门神聚落因先祖未建祠堂，利用大厅祭祖，就在大门上画秦琼、尉迟恭的神像以镇宅，时人就称该聚落为画门神。</p><ul id="3972080e-7d30-824e-9c37-01177bb4c577" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖东隐：</strong>（方志载稳），据洋头村村碑记载于宋末迁枫溪洋头创乡，现传700余人。</li></ul><ul id="ec62080e-7d30-83ce-85b9-01c449c71ae5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖永记：</strong> 于清代开创绞队井。</li></ul><ul id="cc22080e-7d30-83e1-aeb8-81d4e17c273a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖绍光：</strong> 于清代兴建画门神背桑树脚聚落，传至廖先荣迁意溪创祖，该支现传80余人。廖大妹及儿子廖振发先后迁马来西亚侨居。</li></ul><ul id="2a62080e-7d30-82fe-9d01-8131be69c997" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖绍宾：</strong> 于清代兴建桑树脚西侧、脚桶黄背、廖厝埔南侧的七字形聚落，即今廖厝埔厅东。廖狮哥迁梅县丙村，廖狮弟侨居新加坡。</li></ul><ul id="f482080e-7d30-8222-911c-8159a71dc651" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖东平：</strong> 于东津堤顶兴建房屋。</li></ul><p id="5762080e-7d30-825f-b9db-019907625c2b" class="" dir="auto">1949年9月，廖木溪（乳名猪屎）被胡琏兵团残部捉往台湾充兵。</p><p id="d662080e-7d30-8365-b989-01b5039de06d" class="" dir="auto">1952年以后，画门神先后隶属下津群益社、前进社、第四排、新兴生产队、第11生产队、第3村民小组管辖。</p><p id="c1f2080e-7d30-83b5-bf6a-818c1fca0482" class="" dir="auto">画门神现传23世，有16户，86人。</p><h2 id="4ab2080e-7d30-8272-9854-01daff6d6e88" style="display:inline-block" dir="auto">二、绞队井</h2><ul id="4502080e-7d30-8300-9379-816200b4c235" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖永记：</strong> 于清同治元年（1862），由画门神徙创绞队井聚落。创乡迄今157年，传7代至开潮公23世，现有25户，98人。</li></ul><p id="3292080e-7d30-83a4-b115-01f574e37015" class="" dir="auto">先祖世代习武防身，每遭强人骚扰，便摇旗绞队，保护家园。该聚落水井建在村前，时人称之为绞队井，久之，成为聚落名称。</p><p id="91e2080e-7d30-8378-b081-8118c8a2fe80" class="" dir="auto">清末民初，廖再木、廖振溪、廖明正、廖明丰在堤顶建屋。</p><p id="6542080e-7d30-82a1-a9b5-81ee9916dfcd" class="" dir="auto">清代至民国间，先后侨居新加坡者有：廖先板、廖先科、廖先权、廖老哑、廖振正，廖弟九、廖五、廖振美、廖再木。现传衍有百余人。</p><p id="cd32080e-7d30-83a8-8620-819f2d6d630f" class="" dir="auto">1949年9月，廖木盛被胡琏兵团残部捉往台湾充兵。</p><p id="d292080e-7d30-83ce-8d5f-01e9b5ae10e1" class="" dir="auto">绞队井村民大部分为工人户，1958年安排在第四排，尔后被分插在四个生产队，现属下津村第三村民小组管辖。</p><h2 id="6f12080e-7d30-836a-9f69-013881ff7d00" style="display:inline-block" dir="auto">三、廖厝埔</h2><ul id="3732080e-7d30-83d6-bb4a-01bc13965075" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖崖柏：</strong> 约于明宣德三年（1428），由祖屋移创廖厝埔聚落。创乡迄今约历592年，现有12户，46人。</li></ul><p id="a3e2080e-7d30-82c1-90ef-812d5d41cbb5" class="" dir="auto">廖厝埔创乡之后，历史上曾遭两次洪水冲袭。第一次在咸丰三年（1853），廖厝码头决堤，第二次在清宣统三年（1911），三师庙决堤。这两场水灾，使房屋倒塌，族人多外迁，几欲散乡。</p><ul id="5ac2080e-7d30-8259-93af-81ce2d85f9ea" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖绍章：</strong> 于1911年携家眷迁潮州城下西平路池仔顶内居住。同时在仙街头租铺创办&quot;廖合利&quot;铺号。传至廖先勤、廖先松、廖先源增创&quot;廖合利松记&quot;、&quot;廖合祥&quot;商号。三兄弟合资购置义安里300平方米住宅，产权名廖永志堂。现传100余人。</li></ul><ul id="ed12080e-7d30-830a-a53c-81267aa1d15a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖永道：</strong> 于1911年，携家眷徙创弯堤廖厝，聚落呈一巷两厢式，南厢靠弯堤，有四间房，北厢靠陈厝，有一厅二房，巷头门朝韩江。该家族以&quot;做桌&quot;（办理酒席）为业。1964年6月17日，韩江洪水暴涨，屋背弯堤旋水，抗洪部队应急拆屋杉打桩，推墙堵旋洞。尔后，经多次扩堤，使弯堤廖厝湮没于堤围之中。现该支在香港&quot;声&quot;字辈有六大户，50余人，数次回乡省亲。</li></ul><p id="9b52080e-7d30-83a9-a399-01e5362a7f3f" class="" dir="auto">1911年，廖永禄、廖永理、廖来家、廖方墙四大户合力重建家园。廖厝埔新建的聚落为东西相朝，两边以厅为中，各建四间房屋。中间为灰埕，南北各建龙虎门。</p><p id="1b82080e-7d30-835e-aebe-81fe07b6f443" class="" dir="auto">廖厝埔先后迁新加坡侨居有：廖绍贞、廖亚五（&quot;声&quot;字辈）、廖作传、廖炎通，共传30余人。侨居马来西亚有：廖添树，传10余人。</p><p id="9ae2080e-7d30-8240-9883-813d2dea683b" class="" dir="auto">1952年以后，廖厝埔先后隶属下津群益社、前进社、第四排、新兴生产队、第11生产队，第3村民小组管辖。</p><h2 id="5692080e-7d30-82ee-b33d-0111eeed0344" style="display:inline-block" dir="auto">四、廖厝码头廖厝</h2><ul id="4282080e-7d30-839a-bf64-019398bdcc27" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖润松：</strong> 约于明宣德三年（1428），由祖屋徙韩江之滨兴建聚落，1756年韩江筑码头，因廖姓聚落而称廖厝码头。清代潮州邮递总铺，曾在廖厝码头与廖厝之间设邮递站。</li></ul><p id="bf32080e-7d30-828d-bbf8-816f4669d1ec" class="" dir="auto">廖厝原坐向是坐东朝西面临韩江，明万历年间，廖广渤一族迁居明经第。清咸丰三年（1853），廖厝码头决堤，整座村落被洪水冲毁。重建的聚落坐西朝东。清宣统三年，三师庙决堤，北侧房屋被洪水冲毁，南侧房屋于1940年，被驻笔架山的日军烧毁。</p><p id="1c72080e-7d30-83d6-8c04-81daf7212088" class="" dir="auto">由于天灾人祸，该聚落可考者仅有廖锦元、廖木章两大户居住。现该聚落名称曰脚桶黄前，仅有一户，4人。</p><h2 id="b4e2080e-7d30-833c-a198-81c3a32792cd" style="display:inline-block" dir="auto">五、明经第</h2><p id="44d2080e-7d30-834a-a701-016475e3476a" class="" dir="auto">明经第兴建于明万历年间，厝座坐西朝东为三进一巷二厅式。</p><p id="5462080e-7d30-8313-8cdb-818f579277d0" class="" dir="auto">该聚落可考者，廖碧堂后裔居上座及北巷，廖绍林居下座。中座于清咸丰三年廖厝码头决堤被冲浸倒塌。</p><ul id="4842080e-7d30-837a-b3b7-01ca8ff7e696" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖绍林：</strong> 于晚清时期迁凤塘，长子廖德芳守祖居，廖德光长子廖惠通过继廖德芳。余者概有20人从邱姓。廖松兴于民国年间迁铺头埔。明经第廖厝现有5户，22人。</li></ul><h2 id="5cd2080e-7d30-826b-8696-01a3963e7eb2" style="display:inline-block" dir="auto">六、水仙亭</h2><p id="3e52080e-7d30-8226-bb90-010e1f9356f4" class="" dir="auto">明宣德十年（1435）之前，韩江东岸未筑堤，韩江洪水及内地山洪顺地势自北向南长期冲刷，形成水窟。先祖在水中兴建亭榭，供老年人饮茶聊天及儿童读书。东厢堤筑后，自忆公房嗣裔将建亭的水窟屯莫沙土，兴建聚落，时人称之为水仙亭，久之，称为水心亭。</p><p id="0612080e-7d30-82e3-8f0e-015f1f513a63" class="" dir="auto">水仙亭聚落坐北朝南，中央分上、中、下三厅，两侧巷厝。始建于明正统年间（1436—1449）。清咸丰三年（1853）决廖厝码头堤，清宣统三年（1911），三师庙决堤，两次决堤，使水仙亭房屋大部冲毁。尔后，逐步修建。现有16户，76人。</p><p id="bc32080e-7d30-82be-b731-0144e9b4945e" class="" dir="auto">迁出有：廖大道侨居新加坡。廖振映迁韶关。廖振汉迁潮州城内。廖振亮（乳名亚耐）于1949年9月被胡琏残部抓往台湾充兵。</p><p id="bf52080e-7d30-82a1-a236-01901b1864a7" class="" dir="auto"><em>（提供资料：廖振海、廖耀明、廖耀镇、廖春茂、廖龙泉）</em></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

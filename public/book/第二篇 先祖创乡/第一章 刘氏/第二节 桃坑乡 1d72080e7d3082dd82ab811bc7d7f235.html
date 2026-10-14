@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第二节　桃坑乡</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="1d72080e-7d30-82dd-82ab-811bc7d7f235" class="page sans"><header><h1 class="page-title" dir="auto">第二节　桃坑乡</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="9be2080e-7d30-834c-8a28-01b16ef8c6d8" class="" dir="auto">桃坑乡位于下津村的东南端，西面至笔架山分水岭东北坡，南以水缸山分水岭与卧石村交界。原桃坑乡坐南朝北，背依水缸山，面朝东湖。</p><p id="9ba2080e-7d30-82bb-ab6e-81a3a271afe8" class="" dir="auto">桃坑东、西、南三面群山环绕，山上橡木成林。西面三峰耸立如笔架，向东延伸至马鞍山。东面主峰呈双乳状，东坡为回龙穴（神农祠）。南面主峰呈水缸形，北坡坑旁桃树丛生，因而得桃坑地名。桃坑五峰映湖，湖中水丘随湖水起落而名鼎盖，湖水沿长沟注入后溪，有龟、蛇二山扼守水口。北面濒江渚泽地，遥望凤凰山脉，是五代时期潮州城东厢的世外桃源。</p><ul id="5562080e-7d30-8204-a8f2-81d591e96e64" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一二三世　刘颖</strong>：父被害，又因婚于潮，于五代后梁贞明三年（917）由广州迁徙潮州，卜择桃坑结庐隐居，洁身遁世，奉为桃坑刘氏开基祖。</li></ul><ul id="88f2080e-7d30-8375-a69c-81a32de7433b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一二四世　刘穆</strong>：开辟家园，奉为桃坑刘氏始创祖。</li></ul><ul id="7fc2080e-7d30-8281-82f4-81cdfac3a33d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一二五世　刘表</strong>：于宋咸平四年（1001），举贤良方正，授承直郎、大理寺评事。奉为桃坑刘氏一世祖。</li></ul><ul id="9d02080e-7d30-82fa-847d-01a75a69c38d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一二六世（桃坑二世）刘默</strong>：于宋景祐三年（1036）举五经特奏题名，官拜文林郎，化州推官。</li></ul><ul id="0ed2080e-7d30-8207-b5fc-0107a1c4740b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一二七世（桃坑三世）刘克俊</strong>：恩赠朝请大夫。公有子三：长刘允，次刘元，三刘亮。</li></ul><ul id="cd82080e-7d30-8266-94e7-019612e213af" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一二八世（桃坑四世）刘允</strong>：于宋绍圣四年（1097）登丁丑科进士。公为潮州八贤之一，终赠上柱国左金紫光禄大夫，尊称金紫公。有子二：长刘昉，次刘景。</li></ul><ul id="0152080e-7d30-829f-8ba3-01822293032d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一二九世（桃坑五世）</strong>：分为两大房。<ul id="7282080e-7d30-8276-9903-819c03b9cdbe" class="bulleted-list" dir="auto"><li style="list-style-type:circle">刘昉公于宋宣和六年（1124）登甲辰科进士，累官龙图阁大学士，其后称龙图公房。</li></ul><ul id="59c2080e-7d30-8212-986d-0117b38ff010" class="bulleted-list" dir="auto"><li style="list-style-type:circle">刘景公于宋靖康元年（1126）授朝请郎，曾奉诏<mark class="highlight-red" data-notion-highlight="red">使</mark>安南（今越南），因和戎有功，钦赐银青开国男，其后称银青公房。</li></ul></li></ul><p id="66f2080e-7d30-8247-a620-01dc4f168280" class="" dir="auto">桃坑先祖于宋绍圣四年（1097），在祖居东侧（今绵德中学礼堂）兴建刘氏家庙，祀奉一世祖刘表公。该祠坐南朝北，称向北祠。尔后，又在双乳山前兴建绍德堂，祀奉四世祖刘允公。该祠坐东朝西，称向西祠。祠堂的落成，奠定了桃坑刘氏福祉。</p><p id="f332080e-7d30-8381-8373-815846b8f24f" class="" dir="auto">桃坑乡是刘氏的发祥地，自宋代始，各宗因任职、经商等原因，先后迁徙各地开基创祖。明宣德十年（1435）始筑东厢堤，使濒韩江东岸的泽、塭、渚地带成为可垦的土地。桃坑乡随着人口的不断增加，各支相继迁出东厢平原开基创乡，垦荒造田。</p><p id="4dd2080e-7d30-82c2-b9e3-81cbab460ad5" class="" dir="auto">民国初年，南北军阀混战，争夺潮城东面屏障，两军在笔架山与双乳山对仗，战火殃及桃坑乡，房屋遭炮击而倒塌。1939年，日军占领潮州，在笔架山设据点。日寇用炮火推毁向西祠、向北祠及祠傍守祠人家，将桃坑乡夷为平地，被逼散乡。桃坑乡刘氏祖居，历时1022年。</p><p id="0132080e-7d30-8274-96d8-81577c10a599" class="" dir="auto">钟灵桃坑乡，孕育了历代先贤，自公元1001年刘表出仕，至1893年刘步青中举，涌现先贤名宦54人。其中宋代23人，元代6人，明代20人，清代5人。而今，党政领导、专家、学者、企业家不胜枚举。</p><h4 id="11d2080e-7d30-82d4-ab74-01364c89e839" style="display:inline-block" dir="auto">一、桃坑刘氏历代谱牒</h4><p id="a082080e-7d30-82cb-a3ac-01806920f9f7" class="" dir="auto">开基祖刘颖身处乱世，家父被害，由广南（今广州）移潮州托庐桃坑隐居，几欲没姓。为使日后子孙知其根基来历，桑榆（晚年）纵观五代史，垂泪书写《五言诗》和《永思祠》。</p><p id="4d42080e-7d30-83a3-b728-8188fca22267" class="" dir="auto">刘克俊（尊称朝请公）于宋宣和年间（1119—1125），肇修宗谱《天地人》三册，交付刘允、刘元、刘亮三个儿子珍存，后<mark class="highlight-red" data-notion-highlight="red">毁于兵燹</mark>。</p><p id="06d2080e-7d30-83f8-99a3-01b3f2356f37" class="" dir="auto">刘少集（尊称中舍公），于宋淳熙五年（1178）<mark class="highlight-red" data-notion-highlight="red">作《家谱引》</mark>续修十世宗谱。</p><p id="79a2080e-7d30-8267-abf7-8139a5a5a891" class="" dir="auto">刘镇（尊称教谕公），于元皇庆二年（1313）撰重修谱序，刘英发、刘铨续修宗谱。</p><p id="1992080e-7d30-8296-985c-8186d9efeed0" class="" dir="auto">刘义字孟宜（桂平知县），于明宣德四年（1429）重修谱牒并作序。公于明宣德四年（1429）请莆田人林邑作序。宣德九年（1434）请中宪大夫詹事府少詹事翰林院侍读学士修国史、泰和人王直作序，又请赐进士翰林院修撰儒林郎吉水人尹凤岐作序。宣德十年（1435）请赐进士中顺大夫行在都察院右佥都御史罗亨信作序。正统四年（1439）请赐进士中宪大夫潮州府知府龙岩人王源作序。正统十年（1445）请赐进士大中大夫山西布政司右参政潮州人林厚作序。诸公在序中肯定了桃坑刘氏出自汉室中山裔派，为潮州巨族，赞扬刘义之孝举。</p><p id="8452080e-7d30-8328-afbf-01ecf54fdf93" class="" dir="auto">刘志学（漳州府同知）于明嘉靖七年（1528）重修族谱，作《世系图说》。同年请蔡亨嘉作序，嘉靖十四年（1535）请林大钦作序。嘉靖三十年（1551）请朱大器作序。是年，刘氏家庙举行祭祠庆典，颁发族谱。</p><p id="ea22080e-7d30-8268-93d3-81951a782416" class="" dir="auto">清光绪年间（1875—1908）刘茂楠续修《潮州桃坑东津派刘氏族谱》。</p><p id="0612080e-7d30-82ad-84a0-01a8b8c1a24b" class="" dir="auto">历代先贤绳绳相继编纂谱牒，积淀了桃坑刘氏的族史文化，世系流传历代可考，使改革开放后续修族谱，有据可凭。</p><h4 id="7df2080e-7d30-8396-8889-8136fd879dd6" style="display:inline-block" dir="auto">二、刘景至刘策世系流传</h4><ul id="5e62080e-7d30-82c1-beb0-01de5a0f0ca5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一二九世（桃坑五世）刘景</strong>：生于宋治平三年（1066）岁次丙午，卒于宋隆兴元年（1163）岁次癸未十二月十六日，寿九十八。公娶吴、许、<mark class="highlight-red" data-notion-highlight="red">曾</mark>、詹四氏，俱封为夫人。生济、涣、瀚、泽、洛、潞、汭、渍、淮九子。</li></ul><ul id="c912080e-7d30-82cb-9b3b-01224c41afde" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一三〇世（桃坑六世）刘渍</strong>：字微甫，官迪功郎，娶叶氏，生权、模、栻、梓四子。</li></ul><ul id="2472080e-7d30-83ab-bb86-818af96442dd" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一三一世（桃坑七世）刘权</strong>：<mark class="highlight-red" data-notion-highlight="red">妣氏未详</mark>，生炳、然老二子。</li></ul><ul id="b032080e-7d30-83d8-8563-81f84b3de4bf" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一三二世（桃坑八世）刘炳</strong>：官户曹给事中。妣宜人苏氏，生真庆、真禄二子。</li></ul><ul id="9d52080e-7d30-831c-8953-81b2ca50d9c2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一三三世（桃坑九世）刘真庆</strong>：官承事郎机宜。妣孺人陈氏、叶氏，生铨一子。</li></ul><ul id="d102080e-7d30-83d0-8bcf-01c347278043" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一三四世（桃坑十世）刘铨</strong>：号东村，处士（德才兼备，不愿为官者）。元皇庆二年（<mark class="highlight-red" data-notion-highlight="red">1313</mark>）主编宗谱。公广增田宅，重建祠堂，立祭田赡宗子香灯，配享大宗祠。妣县君李氏、叶氏，生公孙、济孙二子。</li></ul><ul id="1602080e-7d30-83ab-bd79-815c4e664540" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一三五世（桃坑十一世）刘公孙</strong>：号甲四学士，立蒸尝三顷。妣郡主赵氏，生桂、枢二子。其后立学士公祠，称甲四公房。</li></ul><ul id="2512080e-7d30-831e-b351-818bec447676" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一三六世（桃坑十二世）</strong>：<ul id="1412080e-7d30-8340-bd36-016b4097775c" class="bulleted-list" dir="auto"><li style="list-style-type:circle">刘桂系甲四公房长房，其后创上津旧厝刘，分支中津照壁。</li></ul><ul id="6302080e-7d30-8383-951d-01d6c3d6a720" class="bulleted-list" dir="auto"><li style="list-style-type:circle">刘枢字原丙，系甲四公房二房，妣郑氏，生勋、焘、然三子。</li></ul></li></ul><ul id="9302080e-7d30-83e2-b9f2-015164ab3402" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一三七世（桃坑十三世）刘勋</strong>：字宗尧，号东叟，获庠生功名。妣县君陈氏，生童一子。</li></ul><ul id="55c2080e-7d30-839d-b4cb-81cadcf4151f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一三八世（桃坑十四世）刘童</strong>：字本明，号若愚，妣李氏，生潮津、铿、得山、鉴四子。</li></ul><ul id="0e72080e-7d30-833e-9524-0157e8370860" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一三九世（桃坑十五世）刘潮津</strong>：字东顺，获庠生功名。<mark class="highlight-red" data-notion-highlight="red">妣氏未详</mark>，生拱、寅二子。</li></ul><ul id="ead2080e-7d30-82c7-a064-810a971103a1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一四〇世（桃坑十六世）刘拱</strong>：字廷敬，号默简，获庠生功名。妣陈氏，生顷、顺兴二子。</li></ul><ul id="af72080e-7d30-825d-9875-0151415bff5a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一四一世（桃坑十七世）刘顺兴</strong>：字文元，号素轩，妣吴氏，生锡一子。</li></ul><ul id="7072080e-7d30-82dc-85cd-01cffb1db8a2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一四二世（桃坑十八世）刘锡</strong>：字朝纪，号新溪，妣陈氏、吴氏，生策、簧、廉三子。</li></ul><ul id="bd02080e-7d30-83b5-8dbd-814cadf91c25" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一四三世（桃坑十九世）刘策</strong>：公由桃坑移创窟尾沟乡。</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

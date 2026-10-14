@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第二章　房屋建设</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="f352080e-7d30-8276-9dda-8139b0832674" class="page sans"><header><h1 class="page-title" dir="auto">第二章　房屋建设</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h2 id="01e2080e-7d30-829d-a8a2-814fb3dd5821" style="display:inline-block" dir="auto">第一节　宅区建设</h2><p id="7952080e-7d30-832f-ae7d-014c8e21fd3a" class="" dir="auto">1952年，下津置为行政乡时，人口有2178人。在中国共产党的领导下，社会稳定，百业俱兴。下津人口发展，也与日俱增。</p><p id="78f2080e-7d30-8365-8cb8-014b987e437f" class="" dir="auto">1978年，大部分家庭住房拥挤，三、四代人同居在十余平方米的老屋。人口多的家庭，床铺位占去房屋空间的一半，有的四、五人同棲一床，有的睡楼顶或地铺。婚龄的儿女只好到人口较少的邻居借宿，乡里出现许多&quot;姿娘&quot;间和&quot;竹槌&quot;间。因住房紧缺，当婚的男人配偶难成。向村领导要求安排宅基地者络绎不断，解决村民住房紧缺的问题迫在眉睫。</p><p id="0732080e-7d30-835f-8661-01f75fac27ee" class="" dir="auto">1980年，村两委将解决村民宅基地问题列入议事日程。对住宅区用地统一规划，制定每间宅地面积及交纳土地费金额，根据村民住房紧缺情况及建房经济状况，分批安排宅基地。</p><p id="8352080e-7d30-8297-8136-0153a0290de8" class="" dir="auto">2009年，经村民的共同努力，基本实现下津村新住宅区的总体规划，形成津界路南、三房后、七垮前、新厝后、新湖路南、后库路南、桃园、长美路西、洗马桥、海鹅头等新住宅区。</p><h2 id="8062080e-7d30-8318-aa66-81778d0296e3" style="display:inline-block" dir="auto">第二节　村址建设</h2><p id="2e52080e-7d30-838a-a4c9-014ababfc04c" class="" dir="auto">1952年至1984年，下津治所设在廖元兴儒林第。1984年，在廖厝祠灰埕北侧戏台建3间瓦房作村址。（后作村水管组办公室）</p><p id="9c32080e-7d30-82cf-8bd4-01a4bd91821c" class="" dir="auto">1985年，经上级相关部门批准，在桃园路与长美路交界处兴建办公楼，于是年动工至1986年峻工，占地面积约6亩。</p><p id="01d2080e-7d30-82c4-8a67-0113f898d390" class="" dir="auto">2017年，经上级相关部门批准，在下津健身广场东南角兴建综合办公楼，于同年兴工，2018年1月5日竣工，建筑面积2667平方米，总投资574.8万元。综合办公楼是下津的政治、经济、文化中心。</p><h2 id="c4f2080e-7d30-829f-87f2-816c6706eb07" style="display:inline-block" dir="auto">第三节　公厕建设</h2><p id="21a2080e-7d30-8398-84d6-01f233bbdb2a" class="" dir="auto">下津村先后在桃园路口、巷内前、窟尾沟、三房雨亭前、廖厝池乾、洗马桥、海鹅头等地，兴建公厕七座，总建筑面积约540平方米，总蹲位42个。</p><h2 id="9252080e-7d30-8382-b08a-81a60b1f48e7" style="display:inline-block" dir="auto">第四节　卫生站</h2><ul id="b542080e-7d30-8210-ad15-812486014474" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、私建卫生站</strong>　下津村私人办证的卫生站有：下津卫生站第一分站、第二分站、第三分站等九个。私人卫生站隶属桥东医院管理。</li></ul><ul id="fd92080e-7d30-83c9-a30a-01e43455631d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、村卫生站</strong>　2018年，下津村在长美路与宫前路交界处，兴建村卫生站，2019年峻工使用，建筑面积80平方米，总投资24万元。</li></ul><h2 id="dcc2080e-7d30-83b7-aae7-8138dcd0f497" style="display:inline-block" dir="auto">第五节　便民综合服务岛</h2><p id="25a2080e-7d30-8279-8025-819d750f30c3" class="" dir="auto">2018年，下津村在健身广场长美路旁兴建一座便民综合服务岛。该岛于2018年1月份动工，8月份正式对外开放，这是潮州市试点项目之一，也是我市首个便民综合服务岛，该岛为村民提供了&quot;一站式&quot;便捷服务。</p><p id="7672080e-7d30-8260-98cb-818ed9d9065f" class="" dir="auto">便民岛建筑面积约230平方米，总投资约90万元。涵盖中国电信便民服务站点、无人售货商店、银行自动ATM存取款机、邮政快递寄取中转站以及便民服务休闲中心五大功能区。</p><h2 id="b8f2080e-7d30-82e4-bcde-81194c7dd1d9" style="display:inline-block" dir="auto">第六节　老年人活动中心</h2><ul id="9b72080e-7d30-8271-8c79-01c44844c172" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>一、锣鼓馆</strong>　1983年，下津村在新湖路窟尾沟路口处，兴建一间老人组办公室及两间老年人活动室。1984年，由旅泰乡贤廖少贤赞助人民币一万元，续建两间活动室。1992年，村管委会、老人组负责人刘世美多方筹资，创办锣鼓班，活跃乡村传统文化。因而，老年人活动场所，时人称为锣鼓馆。</li></ul><ul id="f142080e-7d30-8296-a6d0-8184134f4194" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>二、老年人活动楼</strong>　2009年，在草尾与康厝之间，兴建下津村老人活动楼，建筑面积775.6平方米，总投资85.7万元。</li></ul><p id="9d02080e-7d30-82b0-8295-01b2159c18f0" class="" dir="auto"><strong>赞助建楼乡贤芳名榜</strong></p><table id="15c2080e-7d30-83ad-bdbd-017ae68d9c1f" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="c572080e-7d30-83f8-918d-01359b2ada18" dir="ltr"><th id="EWXh" class="simple-table-header-color simple-table-header">姓名</th><th id="@zgF" class="simple-table-header-color simple-table-header">金额（元）</th><th id="VWx:" class="simple-table-header-color simple-table-header">姓名</th><th id="FsU&lt;" class="simple-table-header-color simple-table-header">金额（元）</th></tr></thead><tbody><tr id="0062080e-7d30-8318-ad46-818f085a3375" dir="ltr"><td id="EWXh" class="">深圳潮州商会</td><td id="@zgF" class="">200000</td><td id="VWx:" class="">刘金泽</td><td id="FsU&lt;" class="">20000</td></tr><tr id="3622080e-7d30-8288-b82e-817cd5b2e712" dir="ltr"><td id="EWXh" class="">刘陈春端</td><td id="@zgF" class="">180000</td><td id="VWx:" class="">刘德广</td><td id="FsU&lt;" class="">20000</td></tr><tr id="2272080e-7d30-82cd-89b2-016f4b6f7086" dir="ltr"><td id="EWXh" class="">刘世伦</td><td id="@zgF" class="">80000</td><td id="VWx:" class="">刘泽雄</td><td id="FsU&lt;" class="">20000</td></tr><tr id="7f32080e-7d30-82a3-a342-811c82376bab" dir="ltr"><td id="EWXh" class="">刘俊良</td><td id="@zgF" class="">80000</td><td id="VWx:" class="">刘德盛</td><td id="FsU&lt;" class="">20000</td></tr><tr id="30e2080e-7d30-8206-8109-01a8ad460400" dir="ltr"><td id="EWXh" class="">林奇光</td><td id="@zgF" class="">50000</td><td id="VWx:" class="">刘德标</td><td id="FsU&lt;" class="">20000</td></tr><tr id="e3c2080e-7d30-8252-a605-01b9fe20f84b" dir="ltr"><td id="EWXh" class="">方绍远</td><td id="@zgF" class="">50000</td><td id="VWx:" class="">刘德忠</td><td id="FsU&lt;" class="">20000</td></tr><tr id="3dc2080e-7d30-821b-9578-01e011903358" dir="ltr"><td id="EWXh" class="">刘昆东</td><td id="@zgF" class="">33699</td><td id="VWx:" class="">刘炀</td><td id="FsU&lt;" class="">20000</td></tr><tr id="b412080e-7d30-82fe-996a-01f7e9a3a0ef" dir="ltr"><td id="EWXh" class="">刘树钿</td><td id="@zgF" class="">30000</td><td id="VWx:" class="">黄镜明</td><td id="FsU&lt;" class="">12000</td></tr><tr id="9772080e-7d30-82b2-9a27-015ff45ad412" dir="ltr"><td id="EWXh" class="">廖海镇</td><td id="@zgF" class="">30000</td><td id="VWx:" class="">刘汉钿</td><td id="FsU&lt;" class="">12000</td></tr><tr id="3e72080e-7d30-82cf-b73d-816ee7fd4f24" dir="ltr"><td id="EWXh" class="">廖振波</td><td id="@zgF" class="">30000</td><td id="VWx:" class="">刘少雄</td><td id="FsU&lt;" class="">12000</td></tr><tr id="a3f2080e-7d30-8368-a04c-019b6d093ef9" dir="ltr"><td id="EWXh" class="">廖耀銮</td><td id="@zgF" class="">30000</td><td id="VWx:" class="">刘泽坤</td><td id="FsU&lt;" class="">10000</td></tr><tr id="9272080e-7d30-83d0-9154-81172dc5a614" dir="ltr"><td id="EWXh" class="">刘锦兴</td><td id="@zgF" class="">30000</td><td id="VWx:" class="">林明亮</td><td id="FsU&lt;" class="">10000</td></tr><tr id="5c42080e-7d30-83f0-8ad6-01c4fe94d193" dir="ltr"><td id="EWXh" class="">刘金成</td><td id="@zgF" class="">20000</td><td id="VWx:" class=""></td><td id="FsU&lt;" class=""></td></tr></tbody></table><h2 id="3762080e-7d30-82dc-a988-013659c65918" style="display:inline-block" dir="auto">第七节　安息堂</h2><p id="de52080e-7d30-8349-8790-817c5fe143ac" class="" dir="auto">扫墓祭祖是中华民族的优良传统和美德。随着丧葬（殡仪）制度的深化改革，逝者由土葬改为火葬，建造安息堂（俗称灵堂），安放骨灰势在必行。</p><p id="2882080e-7d30-82c2-b6b0-81141f0e16c9" class="" dir="auto">为促进社会主义两个文明建设，响应上级号召，搞好殡葬改革，方便村民悼念先祖，村委会本着节约土地资源，维护生态环境，采集多方意见，经村两委会讨论研究，报上级有关部门审批并召开村民代表大会审议通过，决定选址在本村马鞍山下岭头堀建设骨灰堂。</p><p id="a1d2080e-7d30-83a3-a5da-01c4686f6aee" class="" dir="auto">下津骨灰堂取名安息堂，占地5亩左右，于2004年动工，至2005年12月建成，2006年1月1日起开始投入使用。安息堂内设灵位1836个，分22行，总投入资金260多万元，资金来源由村自筹。</p><p id="e5b2080e-7d30-82f2-b111-81a4486c7cb1" class="" dir="auto">堂联：下海寻瀛双旌山麓风光好　津梁聚雀落马亭前事业兴</p><p id="ed12080e-7d30-83a7-b706-812e0665b5b2" class="" dir="auto">缅思祖泽音容宛在　怀念慈恩感激长存</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

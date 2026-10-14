@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>前言</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="fb82080e-7d30-83cf-b0d4-816f3d892320" class="page sans"><header><h1 class="page-title" dir="auto">前言</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h2 id="38e2080e-7d30-8376-84d5-813a7847a16a" style="display:inline-block" dir="auto">下津村史</h2><p id="2ff2080e-7d30-830c-ab24-814e366decfd" class="" dir="auto"><strong>潮州市湘桥区下津村委会 编</strong></p><p id="8682080e-7d30-83ae-ad7e-81795e6dd429" class="" dir="auto"><strong>二〇二〇年六月 出版</strong></p><hr id="7952080e-7d30-8215-a7f8-01b968a127bd" dir="auto"/><h2 id="2f32080e-7d30-83c8-98e3-014592d6784c" style="display:inline-block" dir="auto">编委会成员</h2><p id="b402080e-7d30-8219-b413-8135bad73920" class="" dir="auto"><strong>编委主任：</strong> 刘俊强</p><p id="7682080e-7d30-825e-9f52-01c3dd223d4e" class="" dir="auto"><strong>编委副主任：</strong> 刘裕乾、刘金亥</p><p id="1702080e-7d30-826a-840e-01d365a36c34" class="" dir="auto"><strong>主编：</strong> 廖令焕</p><p id="add2080e-7d30-838a-8ad3-81ee64d40496" class="" dir="auto"><strong>编委：</strong> 刘泳华、刘俊复、康忠林、刘建文、刘泽伟、黄镇华、刘春祥</p><p id="a792080e-7d30-82b1-86d4-010cf4f2a629" class="" dir="auto"><strong>校对：</strong> 刘泽伟、黄镇华</p><h3 id="6782080e-7d30-8347-96f5-8129e2dc1389" style="display:inline-block" dir="auto">编委会合影</h3><p id="4362080e-7d30-83bc-9df7-01e8ef9b49d0" class="" dir="auto">前排左起：廖令焕、刘金亥、刘俊强、刘裕乾、刘建文<br/>后排左起：黄镇华、刘泽伟、康忠林、刘俊复、刘泳华</p><p id="3d12080e-7d30-829c-b7b2-015a3a847193" class="" dir="auto"><em>（合影地点：下津村党群服务中心）</em></p><hr id="d752080e-7d30-83f5-bdd6-019c893f66d7" dir="auto"/><h2 id="e4f2080e-7d30-8375-b816-01dad967ddb0" style="display:inline-block" dir="auto">村史修编工作照片</h2><p id="1dc2080e-7d30-828e-9cb0-813bf9cab9cb" class="" dir="auto"><strong>照片一：</strong> 2019年3月7日，村党委副书记刘裕乾（右三）主持村史领导小组会议，布置修史工作。</p><p id="a192080e-7d30-8239-a99e-811fadae95f6" class="" dir="auto"><strong>照片二：</strong> 2019年11月8日，村党委书记刘俊强（中）主持村史编审工作会议。</p><hr id="7ba2080e-7d30-83eb-88e4-81df3883e937" dir="auto"/><h2 id="7c62080e-7d30-83ea-9bf0-01a3b2c05c48" style="display:inline-block" dir="auto">前言</h2><p id="2842080e-7d30-836a-bd14-810acb9c3f9a" class="" dir="auto">国史、方志、家谱，是中华历史文化之三大支柱。村史是方志的基础和重要的组成部分。村之有史犹如族之有谱，国之有史也。</p><p id="3b62080e-7d30-8203-8dc9-81510dde9693" class="" dir="auto">下津位于潮州城东，是古代闽粤赣由韩江东岸通往潮州城之必经之地。自五代后梁贞明三年（917）始，先后有21个姓氏迁入斯地创祖，各姓氏的家谱记载着下津1102年的文明发展史。修编村史，既是上级的要求，也是深受众望之举。</p><p id="a252080e-7d30-8225-b3c7-010f87cf364b" class="" dir="auto">时逢盛世，政通人和。在乡贤的提议下，村两委与时俱进，于2019年3月5日成立下津村史修编工作领导小组。工作人员深入各个聚落收集资料，得到刘潮森、刘世美、廖振海等老一辈忆述的宝贵史料，各姓氏理事人员踊跃提供资料。经编辑人员历时一年多的辛勤耕耘，村史终于问世付<mark class="highlight-red" data-notion-highlight="red">梓</mark>。借此，谨向所有关心支持村史修编工作的乡亲表示衷心的感谢！</p><p id="f202080e-7d30-82c6-aa12-8171878b26f4" class="" dir="auto">村史内容包括土地资源、先祖创乡、乡村建设、人口、经济、政治、人物、文化、教育、大事记等<mark class="highlight-red" data-notion-highlight="red">篇目</mark>，章节分明，图文并茂。编纂时坚持详今略古，用已知史料推定各宗创乡时间，起到鉴古知今、察今知古的作用。事件表述力求翔实准确，具有地方性、时代性、文史性和综述性、可读性、通俗性的特点。</p><p id="b902080e-7d30-830b-9265-01f69a7cae3d" class="" dir="auto">《下津村史》的出版，形成下津文史资料，体现下津文化内涵。繁荣地域文化，为桥东志增光添彩。村史之发行，能使乡亲宛若跨越下津一千余年时光隧道之旅，与先人直接进行心灵的沟通，在追寻一代代下津人开发建设的辉煌中，感悟先世创业之艰辛和文化积淀之不易，领略历代乡贤的美德和风采；激发桑梓情怀，记住乡愁，砥砺前行，将下津建设得更加美丽。美德文史贯古今，承先启后谱篇章！</p><p id="30c2080e-7d30-82c9-af4f-8107acbf5ca4" class="" dir="auto">由于年湮代久，谱牒失传，村治变迁，资料失散，发掘收集不全。加之编辑时间仓促，编者水平所限，失当之处，诚望后人续修村史时加以斧正，使之更臻完美。</p><p id="9932080e-7d30-82ae-bb56-81e5bc019612" class="" dir="auto"><em>——《下津村史》编委会</em></p><hr id="16d2080e-7d30-8325-a24b-0154431df5ee" dir="auto"/><h2 id="1a12080e-7d30-8204-b95e-010b7c9699cf" style="display:inline-block" dir="auto">目录（按“篇—章—节”）</h2><h3 id="f732080e-7d30-822e-a3be-81f8ddb51fec" style="display:inline-block" dir="auto">第一篇　土地资源</h3><ul id="0352080e-7d30-83d6-ab0b-01a39e814357" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第一章　地理位置<ul id="4392080e-7d30-8326-8c11-81d10b3b77a7" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　地理位置 ……002</li></ul><ul id="4132080e-7d30-8264-b98a-01d3a691f991" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　村境范围 ……002</li></ul></li></ul><ul id="a7f2080e-7d30-8382-b6bd-01f4721de8a5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第二章　自然环境<ul id="c912080e-7d30-83c3-8ccd-8111ddb453ee" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　土地资源 ……003</li></ul><ul id="dd72080e-7d30-83f7-b63f-81feaba1dbe6" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　气候 ……003</li></ul><ul id="e602080e-7d30-832d-8a64-81079903de7a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　自然灾害 ……004</li></ul></li></ul><ul id="fc22080e-7d30-8293-82df-01234795de6f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第三章　土地演变<ul id="be62080e-7d30-8228-96d0-8106f50ee044" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　先祖开垦耕种地名 ……005</li></ul><ul id="4592080e-7d30-829e-8f7a-012051cc5261" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　土地变动情况 ……005</li></ul><ul id="d932080e-7d30-82d5-9979-01155c2fda15" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　土地现状 ……006</li></ul></li></ul><h3 id="1222080e-7d30-82a1-9849-0114535a29e7" style="display:inline-block" dir="auto">第二篇　先祖创乡</h3><ul id="c442080e-7d30-82aa-8776-815b95222af0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第一章　刘氏<ul id="eca2080e-7d30-834a-b52e-8145f192009d" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　桃坑刘氏源流纪略 ……008</li></ul><ul id="fd42080e-7d30-8337-8ffd-0186305f7b35" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　桃坑乡 ……008</li></ul><ul id="2ab2080e-7d30-8252-8618-0194e4df2dce" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　窟尾沟乡 ……010</li></ul><ul id="de02080e-7d30-83f9-9d26-81e53ddf28be" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　巷内乡 ……013</li></ul><ul id="2752080e-7d30-8316-ba23-01b008133080" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第五节　盐墩乡 ……021</li></ul><ul id="9382080e-7d30-82ce-b2dc-01a48e005ac5" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第六节　茂利乡 ……026</li></ul><ul id="f4a2080e-7d30-8301-adbc-81994c1ca18f" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第七节　铺仔前 ……027</li></ul><ul id="f082080e-7d30-8352-bc68-015f6c69b1c7" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第八节　洗马桥刘氏 ……029</li></ul><ul id="eb22080e-7d30-83c8-8295-81c69fc119c7" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第九节　海鹅头刘氏 ……030</li></ul></li></ul><ul id="c5a2080e-7d30-830e-8d8c-013a8b9e3bf0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第二章　廖氏<ul id="f202080e-7d30-8260-ae29-017fb8669902" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　下津廖氏源流纪略 ……031</li></ul><ul id="7302080e-7d30-820a-bf15-8139dfb345b8" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　廖厝 ……032</li></ul><ul id="bc12080e-7d30-83a5-9353-8174cf680a63" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　草美乡 ……037</li></ul></li></ul><ul id="62a2080e-7d30-8293-8482-81cbd3205a5b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第三章　陈氏<ul id="4ad2080e-7d30-82d1-b917-8138ead8da93" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　下津陈氏源流纪略 ……039</li></ul><ul id="0df2080e-7d30-8275-98e1-816ac00d221c" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　陈厝 ……040</li></ul></li></ul><ul id="2b22080e-7d30-8345-981d-8128c604ed60" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第四章　康氏<ul id="9162080e-7d30-83bd-a711-0111f042b84c" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　下津康氏源流纪略 ……042</li></ul><ul id="6822080e-7d30-83f8-a821-81576c9be18b" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　康厝 ……042</li></ul><ul id="5032080e-7d30-83f8-b6a7-81cd31ca6801" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　杜猴寨康氏 ……044</li></ul></li></ul><ul id="b892080e-7d30-8339-b9c4-01062a63ada3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第五章　洪氏<ul id="6422080e-7d30-83ca-a623-0180f749d37c" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　下津洪氏源流纪略 ……045</li></ul><ul id="dcd2080e-7d30-8316-aff8-812cc8beb67a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　洪厝 ……045</li></ul></li></ul><ul id="ee22080e-7d30-8375-8413-018726856c79" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第六章　潘氏<ul id="ce92080e-7d30-82e3-916f-813dab8c0d42" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　下津潘氏源流纪略 ……047</li></ul><ul id="3f52080e-7d30-8203-b216-8117d79fc55a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　潘厝 ……047</li></ul></li></ul><ul id="6f12080e-7d30-823b-9208-8184599aa6ef" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第七章　黄氏<ul id="5e62080e-7d30-82f9-b35d-010444093eaf" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　下津黄氏源流纪略 ……049</li></ul><ul id="3672080e-7d30-82a8-b80e-81811cced622" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　脚桶黄 ……049</li></ul><ul id="c972080e-7d30-82aa-b0de-81902723ce86" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　山边寨 ……051</li></ul><ul id="c842080e-7d30-822a-830a-011a762fb125" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　绞队井黄氏 ……051</li></ul></li></ul><ul id="9a92080e-7d30-8348-8a23-81f77ee024c2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第八章　洗马桥<ul id="64e2080e-7d30-82d0-8c7e-0154282105c2" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　洗马桥概况 ……052</li></ul><ul id="e202080e-7d30-82cf-bbe1-8165c35cac07" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　林氏 ……053</li></ul><ul id="c452080e-7d30-8339-ac41-81d6af5dd064" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　赖氏 ……054</li></ul><ul id="39f2080e-7d30-839d-992d-814d7a64a586" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　管氏 ……054</li></ul></li></ul><ul id="c452080e-7d30-827f-8750-01b2892321d9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第九章　海鹅头乡<ul id="74f2080e-7d30-83bf-8d90-81e998a135c6" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　海鹅头乡概况 ……056</li></ul><ul id="81a2080e-7d30-82eb-968c-01e942ba7a82" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　张氏 ……057</li></ul><ul id="df92080e-7d30-82f5-b781-81c14bddf8c0" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　钟氏 ……058</li></ul></li></ul><ul id="1f62080e-7d30-8338-83b0-81723b7837d6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第十章　沙瓯乡<ul id="5dd2080e-7d30-831b-b095-81e684626d82" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　沙瓯乡概况 ……059</li></ul><ul id="7732080e-7d30-8288-bc13-01244a0107a6" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　柯氏 ……059</li></ul></li></ul><ul id="e2d2080e-7d30-827e-8f1e-01e85daddcfa" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第十一章　杜猴寨<ul id="bfc2080e-7d30-834d-b9e3-8189363b652a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　杜猴寨概况 ……061</li></ul><ul id="9032080e-7d30-82d5-a16a-818f9bbc3cdd" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　李氏 ……061</li></ul><ul id="6732080e-7d30-8247-85b8-010b82f41fe6" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　郭氏 ……062</li></ul></li></ul><ul id="4872080e-7d30-8304-b90b-811ffd797d76" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第十二章　落籍创祖<ul id="7b72080e-7d30-8381-8162-0110950a2f8f" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　方氏 ……064</li></ul><ul id="5432080e-7d30-82bb-93d8-811344f9c905" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　许氏 ……064</li></ul><ul id="18e2080e-7d30-8310-9809-8127af3ac522" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　曾氏 ……065</li></ul><ul id="9602080e-7d30-8225-b0dd-81c20d9896b6" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　吴氏 ……065</li></ul><ul id="b0c2080e-7d30-8362-ad7c-817c958c9850" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第五节　王氏 ……066</li></ul><ul id="6912080e-7d30-83f3-ae6f-01585b9afa60" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第六节　蔡氏 ……066</li></ul></li></ul><h3 id="7cc2080e-7d30-83aa-ad98-810db595527b" style="display:inline-block" dir="auto">第三篇　乡村建设</h3><ul id="bf32080e-7d30-828a-9f67-81f106308770" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第一章　道路<ul id="ad92080e-7d30-827a-a77f-81c6635fd771" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　公路 ……068</li></ul><ul id="b212080e-7d30-8213-b2e4-01cc6d78ec38" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　古道 ……068</li></ul><ul id="9e22080e-7d30-8328-862d-81a8da3329c7" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　古道演变村道 ……069</li></ul><ul id="7662080e-7d30-8355-a9cb-81a9e0a14d69" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　桥梁 ……072</li></ul></li></ul><ul id="4832080e-7d30-82e0-ad5c-01e15d0e86b0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第二章　房屋建设<ul id="d962080e-7d30-83e8-a9fd-8151df6373ce" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　宅区建设 ……073</li></ul><ul id="d822080e-7d30-82cd-9982-819a8a510468" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　村址建设 ……074</li></ul><ul id="63d2080e-7d30-82b7-a0a8-01c3b4f1917b" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　公厕建设 ……075</li></ul><ul id="3342080e-7d30-83b3-a887-01e4c4ce353a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　卫生站 ……075</li></ul><ul id="b9d2080e-7d30-828e-8236-81e668ffc72e" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第五节　便民综合服务岛 ……075</li></ul><ul id="ca82080e-7d30-8228-8445-01e3a1f880fe" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第六节　老年人活动中心 ……076</li></ul><ul id="f2b2080e-7d30-8221-ab26-8137437df522" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第七节　安息堂 ……077</li></ul></li></ul><ul id="e1a2080e-7d30-8234-b47c-81989015b87d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第三章　水电建设<ul id="9f92080e-7d30-82c4-9209-01bdcc918877" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　自来水 ……078</li></ul><ul id="ea32080e-7d30-82bb-a8a9-81241850087b" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　电力 ……078</li></ul><ul id="62e2080e-7d30-8201-be64-81c05e50aee6" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　电话 ……078</li></ul></li></ul><ul id="69a2080e-7d30-8322-829d-015c2def394b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第四章　精神文明建设<ul id="d4f2080e-7d30-82e1-93d6-81d3a5505f36" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　健身广场 ……080</li></ul><ul id="05c2080e-7d30-8229-9e39-81db67bf5015" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　池塘整治 ……081</li></ul><ul id="9372080e-7d30-836e-b071-016d01056b34" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　排污沟 ……082</li></ul><ul id="1292080e-7d30-82e2-b7dc-010a252cdc09" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　文化公园 ……082</li></ul></li></ul><h3 id="0532080e-7d30-8277-8a14-81df264830ac" style="display:inline-block" dir="auto">第四篇　人口</h3><ul id="2da2080e-7d30-83a2-9d37-81936de45c79" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第一章　人口发展<ul id="2d12080e-7d30-82e5-8767-013c7ed02910" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　人口时点数 ……084</li></ul><ul id="0c82080e-7d30-8351-9a57-817171337d20" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　人口增长与密度 ……084</li></ul></li></ul><ul id="30e2080e-7d30-82c3-a198-01e0dc1e3d4f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第二章　人口结构<ul id="4122080e-7d30-82d7-8073-01b46cdb40e4" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　姓氏人口 ……085</li></ul><ul id="2ea2080e-7d30-8321-88b2-015319b2463a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　自然村人口 ……086</li></ul></li></ul><ul id="8772080e-7d30-833f-82dc-817f2347d77a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第三章　人口迁播<ul id="3df2080e-7d30-8265-82a5-81b2bd512bc9" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　海外侨胞 ……087</li></ul><ul id="7b22080e-7d30-837a-b170-81014400acec" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　迁播国内 ……088</li></ul><ul id="2d32080e-7d30-83f0-add2-0146a6852be8" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　参加海南建设 ……088</li></ul><ul id="45b2080e-7d30-8215-91d0-81fdd78073d8" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　调动情况 ……089</li></ul></li></ul><ul id="54b2080e-7d30-83e8-afcc-0193e95a490a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第四章　退伍军人 ……091</li></ul><ul id="bfb2080e-7d30-83a1-896a-81046a080c40" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第五章　计划生育 ……092</li></ul><h3 id="1412080e-7d30-8228-aa33-81d2b129a019" style="display:inline-block" dir="auto">第五篇　经济</h3><ul id="08d2080e-7d30-8314-bafd-815f53c7c5d2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第一章　体制沿革<ul id="97f2080e-7d30-8236-910f-817b5647016e" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　土地改革 ……094</li></ul><ul id="e632080e-7d30-8346-80d9-814c7ca0fbf6" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　农业合作社 ……094</li></ul><ul id="9402080e-7d30-8268-ab9a-818529cfe1b6" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　人民公社 ……095</li></ul><ul id="c5f2080e-7d30-8347-afa6-81d49c50670a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　承包责任制 ……095</li></ul></li></ul><ul id="dfc2080e-7d30-82a9-af79-017e7afd4546" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第二章　农业<ul id="e292080e-7d30-834c-ab1c-812ba16df0e0" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　粮食作物 ……096</li></ul><ul id="79b2080e-7d30-835a-8215-01d9eb0bd166" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　畜牧 ……097</li></ul><ul id="28f2080e-7d30-8212-99a1-815e15658ea6" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　渔业 ……097</li></ul><ul id="9712080e-7d30-8322-8c9f-81b20deb7d2a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　林业 ……097</li></ul><ul id="7e82080e-7d30-83ae-93c8-01e158a4edaf" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第五节　副业 ……098</li></ul><ul id="35b2080e-7d30-82f5-9f33-81d9b05cd9b6" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第六节　经济作物 ……098</li></ul></li></ul><ul id="c462080e-7d30-831f-9ea8-014a2e1add28" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第三章　水利<ul id="1932080e-7d30-82bf-8646-812420228602" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　堤防 ……100</li></ul><ul id="2f72080e-7d30-82ea-b15b-8114c30d932e" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　疏通洗马桥溪段 ……101</li></ul><ul id="1602080e-7d30-8331-9407-8128e2fbb345" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　灌溉 ……101</li></ul><ul id="cc82080e-7d30-82b6-acd0-817f42c9d688" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　平整土地 ……101</li></ul></li></ul><ul id="e082080e-7d30-8230-984f-014daa1ea672" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第四章　工商业<ul id="f992080e-7d30-833f-b493-8140d4f764ab" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　工商业的形成与发展 ……102</li></ul><ul id="61f2080e-7d30-83bd-80c9-010e2d46f4e0" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　做屐桃 ……103</li></ul><ul id="0312080e-7d30-8304-9bcb-810dbb4a74c8" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　工业 ……103<ul id="6672080e-7d30-82dc-ae84-01aa77363472" class="bulleted-list" dir="auto"><li style="list-style-type:square">一、下津古今工业</li></ul><ul id="87f2080e-7d30-83a2-891d-81b564cd4b75" class="bulleted-list" dir="auto"><li style="list-style-type:square">二、瓷土开采</li></ul><ul id="ce72080e-7d30-82c9-83ce-81b3b5e067b0" class="bulleted-list" dir="auto"><li style="list-style-type:square">三、瓷泥加工</li></ul><ul id="dff2080e-7d30-82e4-8037-019f7d333624" class="bulleted-list" dir="auto"><li style="list-style-type:square">四、下津村办工业</li></ul></li></ul><ul id="b152080e-7d30-82ad-bde7-812b09c945b5" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　商业 ……104</li></ul></li></ul><ul id="0c92080e-7d30-820b-81da-8184bde6ca35" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第五章　民生<ul id="79e2080e-7d30-836f-b3db-0121bec19b9c" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　经济收入 ……107</li></ul><ul id="7ef2080e-7d30-834b-9037-812ebcab621d" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　衣食住行 ……107</li></ul></li></ul><h3 id="a902080e-7d30-837a-ac6c-017b0f0985ea" style="display:inline-block" dir="auto">第六篇　政治</h3><ul id="7cd2080e-7d30-8235-83ac-0184f7170890" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第一章　建置沿革<ul id="1802080e-7d30-8356-8c91-01c066089f7a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　潮州政区沿革 ……110</li></ul><ul id="2712080e-7d30-83a1-97be-013a54b6831b" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　海阳县潮安县沿革 ……111</li></ul><ul id="15a2080e-7d30-82e4-a3db-013abd1144a2" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　湘桥置区 ……111</li></ul><ul id="0382080e-7d30-82de-b571-0138a2f05c8f" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　下津乡名由来 ……112</li></ul><ul id="cc02080e-7d30-8203-bb29-81b5f3d2efdb" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第五节　下津行政名称沿革 ……113</li></ul><ul id="04c2080e-7d30-83af-8cb4-011d49b568f5" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第六节　下津隶属沿革 ……114</li></ul></li></ul><ul id="7be2080e-7d30-838a-b93b-811a01abe710" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第二章　中共下津党组织<ul id="1ec2080e-7d30-82fd-ba83-81740d7c3dfc" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　中共下津乡党支部 ……115</li></ul><ul id="0f02080e-7d30-8352-853e-812dd6e8b456" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　中共下津村党委会 ……116</li></ul><ul id="c452080e-7d30-83b6-b957-811e32c61377" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　党员人数 ……117</li></ul></li></ul><ul id="d772080e-7d30-82b3-9f00-01b7fe502f37" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第三章　人民代表大会<ul id="8812080e-7d30-837f-9f49-01af51e74a87" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　下津人大代表 ……118</li></ul><ul id="a952080e-7d30-824e-bbca-81f4e2b4fd3f" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　村民代表大会 ……118</li></ul><ul id="8682080e-7d30-8251-8bc4-01cd823e3821" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　历任行政领导人 ……118</li></ul></li></ul><ul id="ffa2080e-7d30-834c-9f3b-01e5fce9eb40" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第四章　下津群团组织<ul id="61c2080e-7d30-834f-a1bc-01299699f2f0" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　共青团 ……120</li></ul><ul id="a732080e-7d30-83c1-a60d-01559dadde49" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　妇女 ……120</li></ul><ul id="fe92080e-7d30-8286-ab99-810bda0b4d1b" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　农会 ……120</li></ul><ul id="a562080e-7d30-8237-8c16-012482a285af" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　民兵 ……121</li></ul></li></ul><ul id="0bd2080e-7d30-83e6-a82b-8148e672bea4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第五章　政绩表彰称号 ……122</li></ul><h3 id="af52080e-7d30-82c9-a368-81aa478c96eb" style="display:inline-block" dir="auto">第七篇　人物</h3><ul id="8e52080e-7d30-826a-82b2-81b168f7c1e1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第一章　古代人物<ul id="d302080e-7d30-833a-8e61-0133e6789277" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　唐宋时期 ……124</li></ul><ul id="5f12080e-7d30-82b2-a551-81d5786fa8a1" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　元代 ……125</li></ul><ul id="1522080e-7d30-8299-a749-810d633ea750" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　明代 ……125</li></ul><ul id="0ab2080e-7d30-83cc-b8df-817995b3f2b1" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　清代 ……126</li></ul></li></ul><ul id="6bf2080e-7d30-824a-a410-811cd8825010" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第二章　民国人物 ……128</li></ul><ul id="5042080e-7d30-824b-8133-81e80f5b608e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第三章　革命人物 ……129</li></ul><ul id="5642080e-7d30-821f-9b5f-019c6ef279ac" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第四章　复员军人 ……131</li></ul><ul id="6fc2080e-7d30-823b-b48f-817d515e6eb2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第五章　烈士、荣誉军人 ……132</li></ul><ul id="65b2080e-7d30-8285-8acb-010c1090474b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第六章　现代人物<ul id="4272080e-7d30-822d-97dd-81aefa468f80" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　土改干部 ……133</li></ul><ul id="48f2080e-7d30-8224-a61a-81ad36b6d249" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　党政干部 ……134</li></ul><ul id="4192080e-7d30-83c0-a522-014cf01773dd" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　军转干部 ……136</li></ul><ul id="fda2080e-7d30-825a-ba11-01648be99c28" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　企业干部 ……138</li></ul><ul id="eab2080e-7d30-83d9-ab14-81542096fb07" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第五节　事业干部 ……141</li></ul><ul id="bdc2080e-7d30-828b-ae4e-0155402b17a7" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第六节　学位高级职称名录 ……143</li></ul><ul id="c5e2080e-7d30-82f9-acdc-8185c5634c6a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第七节　村两委 ……144</li></ul><ul id="d272080e-7d30-8242-b604-81326919ee08" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第八节　生产队长、村民组长、村企业主管 ……145</li></ul></li></ul><ul id="9fa2080e-7d30-82c7-bce4-8157dc82dab4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第七章　乡贤风采 ……146</li></ul><h3 id="8a22080e-7d30-821e-9d2b-81e19840b822" style="display:inline-block" dir="auto">第八篇　文化</h3><ul id="7a72080e-7d30-8362-99a4-819104967b1c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第一章　庙宇<ul id="0c22080e-7d30-83b8-878f-8146017e02d9" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　土地神庙 ……150</li></ul><ul id="1b92080e-7d30-8241-83e2-812178e697e2" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　游神赛会 ……153</li></ul></li></ul><ul id="7372080e-7d30-8256-8daf-01f58f4bb1a3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第二章　祠堂<ul id="1552080e-7d30-83a1-a1d7-0179bbd5aafd" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　桃坑古祠 ……155</li></ul><ul id="1cf2080e-7d30-8216-b743-81243a27114b" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　刘氏祠堂 ……157</li></ul><ul id="f942080e-7d30-8380-908a-81e26f5d73a5" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　廖氏祠堂 ……160</li></ul><ul id="e232080e-7d30-8297-b20b-81091aa507d2" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　陈氏祠堂 ……161</li></ul><ul id="c3e2080e-7d30-8297-91d5-812f4d7448e5" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第五节　祖厅堂号、堂联、祖联选介 ……162</li></ul><ul id="55a2080e-7d30-837b-80b3-81b667d9cc2f" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第六节　民居对联选介 ……172</li></ul></li></ul><ul id="e9f2080e-7d30-8227-862d-81ad5527282c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第三章　家谱文化<ul id="be92080e-7d30-8233-a09f-81f298b3e7ee" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　谱牒出版发行 ……173</li></ul><ul id="4b82080e-7d30-8337-a090-018fc8aefa72" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　郡望 ……174</li></ul><ul id="7032080e-7d30-82a6-823f-019c10bb6589" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　堂号 ……174</li></ul><ul id="add2080e-7d30-83ef-b204-8195071d2231" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　族训家训 ……175</li></ul><ul id="9b42080e-7d30-83fa-a6c7-818aca69b691" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第五节　诗词 ……176</li></ul><ul id="12b2080e-7d30-82bb-962f-814b47b55cbb" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第六节　文章选登 ……179</li></ul></li></ul><ul id="d762080e-7d30-8376-a1a4-01583830bf72" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第四章　传统节日与风俗习惯<ul id="2f62080e-7d30-83cf-9522-01ccf6a0212b" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　传统节日 ……181</li></ul><ul id="9e22080e-7d30-82d2-b2b3-01447d273f86" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　风俗习惯 ……181</li></ul></li></ul><ul id="6402080e-7d30-8269-906b-81ced7b9c79d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第五章　民间传说<ul id="9302080e-7d30-82fb-bb11-8195d5673fee" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　刘昉之民间传说 ……183</li></ul><ul id="04b2080e-7d30-83bc-abd1-0148eee1f012" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　十五岁阿公坟的传说 ……185</li></ul><ul id="cc22080e-7d30-83e1-ad61-8111de020c5a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　孝子黄良丰的传说 ……187</li></ul></li></ul><ul id="9392080e-7d30-8388-927b-81023db2f3f1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第六章　古墓 ……188</li></ul><ul id="24b2080e-7d30-8396-b188-8181614e9ba2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第七章　宣传<ul id="b312080e-7d30-83a4-a206-81438e8ff178" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　宣传设施 ……191</li></ul><ul id="68f2080e-7d30-83f5-b31d-81a106d9d35c" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　宣传队伍 ……192</li></ul></li></ul><ul id="5d22080e-7d30-8312-9306-01ac8d5bd184" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第八章　文体活动<ul id="e732080e-7d30-82ca-a296-0115fb406004" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　锣鼓班、弦乐队 ……193</li></ul><ul id="7252080e-7d30-823d-8e8c-01a6fcadf04c" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　体育活动 ……194</li></ul><ul id="5712080e-7d30-8286-8430-01541dc2ef68" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　灯谜活动 ……194</li></ul></li></ul><h3 id="d9d2080e-7d30-8203-b26d-816d39287895" style="display:inline-block" dir="auto">第九篇　教育</h3><ul id="2752080e-7d30-826e-950f-0171f06f2d20" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第一章　私塾教育<ul id="68d2080e-7d30-82ec-99d3-81f94ee1d8bc" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　私塾办学方式 ……196</li></ul><ul id="e9e2080e-7d30-83a3-b45f-816736e8dcf5" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　私塾教学内容 ……196</li></ul></li></ul><ul id="5962080e-7d30-833d-8c75-01a0c20e3376" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第二章　小学教育<ul id="0512080e-7d30-82a7-965f-01c287bc4abb" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　民国时期 ……197</li></ul><ul id="3ce2080e-7d30-8315-850f-01a9ffe09f11" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　解放初期 ……197</li></ul><ul id="1d62080e-7d30-8353-b955-817ca51afcc5" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　下津小学 ……197</li></ul><ul id="7bc2080e-7d30-8346-8258-815292d3a4ce" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第四节　下津博雅学校 ……199</li></ul></li></ul><ul id="5672080e-7d30-828a-95b2-01ebbb06e41c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第三章　民办教育 ……203</li></ul><ul id="03d2080e-7d30-82a5-a483-0173c588d80b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第四章　初中教育 ……204</li></ul><ul id="2e12080e-7d30-8257-97d6-01cbbffdc37e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第五章　幼儿教育<ul id="b9d2080e-7d30-82f9-af98-012345c0a7d4" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　公办幼儿园 ……205</li></ul><ul id="f792080e-7d30-8253-b5b8-816314965b37" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　私办幼儿园 ……206</li></ul><ul id="3e32080e-7d30-82dc-b4b0-81a1002d0f1a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　幼教现状 ……206</li></ul></li></ul><ul id="4d12080e-7d30-8380-a014-01e1d7c03ec3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第六章　业余教育<ul id="acc2080e-7d30-8377-99da-01221a33a1cc" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　扫盲 ……207</li></ul><ul id="0b22080e-7d30-820c-bb8c-813068e354d3" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　夜校 ……207</li></ul><ul id="c872080e-7d30-82b4-bd7e-01a87df2cad3" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第三节　耕读班 ……209</li></ul></li></ul><ul id="2992080e-7d30-8227-8390-0178b1318dc8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第七章　捐资兴学 ……209</li></ul><ul id="3572080e-7d30-8249-9be3-81eab602481b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第八章　下津小学历任校长 ……211</li></ul><ul id="69f2080e-7d30-8379-ac99-81dbf9bb182e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">第九章　奖学金制度<ul id="dfe2080e-7d30-82f6-96b6-81d4bd0b4730" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第一节　集体奖学 ……212</li></ul><ul id="b072080e-7d30-827c-a349-01d932bcc417" class="bulleted-list" dir="auto"><li style="list-style-type:circle">第二节　民间奖学 ……212</li></ul></li></ul><h3 id="04c2080e-7d30-832e-943a-81a0dfdab077" style="display:inline-block" dir="auto">第十篇　大事记</h3><ul id="da52080e-7d30-82a0-b7ec-815b7409c855" class="bulleted-list" dir="auto"><li style="list-style-type:disc">大事记 ……214</li></ul><ul id="e182080e-7d30-837f-a748-0119ab4899a4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">芳名榜 ……222</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

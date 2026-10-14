@@ -1,0 +1,448 @@
+{
+  "date": "2026-10-14",
+  "counts": {
+    "html": 110,
+    "chapters": 11,
+    "genealogy": 662,
+    "people": 268,
+    "events": 110,
+    "photos": 75,
+    "searchDocs": 109,
+    "referenceRecords": 1237,
+    "referenceNeedsReview": 1233
+  },
+  "unknownGenerations": 471,
+  "issues": [
+    {
+      "id": "review-1",
+      "category": "族谱待核",
+      "title": "刘策",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第三节 窟尾沟乡 3242080e7d3082a7b2730108cfa76a2a.html",
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html",
+        "第七篇 人物/第一章 古代人物 cd72080e7d3083b6992b0154aab98074.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-2",
+      "category": "族谱待核",
+      "title": "刘佳琪",
+      "detail": "原文只记名字，是刘氏女性的子女；当前沿用旧显示姓名，姓氏须核对，不应自动按母姓补刘。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第三节 窟尾沟乡 3242080e7d3082a7b2730108cfa76a2a.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-3",
+      "category": "族谱待核",
+      "title": "刘翠华",
+      "detail": "原文只记名字，是刘氏女性的子女；当前沿用旧显示姓名，姓氏须核对，不应自动按母姓补刘。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第三节 窟尾沟乡 3242080e7d3082a7b2730108cfa76a2a.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-4",
+      "category": "族谱待核",
+      "title": "刘桂宜",
+      "detail": "原文只记名字，是刘氏女性的子女；当前沿用旧显示姓名，姓氏须核对，不应自动按母姓补刘。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第三节 窟尾沟乡 3242080e7d3082a7b2730108cfa76a2a.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-5",
+      "category": "族谱待核",
+      "title": "刘济孙",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-6",
+      "category": "族谱待核",
+      "title": "刘启泳",
+      "detail": "原文只记名字，是刘氏女性的子女；当前沿用旧显示姓名，姓氏须核对，不应自动按母姓补刘。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第三节 窟尾沟乡 3242080e7d3082a7b2730108cfa76a2a.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-7",
+      "category": "族谱待核",
+      "title": "刘启跃",
+      "detail": "原文只记名字，是刘氏女性的子女；当前沿用旧显示姓名，姓氏须核对，不应自动按母姓补刘。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第三节 窟尾沟乡 3242080e7d3082a7b2730108cfa76a2a.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-8",
+      "category": "族谱待核",
+      "title": "刘咏华",
+      "detail": "原文只记名字，是刘氏女性的子女；当前沿用旧显示姓名，姓氏须核对，不应自动按母姓补刘。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第三节 窟尾沟乡 3242080e7d3082a7b2730108cfa76a2a.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-9",
+      "category": "族谱待核",
+      "title": "刘济",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-10",
+      "category": "族谱待核",
+      "title": "刘涣",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-11",
+      "category": "族谱待核",
+      "title": "刘瀚",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-12",
+      "category": "族谱待核",
+      "title": "刘泽",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-13",
+      "category": "族谱待核",
+      "title": "刘洛",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-14",
+      "category": "族谱待核",
+      "title": "刘潞",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-15",
+      "category": "族谱待核",
+      "title": "刘汭",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-16",
+      "category": "族谱待核",
+      "title": "刘淮",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-17",
+      "category": "族谱待核",
+      "title": "刘渍",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html",
+        "第七篇 人物/第一章 古代人物 cd72080e7d3083b6992b0154aab98074.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-18",
+      "category": "族谱待核",
+      "title": "刘铨",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html",
+        "第七篇 人物/第一章 古代人物 cd72080e7d3083b6992b0154aab98074.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-19",
+      "category": "族谱待核",
+      "title": "刘公孙",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-20",
+      "category": "族谱待核",
+      "title": "刘簧",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-21",
+      "category": "族谱待核",
+      "title": "刘廉",
+      "detail": "原文列父亲多位配偶，未说明具体生母；保留父系关系。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第二节 桃坑乡 1d72080e7d3082dd82ab811bc7d7f235.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-22",
+      "category": "地图",
+      "title": "下津祠堂",
+      "detail": "地点、简介和坐标仍为示例，需实地核实",
+      "sourceFiles": [],
+      "status": "待核"
+    },
+    {
+      "id": "review-23",
+      "category": "地图",
+      "title": "村小旧址",
+      "detail": "地点、简介和坐标仍为示例，需实地核实",
+      "sourceFiles": [],
+      "status": "待核"
+    },
+    {
+      "id": "review-24",
+      "category": "地图",
+      "title": "古井",
+      "detail": "地点、简介和坐标仍为示例，需实地核实",
+      "sourceFiles": [],
+      "status": "待核"
+    },
+    {
+      "id": "review-25",
+      "category": "地图",
+      "title": "石桥",
+      "detail": "地点、简介和坐标仍为示例，需实地核实",
+      "sourceFiles": [],
+      "status": "待核"
+    },
+    {
+      "id": "review-26",
+      "category": "地图",
+      "title": "庙宇遗址",
+      "detail": "地点、简介和坐标仍为示例，需实地核实",
+      "sourceFiles": [],
+      "status": "待核"
+    },
+    {
+      "id": "review-27",
+      "category": "地图",
+      "title": "老宅群",
+      "detail": "地点、简介和坐标仍为示例，需实地核实",
+      "sourceFiles": [],
+      "status": "待核"
+    },
+    {
+      "id": "review-28",
+      "category": "地图",
+      "title": "南畈农田",
+      "detail": "地点、简介和坐标仍为示例，需实地核实",
+      "sourceFiles": [],
+      "status": "待核"
+    },
+    {
+      "id": "review-29",
+      "category": "原文口径",
+      "title": "姓氏人口与2018年人口",
+      "detail": "21姓合计1590户、6918人；人口发展篇记2018年1818户、6035人。年份和户籍/常住/宗族口径需核对，未改原文数字。",
+      "sourceFiles": [
+        "第四篇 人口 eff2080e7d308315b6cc81cbc14ad003.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-30",
+      "category": "原文缺漏",
+      "title": "自然村人口表",
+      "detail": "表中只有7行数据；与14个自然村的表述需要核对。",
+      "sourceFiles": [
+        "第四篇 人口 eff2080e7d308315b6cc81cbc14ad003.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-31",
+      "category": "原文时间",
+      "title": "前言 fb82080e7d3083cfb0d4816f3d892320.html",
+      "detail": "1102年是917年至2019年的差值。原文“迄今”应按编纂时间理解，不宜当作网站当前年份。",
+      "sourceFiles": [
+        "前言 fb82080e7d3083cfb0d4816f3d892320.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-32",
+      "category": "原文口径",
+      "title": "山地面积",
+      "detail": "土地资源篇同时记山地约2.6平方公里（3900亩）及2018年1455亩；需说明年代和征地后的统计口径。",
+      "sourceFiles": [
+        "第一篇 土地资源 3842080e7d30828e9bbb81e000bdcbe6.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-33",
+      "category": "原文待核",
+      "title": "刘景官职",
+      "detail": "第七篇 人物/第一章 古代人物 cd72080e7d3083b6992b0154aab98074.html记台南知州/高雄州知州；先祖创乡篇记奉诏使安南。请核族谱与原始文献，不能擅改成另一个官名。",
+      "sourceFiles": [
+        "第二篇 先祖创乡 5272080e7d3082f1b970018faf48978c.html",
+        "第七篇 人物 0272080e7d308364a540010ffc320afc.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-34",
+      "category": "原文文字",
+      "title": "第三篇 乡村建设/第二章 房屋建设 f352080e7d3082769dda8139b0832674.html",
+      "detail": "出现“峻工”，通常应为“竣工”；原书留存，等待审定后修订。",
+      "sourceFiles": [
+        "第三篇 乡村建设 c092080e7d3083a8a708015986a0468a.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-35",
+      "category": "原文时间",
+      "title": "第二篇 先祖创乡 5272080e7d3082f1b970018faf48978c.html",
+      "detail": "1102年是917年至2019年的差值。原文“迄今”应按编纂时间理解，不宜当作网站当前年份。",
+      "sourceFiles": [
+        "第二篇 先祖创乡 5272080e7d3082f1b970018faf48978c.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-36",
+      "category": "原文时间",
+      "title": "第八篇 文化 5302080e7d3083b790548134ce7beffa.html",
+      "detail": "1102年是917年至2019年的差值。原文“迄今”应按编纂时间理解，不宜当作网站当前年份。",
+      "sourceFiles": [
+        "第八篇 文化 5302080e7d3083b790548134ce7beffa.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-37",
+      "category": "参考表待核",
+      "title": "蔡春潮",
+      "detail": "“出东郊母姨嗣蔡为祖”的具体收嗣关系未列，需人工核对。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第十二章 落籍创祖/第六节 蔡氏 e9b2080e7d3083fbb0000180b5b752c8.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-38",
+      "category": "参考表待核",
+      "title": "曾新汉",
+      "detail": "出生年由年龄推算，待人工校验。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第十二章 落籍创祖/第三节 曾氏 4802080e7d30839db14e01f35088b14c.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-39",
+      "category": "参考表待核",
+      "title": "刘映波",
+      "detail": "迁徙名录人物，原文未说明父母、配偶、子女关系。 此姓名前文其他乡也可能出现，需人工确认是否同一人。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第六节 茂利乡 ad22080e7d30822798a481ef89060790.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-40",
+      "category": "参考表待核",
+      "title": "刘映波",
+      "detail": "迁徙名录人物，原文未说明父母、配偶、子女关系。 此姓名前文其他乡也可能出现，需人工确认是否同一人。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第六节 茂利乡 ad22080e7d30822798a481ef89060790.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-41",
+      "category": "参考表待核",
+      "title": "刘绍丰",
+      "detail": "迁徙名录人物，原文未说明父母、配偶、子女关系；注意前文其他乡也可能出现同名刘绍丰。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第五节 盐墩乡 ad12080e7d3082e0a712812f59f6421a.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-42",
+      "category": "参考表待核",
+      "title": "刘绍丰",
+      "detail": "迁徙名录人物，原文未说明父母、配偶、子女关系；注意前文其他乡也可能出现同名刘绍丰。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第五节 盐墩乡 ad12080e7d3082e0a712812f59f6421a.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-43",
+      "category": "参考表待核",
+      "title": "刘世德",
+      "detail": "迁徙名录人物，原文未说明父母、配偶、子女关系。 此姓名前文其他乡也可能出现，需人工确认是否同一人。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第一章 刘氏/第六节 茂利乡 ad22080e7d30822798a481ef89060790.html"
+      ],
+      "status": "待核"
+    },
+    {
+      "id": "review-44",
+      "category": "参考表待核",
+      "title": "林绍章",
+      "detail": "出生年按1959年八岁推算，需人工确认。",
+      "sourceFiles": [
+        "第二篇 先祖创乡/第八章 洗马桥/第二节 林氏 6922080e7d30825da1c9814c94ff3da2.html"
+      ],
+      "status": "待核"
+    }
+  ]
+}

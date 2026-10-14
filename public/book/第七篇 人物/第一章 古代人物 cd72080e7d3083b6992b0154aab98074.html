@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第一章　古代人物</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="cd72080e-7d30-83b6-992b-0154aab98074" class="page sans"><header><h1 class="page-title" dir="auto">第一章　古代人物</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h2 id="5cd2080e-7d30-8391-9b1e-01f55bf9a0e0" style="display:inline-block" dir="auto">第一节　唐宋时期</h2><p id="86e2080e-7d30-83dd-96a1-81f382a53b4e" class="" dir="auto"><strong>唐代</strong></p><ul id="0f02080e-7d30-82c2-8fe6-8148514dacfc" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘嵩：</strong> 唐昭宗年间（889—903），任大理寺卿。</li></ul><p id="bc82080e-7d30-838b-b87f-814671c98e4f" class="" dir="auto"><strong>宋代</strong></p><ul id="7e72080e-7d30-82cd-9e3d-0139ef318886" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘表：</strong> 宋咸平四年（1001），举贤良方正，官授承直郎大理寺评事，崇祀乡贤祠。</li></ul><ul id="4ef2080e-7d30-82bc-9dd5-015caf34afd8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘默：</strong> 字时光，宋景祐三年（1036），举五经特奉奏题名，官拜文林郎、化州推官，崇祀乡贤祠。</li></ul><ul id="6672080e-7d30-8299-ace8-8196997ebf1e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘克俊：</strong> 字子材，号东山，宋大观元年（1107）以子允贵，恩赠朝奉郎。宋宣和六年（1124），敕恩改赠朝请郎，终赠朝请大夫。</li></ul><ul id="f682080e-7d30-827f-ba0e-0155f09ee1d5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘允：</strong> 字厚中，宋绍圣四年（1097）登丁丑科何昌言榜进士，历任循州户曹、程乡知县、化州知州、桂州知州，终赠上柱国左金紫光禄大夫。公在程乡县任上，恰逢大旱，庄稼失收，奏旨减免灾民租赋获准实施。致仕后，订正韩文，并刻版印刷发行。崇祀潮州八贤祠、化州功德祠、程乡名宦祠。</li></ul><ul id="5ed2080e-7d30-82a9-8f5e-016c54f43004" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘昉：</strong> 御赐名旦，登宋宣和六年（1124）沈晦榜进士，历任礼部员外郎，进直秘阁，直龙图阁，授湖南安抚使太卿，进阶光禄大夫。编撰儿科医学《幼幼新书》。勅祭郊祀，终赐祭墓，崇祀乡贤祠。</li></ul><ul id="adc2080e-7d30-8384-b7ae-816d93dc8abb" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘景：</strong> （1066–1163），宋靖康元年（1126），举贤良方正，授朝请郎，历任广南路市舶，台湾台南知州，高雄州知州。公奉命提兵征服安南有功，晋阶银青光禄大夫，封爵开国男，赐食邑三百户，赏黄金三百（斤），三次奉旨上京面君。卒葬龟山，崇祀乡贤祠。</li></ul><ul id="7152080e-7d30-83f0-89fa-814345cc7f95" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘渍：</strong> 字微甫，宋绍兴年间（1131–1162），官授迪功郎，直史馆五经博士。</li></ul><ul id="67f2080e-7d30-82f6-b6b8-8146e4880240" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘炳：</strong> 宋贡士，官至户曹给事中。</li></ul><ul id="9c42080e-7d30-820d-85c0-81db3427abff" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘真庆：</strong> 宋承事郎机宜。</li></ul><ul id="ce42080e-7d30-82ed-b58c-013312fa24ad" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>陈存叟：</strong> 讳恪，字子严，号存叟（1184—1243），漳州龙溪人。宋嘉定七年甲戌年（1214）正奏进士，任宋朝奉大夫，宝谟阁待制，兼修国史。在职忠心秉国，御赐玉温金链，以表其忠。年老致仕云游入潮，后隐居鮀浦江东。卒葬于归仁都，登塘盘龙埔。1984年移葬庵埠霞露官厅园地，奉为东津陈氏一世祖。</li></ul><ul id="55f2080e-7d30-83e5-93a4-81c5ce21847d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘铨：</strong> 号东村，宋处士。</li></ul><h2 id="98a2080e-7d30-823d-8c0f-81b5536d1ca5" style="display:inline-block" dir="auto">第二节　元代</h2><ul id="6632080e-7d30-8208-9d4a-018455cadcd0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>陈莲峰：</strong> 讳肃，字文端（1242–1298）。于宋末元初在莲花山结庐聚贤讲学，学者咸称莲峰先生，被文天祥誉为经伦之才。元至元十九年（1282）元朝以贤良赐第朝列大夫，授潮州总管府事。施仁政安抚百姓，不及半年归者甚众，督民开渠耕鱼乐业，重修文庙兴学育人，修茸湘子桥方便行人。元至元二十一年（1284）升宣慰同知，握兵分镇湖广常德路，身先士卒大破寇猬有奇功，晋湖南军民都总管，赐紫袍金鱼袋。元大德二年（1298）擢升枢密院同知。一生著作汇为《莲峰集》，已失传。</li></ul><ul id="4d52080e-7d30-835c-8637-016e0b9193a9" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>陈桂轩：</strong> 讳与志，蓬峰公长子（1284–1312）。守陈厝祖居，因子常斋贵，元勋授奎章阁引礼舍人，诰赠太常寺博士。</li></ul><ul id="ff42080e-7d30-8321-b796-01697a72eae8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>陈常斋：</strong> 讳元佑，字仲永，号常斋，行大（1310–1346）。元由经业儒士，荐授太常寺博士。</li></ul><ul id="9e12080e-7d30-833a-a7f2-01fa15ab930f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘英发：</strong> 字伯秀，元授从仕郎，官容州通判。</li></ul><ul id="bcb2080e-7d30-824c-b998-01084852262e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘潮：</strong> 字子南，元潮州路海阳县教谕。</li></ul><ul id="4a62080e-7d30-8337-b253-81dd15fc7c30" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘枢：</strong> 字原丙，元登仕郎，官闢望都巡检。</li></ul><h2 id="5272080e-7d30-82d1-b87f-81af8da5b922" style="display:inline-block" dir="auto">第三节　明代</h2><ul id="2092080e-7d30-83a4-a103-01bf992190f5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>陈慧罨：</strong> 讳鼎，字延铉，号慧罨（1407–1479）。行实：公能辟祖基能弘祖业，广拓膏腴，增设蒸尝祭田。尝于成化初，举设城内社学六处：卢师庵、陈师庵、宣召庵、法华堂、万寿庵、蒙斋庵，虽皆古庵名俱系私设，革为社学，便于里人延师儒以诲子弟，人咸德之。尝捐赀助修韩祠，名勒碑记。公处世好义乐施，乡人称为乐义处土先生，郡举乡饮置生上宾。尝题韩祠华表诗，并遗文教篇抄在家集公墓志及有成序、别意序。</li></ul><ul id="8782080e-7d30-83d7-a400-011449c2dc53" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>陈松卷：</strong> 讳光谦，字廷享，号松菴，行四（1449–1495）。行实：公由海阳儒学廪膳生，膺弘治间贡授福建漳州府漳浦县儒学训导升教谕。</li></ul><ul id="9652080e-7d30-82eb-8a3e-81358dbc8c38" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>陈存诚：</strong> 洪武永乐间两举贤良方正。</li></ul><ul id="c5d2080e-7d30-82b8-bf64-01d829d0faa4" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>陈敬斋：</strong> 文林郎漳州府桂平县知县。</li></ul><ul id="7482080e-7d30-8261-826a-8158d983b985" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>陈经伦：</strong> 增广生，授将仕郎。</li></ul><ul id="40c2080e-7d30-82c4-a502-016b773ac55a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘勋：</strong> 字宗尧，号东叟，明庠生。</li></ul><ul id="6fb2080e-7d30-8383-85a6-014720176d2d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘潮津：</strong> 字东顺，明庠生。</li></ul><ul id="fe12080e-7d30-828a-b1d5-8170e656e90b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘拱：</strong> 字廷敬，号默简，明庠生。</li></ul><ul id="fe92080e-7d30-83f5-b365-01fae69fe744" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘策：</strong> 字仕政，号松山，明庠生。</li></ul><ul id="b9d2080e-7d30-821d-a6e4-011147f0eda2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘光显：</strong> 字伯照，号少窗，明生员。</li></ul><ul id="8682080e-7d30-83de-8467-01cd7b2951a1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘化雨：</strong> 字光宗，明庠生。</li></ul><ul id="5322080e-7d30-8315-826c-013b4fe13160" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘标殿：</strong> 字魁第，明太学生。</li></ul><ul id="20a2080e-7d30-82c2-9185-8147efb8c7f3" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘文旦：</strong> 号景新，明廩膳生。</li></ul><ul id="d932080e-7d30-836e-ab97-01f6c7963b92" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘茂翔：</strong> 明庠生，清赠文林郎。</li></ul><ul id="8e12080e-7d30-8329-bebc-0141ddbba7d4" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖广渤：</strong> 字衍泉。明万历年间拔贡，任台州判署天台县事，兴利除害，民颂召杜，升台州府正堂，帝赐明经第。致仕居乡好施乐善。万历四十年（1612）适东津（弯堤）堤陷，渤倡修完固，田庐无淹没之患，乡人德之。</li></ul><h2 id="1d72080e-7d30-82dd-aa8e-0183444c083d" style="display:inline-block" dir="auto">第四节　清代</h2><ul id="2ef2080e-7d30-83b8-b067-016157f7d43d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘启盘：</strong> 清康熙二十五年（1686）丙寅科贡士。</li></ul><ul id="3952080e-7d30-8318-8817-81df17be7b7d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘注：</strong> 字力谦，号益宽。清康熙三十八<mark class="highlight-red" data-notion-highlight="red">年</mark>（1699）己卯科登洪晨孚榜举人，任荆州府江陵县知县，兼护理荆戎府同知事，并两湖理事分府同知事，补任直隶顺天府平谷县知县，兼护理古北口同知事。</li></ul><ul id="8962080e-7d30-8226-bc3c-81aab527ac60" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘铮：</strong> 清乾隆三十九年（1774）登甲午科举人。</li></ul><ul id="3032080e-7d30-8221-9857-0185ed26ab0b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘万：</strong> 字伯为，号启巽。清乾隆五年（1740），授潮州八品郡宾。</li></ul><ul id="bce2080e-7d30-82e1-84a4-01c8f9131b72" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘光祖：</strong> 字炳裘，清乾隆间授潮州八品郡宾。</li></ul><ul id="6872080e-7d30-82aa-bf4f-8123a9391bc7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘潮文：</strong> 字贻谟，清光绪年间人物。生平纯谨，乐善好施，赐赈不吝。</li></ul><ul id="b3e2080e-7d30-82ed-bf05-017bd9c7b9d0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖碧堂：</strong> 清府学生员、武举人。</li></ul><ul id="ae42080e-7d30-828f-8204-81a09946f751" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>刘宗牧：</strong> （1848—1922），清处士。</li></ul><ul id="5ed2080e-7d30-8298-8f3e-010a00248aa6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖先治：</strong> 行老二（1843—1928），清授九品登仕佐郎，廖元兴创始人。公精于农事，菜蔬常抢先上市而得好价。1896年在潮州上东堤创办&quot;廖元兴&quot;商号。其家族商务拓展至丰顺、兴宁、澄海、汕头、广州、上海、天津、江苏、香港、泰国等地，富甲东津乡。妻陈慈祥（1843–1937），为经商积累资金。生六子十八孙，五代同堂。勤俭持家，因子孙众多，读书放学时间不一，她采用&quot;分碟法&quot;，将送饭的菜盛于碟，孙子们放学回家，各取一碟，既卫生又节俭。夫妻俩热心教育事业，发起创办东津小学，出资供族中子弟上学，常济助乡里贫困人家，被东津乡民尊称为廖二伯和廖二姆。民国二十五年，陈氏在潮州廖厝祠办&quot;百寿宴&quot;，获广东省民政厅厅长林翼中贺寿墨宝：&quot;潮安老寿妇廖陈氏《灵萱不老》&quot;，书刻于儒林第匾背，成为民国文物。</li></ul><ul id="9622080e-7d30-829c-b5db-81021c9d2600" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖声兴：</strong> 字佩锦（1877—1949），廖元兴创始人之一，清授从六品州同，赐儒林第。民国年间，捐资开发汕头光华埠和兴建潮州廖厝祠。</li></ul><ul id="a2b2080e-7d30-8373-8fd7-81c73d7dabf6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>廖声华：</strong> 字佩琨（1886–1943），廖元兴创始人之一，为东津小学校董之一。率子侄拓展廖元兴十家分支商行。1916年主理廖元兴新居兴建工作，建筑面积1708平方米。1919年，主理潮州廖厝祠侧兴建廖元兴住宅拱祠。</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

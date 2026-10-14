@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第十篇 大事记</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="2462080e-7d30-8213-9b64-01a9278097cd" class="page sans"><header><h1 class="page-title" dir="auto">第十篇 大事记</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="6852080e-7d30-831b-a0f8-8133aea98261" class="" dir="auto">一桩桩，一件件，走进一段历史，品味一段乡愁。</p><h3 id="26c2080e-7d30-82ea-9ce7-81903564c6c3" style="display:inline-block" dir="auto">五代</h3><ul id="1152080e-7d30-825b-a8e2-013411f82300" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>后梁贞明三年（917）</strong>，刘颖由广南（今广州）迁入潮州开基桃坑。著《永思词》和《五言诗》，为桃坑刘氏开宗明义之作。</li></ul><h3 id="d6a2080e-7d30-83dd-a1f8-81fe61cb1b11" style="display:inline-block" dir="auto">宋代</h3><ul id="d472080e-7d30-8235-bc0e-81e2d8878b0c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>咸平四年（1001）</strong>，刘表举贤良方正。奉为桃坑刘氏一世祖。</li></ul><ul id="09e2080e-7d30-83ed-898a-815d627dacf2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>大观年间（1107-1110）</strong>，刘允编订的潮本《昌黎文集》刊行。</li></ul><ul id="0932080e-7d30-82ad-a37a-81e5dde27a25" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>绍兴二十年（1150）</strong>，刘昉撰著的《幼幼新书》40卷中医儿科巨著刊行全国。</li></ul><ul id="1f82080e-7d30-82fc-ad56-813b9940d627" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>淳熙五年（1178）</strong>，刘少集作《家谱引》，修编颖公至自身十世家谱。</li></ul><ul id="3542080e-7d30-83d0-859f-813ffac10ee3" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>宋庆元年间</strong>，康姓开基东津康厝。</li></ul><ul id="6932080e-7d30-822a-a165-01aeafd9b85b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>绍定年间（1228-1233）</strong>，洪姓（祖讳失传）由泉州晋江迁徙潮州东津开基盐埠。</li></ul><ul id="3ba2080e-7d30-835b-8c08-81a8082fa478" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>端宗年间（1276-1277）</strong>，廖开潮由莆田迁入潮州东津开基廖厝。</li></ul><h3 id="e4e2080e-7d30-835a-9324-01e3f06a9991" style="display:inline-block" dir="auto">元代</h3><ul id="4202080e-7d30-830e-8945-81adec76e7ab" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>至元十九年（1282）</strong>，潮州总管府事陈莲峰开基东津陈厝。</li></ul><ul id="3d22080e-7d30-820f-afaa-816fc7a21d1d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>大德八年（1304）八月</strong>，飓风（热带气旋，破坏性与台风相同）海溢，漂民宅，溺死者众。</li></ul><ul id="7fd2080e-7d30-83ce-8a47-0184203ebc95" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>皇庆二年（1313）</strong>，刘镇作《重修族谱序》。</li></ul><h3 id="ac82080e-7d30-8331-833a-819569255491" style="display:inline-block" dir="auto">明代</h3><ul id="6f52080e-7d30-824f-b4d0-018fc1b24046" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>宣德四年（1429）</strong>，刘义作《重修族谱序》。</li></ul><ul id="d392080e-7d30-824f-8b85-8186f2b4dbc4" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>宣德十年（1435）</strong>，潮州知府王源主持修筑潮州城四厢堤防，韩江东厢始筑堤，使东湖的泽、渚、塭地带逐渐成为可垦荒地。</li></ul><ul id="4a62080e-7d30-8321-8a90-81ec7975d5a0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>弘治八年（1495）九月</strong>，飓风暴雨，大水浸毁庄稼。</li></ul><ul id="98a2080e-7d30-8377-b429-01ffc340158c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>弘治九年（1496）</strong>，决东厢堤（龙船潭）。</li></ul><ul id="f882080e-7d30-839b-90cd-01bb5468a8b0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>弘治十五年（1502）</strong>，刘策由桃坑迁创窟尾沟乡。</li></ul><ul id="e632080e-7d30-825f-b54a-81d711f3861b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>正德二年（1507）六月</strong>，下雹，大如拳。</li></ul><ul id="0de2080e-7d30-8356-b4dc-8196ab9922bb" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>正德四年（1509）十二月</strong>，下雪一尺多厚。</li></ul><ul id="cd72080e-7d30-83b9-8366-016753423a60" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>正德六年（1511）秋</strong>，蝗虫成灾，粮食失收，出现饥荒。</li></ul><ul id="1ec2080e-7d30-82c2-a92a-01686ea4d6d0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>嘉靖九年（1530）</strong>，春、秋干旱，是年粮食失收，民众大饥。</li></ul><ul id="0062080e-7d30-83ef-87ff-015826521f12" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>嘉靖十二年（1533）十月</strong>，星陨如雨。</li></ul><ul id="df62080e-7d30-8206-a75b-015460e3e662" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>嘉靖十四年（1535）</strong>，林大钦为《桃坑刘氏族谱》作序。是年，《桃坑刘氏族谱》问世。</li></ul><ul id="d572080e-7d30-82d5-bd75-810dce895bbb" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>嘉靖二十六年（1547）</strong>，刘梅松由窟尾沟移创巷内乡。</li></ul><ul id="b512080e-7d30-83b7-98b7-818fa02a0b47" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>万历二十八年（1600）、四十年（1612）、四十一年（1613）</strong>，弯堤三次决堤。</li></ul><ul id="c592080e-7d30-82a5-882d-817520e80b16" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>崇祯年间（1628-1644）</strong>，黄良士开基东津脚桶黄。</li></ul><h3 id="ab42080e-7d30-8324-932b-0190757232e4" style="display:inline-block" dir="auto">清代</h3><ul id="c582080e-7d30-821a-9693-01b111320f5b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>顺治年间（1644-1661）</strong>，东厢堤屡溃，蔡元主持复修。</li></ul><ul id="c562080e-7d30-82e6-8315-818b820d1e39" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>顺治十年（1653）</strong>，潮州镇总兵郝尚久反清复明义军设营地于窟尾沟大房二省日公居宅（营内）。</li></ul><ul id="83b2080e-7d30-8352-85b0-81a8074d2cf9" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>康熙三年（1664）五月</strong>，饥荒。六月，飓风暴雨，东津崩堤（上津潭）。</li></ul><ul id="dc32080e-7d30-829a-9fd0-810872f94f64" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>康熙五十七年（1718）六月初一</strong>，弯堤决堤二十余丈。</li></ul><ul id="aa12080e-7d30-83a1-8e7f-01f3b7b964f5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>康熙五十八年（1719）</strong>，刘延美由桃坑迁创盐墩乡。</li></ul><ul id="5252080e-7d30-8229-b750-81021b3a3549" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>乾隆六年（1741）</strong>，刘禧远由埔东移盐墩乡创祖。</li></ul><ul id="5ac2080e-7d30-8379-b40e-813954fd479e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>乾隆二十一年（1756）</strong>，筑廖厝码头。</li></ul><ul id="c702080e-7d30-8315-8321-01bc836f1388" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>乾隆二十八年（1763）</strong>，刘茂科由桃坑移创茂利乡。</li></ul><ul id="b892080e-7d30-82fe-ae9e-015914f4a2e9" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>乾隆三十二年（1767）</strong>，潘姓（祖讳失传）开基东津潘厝。</li></ul><ul id="d8e2080e-7d30-82a9-93f5-0118b85f0c2d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>乾隆五十三年（1788）</strong>，刘远高由黄冈迁东津创铺仔前乡。</li></ul><ul id="c5a2080e-7d30-82fb-b8c3-0153d2f3cc8a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>乾隆五十九年（1794）</strong>，大水。修筑杜猴寨堤。（杜猴寨创寨时间在是年之前。）</li></ul><ul id="1d42080e-7d30-8333-b874-81ffa0104858" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>嘉庆元年（1796）</strong>，廖兴可携弟由大埔迁潮州东津开基草尾乡。</li></ul><ul id="6f92080e-7d30-8272-867f-010c83e23692" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>嘉庆七年（1802）</strong>，东津出现“花会”，求神问仙盛行。</li></ul><ul id="1642080e-7d30-82f8-89e0-818921706111" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>道光二十一年（1841）七月</strong>，大水，东厢堤崩。</li></ul><ul id="b012080e-7d30-837b-9544-8135987e03d9" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>道光二十六年（1846）</strong>，广东各地进行人口普查，按户造册，实行连环保卫。</li></ul><ul id="beb2080e-7d30-8221-9b83-01e549a59efc" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>咸丰三年（1853）六月</strong>，决廖厝码头堤五十余丈。</li></ul><ul id="8302080e-7d30-83bb-b261-811828099744" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>咸丰四年（1854）</strong>，潮州农民起义，吴忠恕义军8000余人，陈亚十义军3000余人。东津武生刘财宝引义军驻东津，帅帐设向南祠。东津人刘逢得组织东津义军，七月三十日，刘逢得执大旗与清军战于桥东，被清军头目卓兴以钢炮轰断左臂。九月十八日，清军从笔架山渡莲角池（长池）破东津，擒100余人，东津义军溃散。</li></ul><ul id="fa02080e-7d30-824e-be2a-01c4fa6fa905" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>咸丰八年（1858）</strong>，六、七月瘟疫流行。是年，《天津条约》列潮州为通商口岸，东津堤顶工商铺面陆续增加。</li></ul><ul id="87c2080e-7d30-8279-a341-0194b934e2bc" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>咸丰十年（1860）六月下旬</strong>，韩江水涨，东津堤溃。</li></ul><ul id="6632080e-7d30-83b1-af21-0100ac474b9c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>同治三年（1864）七月</strong>，韩江水涨，东津堤再溃。</li></ul><ul id="0802080e-7d30-8356-9280-813e54ccfc3a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>同治十年（1871）六月</strong>，东津决堤七十余丈。</li></ul><ul id="1d62080e-7d30-8262-9911-81823236af35" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>光绪年间（1875—1908）</strong>，由刘茂楠续修的《潮州桃坑东津派刘氏族谱》刊行。</li></ul><ul id="2d32080e-7d30-8328-b183-01c9f7f21a1d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>光绪十三年（1887）四月</strong>，瘟疫流行。</li></ul><ul id="bb92080e-7d30-82a5-af32-81566310d3e4" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>光绪二十六年（1900）春夏间</strong>，鼠疫继续流行。</li></ul><ul id="fef2080e-7d30-834c-bb05-81de3602fb2b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>光绪二十八年（1902）</strong>，饥荒，鼠疫。</li></ul><ul id="c6a2080e-7d30-839a-b2da-01bb600107e4" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>宣统三年（1911）七月十二日夜2时</strong>，决三师庙堤30余丈，冲口成潭深8丈，毁民房无数。</li></ul><h3 id="e782080e-7d30-83d3-bd19-010dcbd2b3cb" style="display:inline-block" dir="auto">中华民国</h3><ul id="9a42080e-7d30-83b0-a1d7-019aa035d472" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国元年（1912）元旦（1月1日）</strong>，改用新历。</li></ul><ul id="5b02080e-7d30-8233-8377-816b8f330814" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国三年（1914）</strong>，海阳县改称潮安县，都改为区，东津属东厢区。乡村设保甲制。</li></ul><ul id="bd02080e-7d30-83b2-8717-015c149c603c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国七年（1918）</strong>，橡埔东岭仔决堤，东津水灾。</li></ul><ul id="dfd2080e-7d30-828a-9e04-81c349cb56a0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国十七年（1928）</strong>，杜猴寨散寨。</li></ul><ul id="fcc2080e-7d30-837f-9fe9-8130e3473b38" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国十九年（1930）</strong>，撤东厢区，置秋东区，东津属之。</li></ul><ul id="6532080e-7d30-82df-a32d-01d9e2c3cf8d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国二十一年（1932）8月25日</strong>，台风，后三日暴雨不止，崩竹巷口涂堤，东津内涝。</li></ul><ul id="3f22080e-7d30-8282-9e08-8167da379423" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国二十七年（1938）10月25日</strong>，山洪决开黄竹洋堤，东津内涝3-4天，晚造失收。</li></ul><ul id="ea02080e-7d30-8353-bb97-01924fa783a7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国二十八年（1939）5月4日</strong>，日机轰炸东津。<ul id="7052080e-7d30-824a-ab70-8130a1c56561" class="bulleted-list" dir="auto"><li style="list-style-type:circle">6月27日，东津沦陷，日军占据笔架山，用炮击摧毁民房。</li></ul><ul id="9312080e-7d30-82cc-b0f2-81382ecc85b2" class="bulleted-list" dir="auto"><li style="list-style-type:circle">11月5日上午七时，潮安城日军数百人分三路进犯东津、意溪，并以飞机、大炮助战，国民党守军顽强抵抗，至下午4时多，日军溃退，沿途烧、杀、抢粮食。</li></ul><ul id="1d62080e-7d30-829d-9319-810cbe08843f" class="bulleted-list" dir="auto"><li style="list-style-type:circle">11月20日上午8时，日机3架、汽艇2艘，敌兵400多人，再次进犯东津、意溪。国民党守军撤退，日军在意溪、东津劫夺杉木、稻谷。</li></ul><ul id="f6b2080e-7d30-83ab-9ab4-0104c1ff91a2" class="bulleted-list" dir="auto"><li style="list-style-type:circle">12月，日军在笔架山设据点，用炮火轰击向西祠、向北祠和守祠人家，桃坑被迫散乡。</li></ul></li></ul><ul id="06e2080e-7d30-822e-89a7-81da5a4b63f9" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国二十九年（1940）7月14日</strong>，驻笔架山日军到东津放火烧民宅。<ul id="b422080e-7d30-833b-87e2-81620a8c51cf" class="bulleted-list" dir="auto"><li style="list-style-type:circle">10月，驻笔架山日军和伪军分别抢劫东津，国民党潮澄饶澳自卫总队奋勇迎击。</li></ul></li></ul><ul id="5862080e-7d30-8396-9066-014b97c86b49" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国三十一年（1942）</strong>，日军在石碑、江厝之间的方厝（今北桥大圆）设立防线，使东津靠担盐度生者绕道河内翻山越岭至归湖。</li></ul><ul id="5012080e-7d30-8352-9c67-81c5eb0cb8a6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国三十二年（1943）</strong>，大旱饥荒，霍乱流行。饥民有的卖子当儿，有的背井离乡逃往外地，有的因此绝户。</li></ul><ul id="9d92080e-7d30-834d-b4d7-81b02628e42b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国三十三年（1944）5月15日</strong>，国民党军队攻打笔架山日军，国军退兵后，日军下山到处放火烧民房。</li></ul><ul id="4922080e-7d30-82a9-b437-8168be851ea1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国三十四年（1945）8月15日</strong>，侵潮日军集中县城，宣布投降，东津复员（光复）。自1939年6月27日至1945年8月14日，东津失陷（沦陷）期间，日本侵略军杀死下津13人，烧毁祠堂2座、公厅9座，民宅112间。</li></ul><ul id="8872080e-7d30-83da-960c-01e11aeb9d48" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国三十五年（1946）1月</strong>，裁区并乡，东津属东厢乡。是年自上年度至本年连续干旱7个多月，田不能耕，米价猛涨。</li></ul><ul id="3422080e-7d30-835c-a6ca-011ff305b339" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国三十六年（1947）5月6月</strong>，淫雨连旬，20天内韩江3次暴涨，堤防出险，后溪山洪奔泻，田园多被水淹，农作物损失严重。</li></ul><ul id="9e32080e-7d30-8265-b136-81d8ea3dd62f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>民国三十八年（1949）1月</strong>，潮安县置八个区，东津乡隶属第四区。<ul id="bb32080e-7d30-8248-bfda-81e2a538409a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">7月，国民党统治区币值聚贬，物价暴涨。</li></ul><ul id="87b2080e-7d30-83ca-a48f-8103eae10b13" class="bulleted-list" dir="auto"><li style="list-style-type:circle">9月，国民党胡琏兵团残部南逃途经东津，大肆抢掠，下津被强拉壮丁渡台充兵有7人。</li></ul></li></ul><h3 id="0ef2080e-7d30-8256-9627-81505c88e0db" style="display:inline-block" dir="auto">中华人民共和国</h3><ul id="6b22080e-7d30-82a7-9e34-81e3782c3b73" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1949年10月19日</strong>，东津全境解放。<ul id="7282080e-7d30-8390-9eaa-01dd72d6860f" class="bulleted-list" dir="auto"><li style="list-style-type:circle">10月23日，举行解放潮安入城仪式，即日成立潮安县军管会，文祠、意溪合置荣意区。</li></ul></li></ul><ul id="4582080e-7d30-83ef-8f93-018bcd27ac1f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1950年1月</strong>，第四区东津乡划属荣意区。<ul id="7d92080e-7d30-8276-850c-019ee8440fe3" class="bulleted-list" dir="auto"><li style="list-style-type:circle">3月15日荣意区改称第三区，东津乡属之。</li></ul><ul id="b4d2080e-7d30-821e-9580-818ae09a7229" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年，东津乡成立农会，下辖四个村。一村农会设廖元兴儒林第，二村农会设窟尾沟厚斋公厅。</li></ul><ul id="ca52080e-7d30-8204-9c2f-814465e6dbab" class="bulleted-list" dir="auto"><li style="list-style-type:circle">5月，水稻发生螟害。</li></ul><ul id="0382080e-7d30-83d5-8c1b-014f75516c4d" class="bulleted-list" dir="auto"><li style="list-style-type:circle">6月，区政府帮助人民度荒，设粮食度荒站于意溪。</li></ul></li></ul><ul id="6dd2080e-7d30-828b-8f87-815adc2e3273" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1951年1月17日</strong>，韩开义率土改工作组进驻一村，周自成率土改工作组进驻二村，协助农会进行土改。<ul id="1822080e-7d30-82c5-9d93-019ee08e57b8" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年，春旱，夏涝。</li></ul></li></ul><ul id="4f62080e-7d30-8227-8f68-017226bd3811" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1952年</strong>，东津乡分置上、中、下津三个行政乡。<ul id="6772080e-7d30-82ce-a902-01aa5b25e22d" class="bulleted-list" dir="auto"><li style="list-style-type:circle">10月，中共下津乡党支部成立，领导土改复查工作，颁发土地证。</li></ul></li></ul><ul id="08c2080e-7d30-8310-ac05-0102deaf1fc5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1953年1月1日</strong>，下津乡政府成立，治所设廖元兴儒林第。刘世美建立农业生产互助组。<ul id="4522080e-7d30-8301-a4c1-8120a97ad17c" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年，广东省长叶剑英兼任华南垦殖局局长，领导国防橡胶基地建设，省府下任务给各地区，经乡政府动员，10月，刘世升等32人胸戴大红花赴海南，参加橡胶基地建设。</li></ul></li></ul><ul id="98c2080e-7d30-82cf-9cb6-817e4cec9016" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1954年1月</strong>，中共第三区委员会办公地址设下津乡绞队井。<ul id="2182080e-7d30-8217-a96c-011480cdde3c" class="bulleted-list" dir="auto"><li style="list-style-type:circle">2月，区委人员配齐后，区委会设在厚斋公厅，至1955年底迁意溪。</li></ul><ul id="2022080e-7d30-8332-a950-81292fd3495f" class="bulleted-list" dir="auto"><li style="list-style-type:circle">7月19日，刘世美在互助组基础上建立前进农业生产初级合作社，随后建英社、群益社、新光社、第五农业生产合作社相继建立。</li></ul></li></ul><ul id="8ed2080e-7d30-83ce-a820-81cee672abad" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1955年5月28日</strong>，第三区改为意溪区。<ul id="0f62080e-7d30-82cc-8d0c-01ca25f776c7" class="bulleted-list" dir="auto"><li style="list-style-type:circle">下半年，下津乡五个农业初级合作社试办高级社成功。</li></ul><ul id="72c2080e-7d30-8341-a269-81c621dbf217" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年，前进高级社评为广东省农业高级合作社模范单位，奖大水牛一头，折人民币120元。</li></ul></li></ul><ul id="1e62080e-7d30-8229-9a37-818462a2da27" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1956年2月</strong>，撤区置乡，意溪区分置东津乡（含东津片、意溪片、文祠片）、河内乡及意溪镇（居民）。林锡荣任东津乡总支书记，下津乡前进高级社党支部书记刘世美选任总支副书记。<ul id="aec2080e-7d30-82cd-b9d2-81010e89a68b" class="bulleted-list" dir="auto"><li style="list-style-type:circle">12月底，撤二乡一镇并为意溪镇，林锡荣任镇委书记。东津乡前进农业高级社划属潮州市郊新合乡，乡治设新乡仔（今市体育馆北侧）。</li></ul></li></ul><ul id="1602080e-7d30-836e-81c9-0125e5ac4fb4" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1957年1月</strong>，洗马桥、海鹅头、山边、沙瓠四个自然村由黄金塘划属下津。<ul id="8992080e-7d30-827b-a555-81406cf92134" class="bulleted-list" dir="auto"><li style="list-style-type:circle">冬季，平整耕地运动。</li></ul></li></ul><ul id="7232080e-7d30-837b-af64-81e839168944" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1958年1月</strong>，六亩闸竣工。<ul id="9a52080e-7d30-8225-a075-018f120694cf" class="bulleted-list" dir="auto"><li style="list-style-type:circle">5月，掀起“大跃进”高潮。</li></ul><ul id="4ce2080e-7d30-8327-ad5c-81fe95fbcb51" class="bulleted-list" dir="auto"><li style="list-style-type:circle">6月，贯彻“鼓足干劲、力争上游、多快好省地建设社会主义”。</li></ul><ul id="e8f2080e-7d30-8369-a4d6-01903edf586a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">9月8日，意溪与文祠合并成立意溪人民公社。</li></ul><ul id="3022080e-7d30-8369-b05b-815ee54fe8a1" class="bulleted-list" dir="auto"><li style="list-style-type:circle">11月1日，下津由市郊新合乡划属意溪公社。</li></ul><ul id="c982080e-7d30-8227-b505-015fad17e184" class="bulleted-list" dir="auto"><li style="list-style-type:circle">冬季，下津参加修筑大片洋堤围。</li></ul></li></ul><ul id="d7d2080e-7d30-829b-a0a0-015983693f5c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1959年冬</strong>，修筑后溪下津堤围。</li></ul><ul id="0d32080e-7d30-8265-b400-01c2170b3a40" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1960年6月10日</strong>，凤凰水库崩决，韩江洪峰达16.88米。村民撤出住房，上山居住。<ul id="1d42080e-7d30-835d-af56-819349f9cd35" class="bulleted-list" dir="auto"><li style="list-style-type:circle">7月1日至23日干旱。</li></ul><ul id="5052080e-7d30-8366-b664-015cb61d7a59" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年冬，续修后溪下津堤围。</li></ul></li></ul><ul id="0802080e-7d30-82d2-8288-8145ee745b56" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1961年9月9日</strong>，韩江水位出现五次涨退，高水位持续九天，降大雨，内涝。</li></ul><ul id="fe02080e-7d30-8275-88dd-012407b42b43" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1962年</strong>，贯彻农村工作条例（六十条）和“调整、巩固、充实、提高”八字方针，社员生活有所改善。<ul id="f512080e-7d30-834d-83de-81b5dbee76c7" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年，沙瓠乡一户迁洗马桥，一户迁海鹅头。</li></ul></li></ul><ul id="fcf2080e-7d30-82b2-96bd-01cd6139c4cf" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1964年6月13日至17日</strong>，受台风影响，韩江水位达16.95米。弯堤廖厝被抗洪大军拆杉木打桩，推墙堵旋洞，保住了大堤的安全。</li></ul><ul id="ff32080e-7d30-8372-871a-0121f1cd36d3" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1965年5月</strong>，六亩闸扩建新三孔竣工。</li></ul><ul id="9422080e-7d30-825e-8431-012da22f8004" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1966年</strong>，文化大革命开始，“红卫兵”横扫“四旧”，下津多处文物遭毁。</li></ul><ul id="7b72080e-7d30-83bf-bff4-0190000cc557" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1967年3月25日</strong>，潮安县军管会成立后，意溪公社党委会停止工作，下津大队坚持抓革命、促生产。<ul id="e402080e-7d30-83d4-9f05-012f6d946be2" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年，山边寨6户迁洗马桥，2户迁海鹅头。</li></ul></li></ul><ul id="6672080e-7d30-824b-b26c-0191596a23e2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1968年4月</strong>，意溪公社革委会成立，下津大队革委会成立。</li></ul><ul id="35b2080e-7d30-823f-afe3-01b90fc40458" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1969年7月8日</strong>，太平洋3号台风在汕头登陆，下津风力达10-11级，阵风12级以上。</li></ul><ul id="8732080e-7d30-82ec-97ee-81b6bb73f386" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1970年八月中秋</strong>，台风降暴雨，山洪暴发，决杜猴寨堤，全村受浸，村民搬上山避水。<ul id="ae22080e-7d30-82d4-9f8d-0149f85d4edf" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年，下津列入治韩工程重点，各地民工进场施工，杜猴寨堤搬填长池。</li></ul></li></ul><ul id="33f2080e-7d30-835c-8244-0137279218a1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1973年12月3日-23日</strong>，疏通洗马桥河道。</li></ul><ul id="fb72080e-7d30-833b-9686-814a543cc1cc" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1975年</strong>，在廖厝祠背兴建下津小学，自此，下津结束在公厅、祠堂办学的历史。</li></ul><ul id="5572080e-7d30-8317-8c8c-018602d024ae" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1976年</strong>，是年，粉碎“四人帮”历时十年的文化革命结束。下津恢复生产大队建制。</li></ul><ul id="6c32080e-7d30-834d-9963-8150f80ffb81" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1979年8月</strong>，潮州镇恢复市级建制，下津大队由意溪公社划属城东公社。公社治所设下津虎池南侧。</li></ul><ul id="47e2080e-7d30-83c8-a1b4-0190c41684a3" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1981年</strong>，开展林业“三定”工作。<ul id="7ca2080e-7d30-83f4-b268-01455cf0bac4" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年，堤顶房屋拆迁完毕。</li></ul></li></ul><ul id="1232080e-7d30-82f9-8f3f-81c8acf3f3e8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1982年9月</strong>，动工铺设自来水管，至翌年完成，下津村家家户户通自来水。<ul id="c442080e-7d30-83d4-b0a1-8124f40cd176" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年，城东公社改称桥东公社。</li></ul><ul id="b7a2080e-7d30-8218-a5d6-01ecdeb58511" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年，开展全国第三次人口普查工作。</li></ul></li></ul><ul id="7ec2080e-7d30-824a-9783-81cdcc93787c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1984年8月16日</strong>，下津大队改为管理区。</li></ul><ul id="43a2080e-7d30-8229-b171-8154d3161c67" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1986年</strong>，下津管理区办公地址由廖厝祠埕北侧迁桃园路新办公楼。</li></ul><ul id="7482080e-7d30-82ef-bc12-0139d62e5d85" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1987年3月</strong>，安凤公路下津路段加盖柏油路。</li></ul><ul id="da42080e-7d30-8239-a88e-813f0ab20d9f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1989年</strong>，是年，进行第四次全国人口普查工作。</li></ul><ul id="8172080e-7d30-82b6-8591-01eef17c1f2c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1993年</strong>，管区划出“六支灯”约24亩土地兴建下津小学。</li></ul><ul id="ffd2080e-7d30-8246-a1d1-81319c7eab74" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1998年</strong>，是年，下津撤销管理区。自10月至12月中旬，经过组织准备，选民登记，确定候选人，投票选举，建章立制和总结验收六个阶段的工作，选举产生第一届下津村民委员会及其成员。</li></ul><ul id="f432080e-7d30-830f-9c8d-81ae94ca242f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>1999年4月1日</strong>，启用下津村民委员会公章。<ul id="9782080e-7d30-8394-95b9-818af5007854" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年，实行第二轮土地承包合同制。</li></ul></li></ul><ul id="4282080e-7d30-82a8-92d4-01d83f6bd057" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>2003年</strong>，经村委会决定，建设本村灵堂，命名“安息堂”。</li></ul><ul id="39f2080e-7d30-8291-b79b-81cf805cc3ca" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>2006年8月</strong>，山洪暴发，后溪水涨，钟厝桥堤段崩塌，全村受浸。</li></ul><ul id="4ce2080e-7d30-839d-81cf-814f4ca35ae8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>2007年</strong>，潮州“体彩标”篮球邀请赛在下津村举行，我村篮球队获比赛第二名。<ul id="0812080e-7d30-8201-ad68-81c50ea29bd2" class="bulleted-list" dir="auto"><li style="list-style-type:circle">是年，潮州刘氏宗亲理事会在下津小学举行《潮州刘氏溯源》谱牒发行仪式。</li></ul></li></ul><ul id="b7d2080e-7d30-8229-99e6-0107ca55b3b1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>2010年4月</strong>，国家人口与计生委主任李斌、广东省副省长雷于蓝、省政府秘书长、省人口和计生委主任张枫等领导莅临下津村调研。</li></ul><ul id="9362080e-7d30-8243-9445-01e5c1937d0e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>2008年</strong>，下津村委会贯彻“三个文明”建设，在村集体划留地中划出30亩地，计划投资800万元，建设下津全民健身广场、老年人活动中心等项目。经村民代表大会审议通过，并报上级批准实施。是年，完成第一期建设计划总投资370余万元。</li></ul><ul id="3f62080e-7d30-83a0-a6e2-01376d71e899" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>2013年</strong>，经上级党委批准，中共下津村党支部更名为中共下津村党委。</li></ul><ul id="9c22080e-7d30-83eb-aa8f-01e25c465ba6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>2017年</strong>，下津小学更称下津博雅学校。</li></ul><ul id="c6c2080e-7d30-831f-ac63-8116ab8984dc" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>2018年1月5日</strong>，下津村办公地址搬迁健身广场综合大楼。</li></ul><ul id="8492080e-7d30-82d1-ac9a-8116d8842c1d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>2019年</strong>，村委会划出宫前路南侧约16亩土地扩大博雅学校校园。<ul id="dc52080e-7d30-83d1-acda-01f27bdb8ea3" class="bulleted-list" dir="auto"><li style="list-style-type:circle">3月5日，成立《下津村史》修编领导小组，开始收集资料，编写村史。</li></ul><ul id="30f2080e-7d30-833c-bc44-81f4f84b007e" class="bulleted-list" dir="auto"><li style="list-style-type:circle">4月，下津村成立锣鼓队，吸收一百多名学员进行培训。</li></ul><ul id="4ab2080e-7d30-832e-a3ce-0164e54ce85a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">10月24日，文化公园兴工。</li></ul></li></ul><hr id="9872080e-7d30-82b3-b01f-01a10a29a520" dir="auto"/><h2 id="3ed2080e-7d30-83c3-bbe8-016cc5f34804" style="display:inline-block" dir="auto">芳名榜</h2><p id="8e02080e-7d30-82a3-9e38-01c3257275af" class="" dir="auto"><em>（赞助村史出版，排名不分先后）</em></p><table id="5fe2080e-7d30-82fb-ac31-81d8cb2da266" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="8752080e-7d30-830a-ba68-019dada18664" dir="ltr"><th id="S;YH" class="simple-table-header-color simple-table-header"><strong>姓名</strong></th><th id="C?ge" class="simple-table-header-color simple-table-header"><strong>金额</strong></th><th id="C@&lt;{" class="simple-table-header-color simple-table-header"><strong>姓名</strong></th><th id="ScLW" class="simple-table-header-color simple-table-header"><strong>金额</strong></th></tr></thead><tbody><tr id="7072080e-7d30-8374-9d01-81096479d1d6" dir="ltr"><td id="S;YH" class="">方绍远</td><td id="C?ge" class="">15000元</td><td id="C@&lt;{" class="">刘炀</td><td id="ScLW" class="">15000元</td></tr><tr id="9ff2080e-7d30-83d9-b2b7-81c80d9e302d" dir="ltr"><td id="S;YH" class="">刘锦兴</td><td id="C?ge" class="">15000元</td><td id="C@&lt;{" class="">林奇光</td><td id="ScLW" class="">15000元</td></tr><tr id="4852080e-7d30-8393-9ed7-81d7170e7213" dir="ltr"><td id="S;YH" class="">刘少雄</td><td id="C?ge" class="">15000元</td><td id="C@&lt;{" class="">刘跃进</td><td id="ScLW" class="">15000元</td></tr><tr id="3172080e-7d30-82c2-bfc9-015fa7c3db8a" dir="ltr"><td id="S;YH" class="">陈春端</td><td id="C?ge" class="">15000元</td><td id="C@&lt;{" class="">廖耀銮</td><td id="ScLW" class="">15000元</td></tr><tr id="29b2080e-7d30-83d8-8239-81b3f0830de6" dir="ltr"><td id="S;YH" class="">刘俊良</td><td id="C?ge" class="">15000元</td><td id="C@&lt;{" class="">廖耀瑞</td><td id="ScLW" class="">15000元</td></tr><tr id="2ee2080e-7d30-8397-9716-01c89c42b8e3" dir="ltr"><td id="S;YH" class="">刘泽雄</td><td id="C?ge" class="">15000元</td><td id="C@&lt;{" class="">刘建伟</td><td id="ScLW" class="">15000元</td></tr><tr id="2212080e-7d30-837b-9cb0-81784db9613b" dir="ltr"><td id="S;YH" class="">刘树钿</td><td id="C?ge" class="">15000元</td><td id="C@&lt;{" class="">刘仲滨</td><td id="ScLW" class="">15000元</td></tr></tbody></table><figure id="dfa2080e-7d30-828d-b517-019e67a762a2" class="link-to-page"><a href="%E7%AC%AC%E5%8D%81%E7%AF%87%20%E5%A4%A7%E4%BA%8B%E8%AE%B0/%E3%80%8A%E4%B8%8B%E6%B4%A5%E6%9D%91%E5%8F%B2%E3%80%8B%E5%8B%98%E8%AF%AF%E4%B8%8E%E5%AE%A1%E6%A0%A1%E6%8A%A5%E5%91%8A%20dfa2080e7d30828db517019e67a762a2.html" data-notion-page-id="dfa2080e-7d30-828d-b517-019e67a762a2" data-notion-space-id="7b62080e-7d30-8119-bb6a-000312cc357f">《下津村史》勘误与审校报告</a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
