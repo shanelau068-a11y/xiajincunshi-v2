@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readData } from './lib/data.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '..');
@@ -27,6 +28,7 @@ function usage() {
 }
 
 function copyDirectory(source, target) {
+  if (path.resolve(source) === path.resolve(target)) return;
   fs.mkdirSync(target, { recursive: true });
   for (const entry of fs.readdirSync(source, { withFileTypes: true })) {
     const from = path.join(source, entry.name);
@@ -64,6 +66,9 @@ fs.mkdirSync(publicBookDir, { recursive: true });
 
 const entries = fs.readdirSync(sourceDir, { withFileTypes: true });
 const htmlFiles = entries.filter((entry) => entry.isFile() && /\.html?$/i.test(entry.name));
+if (!htmlFiles.some((entry) => chapterRules.some((rule) => entry.name.includes(rule.key)))) {
+  throw new Error('未找到可识别的村史篇章；现有目录和原文保持不变。');
+}
 const imported = [];
 
 for (const rule of chapterRules) {
@@ -73,7 +78,8 @@ for (const rule of chapterRules) {
     continue;
   }
 
-  fs.copyFileSync(path.join(sourceDir, match.name), path.join(publicBookDir, match.name));
+  const from = path.join(sourceDir, match.name), to = path.join(publicBookDir, match.name);
+  if (path.resolve(from) !== path.resolve(to)) fs.copyFileSync(from, to);
   imported.push({ ...rule, file: match.name });
   console.log(`已导入：${match.name} -> public/book/${match.name}`);
 }
@@ -83,6 +89,8 @@ for (const entry of entries.filter((item) => item.isDirectory())) {
   console.log(`已复制资源目录：${entry.name}`);
 }
 
-writeBookData(imported);
+const previous = fs.existsSync(dataFile) ? readData('src/data/book.ts', 'bookChapters') : [];
+const importedIds = new Set(imported.map((chapter) => chapter.id));
+writeBookData([...previous.filter((chapter) => !importedIds.has(chapter.id)), ...imported].sort((a, b) => a.order - b.order));
 console.log(`已生成：${path.relative(projectRoot, dataFile)}`);
 console.log(`共导入 ${imported.length} 个章节。`);

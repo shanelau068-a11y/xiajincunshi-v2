@@ -11,6 +11,8 @@
 
 建议 Node.js 22 或更新的受支持版本：
 
+云端固定使用 npm 11.6.2。构建依赖中显式列出 Tailwind 所需的 WASI 辅助依赖，避免 Windows 与 Linux 的可选依赖锁文件遗漏。
+
 ```bash
 npm ci
 npm run dev
@@ -85,6 +87,8 @@ npm run merge:genealogy-reference
 ```
 
 输出候选合并草稿 `tmp/genealogy-reference-draft.ts`，不能未经核对就覆盖正式文件。`reports/genealogy-quarantine.json` 保留从第一版移出的误抽和称谓重复记录。
+
+`npm run clean:genealogy-nonpersons` 同样仅输出 `tmp/genealogy-clean-draft.ts`，不会直接删除人工记录。空目录或无法识别篇章的原文导入会停止；局部导入保留其他已有篇章。
 
 ## 添加或删除照片
 

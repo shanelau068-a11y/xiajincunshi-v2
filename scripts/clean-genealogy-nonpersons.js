@@ -74,7 +74,9 @@ function removePeople(people, shouldRemove) {
 }
 
 function writePeople(prefix, people) {
-  fs.writeFileSync(genealogyPath, `${prefix}${JSON.stringify(people, null, 2)};\n`, "utf8");
+  const draft = path.join(projectRoot, 'tmp', 'genealogy-clean-draft.ts');
+  fs.mkdirSync(path.dirname(draft), { recursive: true });
+  fs.writeFileSync(draft, `${prefix}${JSON.stringify(people, null, 2)};\n`, "utf8");
 }
 
 function writeReport(removed) {
@@ -101,5 +103,5 @@ const result = removePeople(people, (person) => isNonPersonName(person.name));
 writePeople(prefix, result.people);
 writeReport(result.removed);
 
-console.log(`已清理 ${result.removed.length} 个非人名族谱节点。`);
+console.log(`生成清理候选：${result.removed.length} 个节点；已校对族谱未覆盖。`);
 console.log(`报告：${path.relative(projectRoot, reportPath)}`);

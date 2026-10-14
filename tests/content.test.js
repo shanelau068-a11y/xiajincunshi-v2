@@ -48,3 +48,18 @@ test('人物生卒不把唐昭宗年号当成寿命', () => {
   const p = readData('src/data/people.ts', 'people').find((p) => p.name === '刘嵩');
   assert.equal(p.years, '生卒未详');
 });
+
+test('空目录导入不能清空村史目录', () => {
+  const before = fs.readFileSync('src/data/book.ts');
+  fs.mkdirSync('tmp/empty-book-test', { recursive: true });
+  const result = spawnSync(process.execPath, ['scripts/import-book.js', 'tmp/empty-book-test'], { encoding: 'utf8', timeout: 30000 });
+  assert.notEqual(result.status, 0);
+  assert.deepEqual(fs.readFileSync('src/data/book.ts'), before);
+});
+
+test('清理族谱只生成候选，不删除人工记录', () => {
+  const before = fs.readFileSync('src/data/genealogy.ts');
+  const result = spawnSync(process.execPath, ['scripts/clean-genealogy-nonpersons.js'], { encoding: 'utf8', timeout: 30000 });
+  assert.equal(result.status, 0, result.stderr);
+  assert.deepEqual(fs.readFileSync('src/data/genealogy.ts'), before);
+});
